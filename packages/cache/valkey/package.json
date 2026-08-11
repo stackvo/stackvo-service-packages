@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "valkey",
+  "category": "cache",
+  "name": { "en": "Valkey" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "8",
+  "legacyEnvPrefix": "SERVICE_VALKEY_"
+}

@@ -1,0 +1,30 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "kafbat",
+  "version": "v1.4.2",
+  "image": {
+    "repository": "kafbat/kafka-ui",
+    "tag": "v1.4.2"
+  },
+  "capabilities": ["admin-ui"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 8080, "preferred": 8080, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "DYNAMIC_CONFIG", "type": "string", "default": "true" },
+    { "key": "CLUSTER_NAME", "type": "string", "default": "stackvo-kafka" },
+    { "key": "BOOTSTRAP_SERVERS", "type": "string", "default": "stackvo-kafka:9092" }
+  ],
+  "connection": null,
+  "url": { "subdomain": "kafbat", "port": "main" },
+  "dependsOn": [
+    { "capability": "queue", "service": "kafka", "required": true }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "03cbbc7f47882eac3e1845dec8250bfa6dde5d82ab500cf285c9208feb3acd29" },
+  "support": { "status": "supported" }
+}

@@ -1,0 +1,34 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "phpcacheadmin",
+  "version": "2.6.0",
+  "image": {
+    "repository": "robinn/phpcacheadmin",
+    "tag": "2.6.0"
+  },
+  "capabilities": ["admin-ui"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 80, "preferred": 8084, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/var/www/html/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "REDIS_HOST", "type": "string", "default": "stackvo-redis" },
+    { "key": "REDIS_PORT", "type": "string", "default": "6379" },
+    { "key": "MEMCACHED_HOST", "type": "string", "default": "stackvo-memcached" },
+    { "key": "MEMCACHED_PORT", "type": "string", "default": "11211" },
+    { "key": "ADMIN_USER", "type": "string", "default": "admin" },
+    { "key": "ADMIN_PASS", "type": "secret", "default": "admin" }
+  ],
+  "connection": null,
+  "url": { "subdomain": "phpcacheadmin", "port": "main" },
+  "dependsOn": [
+    { "capability": "cache", "required": false }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "2f583e27b1309c36a4ff7858cb0b190b66721eecf766c48e6e1d21cd8e66ad3f" },
+  "support": { "status": "supported" }
+}

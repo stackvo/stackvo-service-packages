@@ -1,0 +1,36 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mariadb",
+  "version": "10.11",
+  "image": {
+    "repository": "mariadb",
+    "tag": "10.11"
+  },
+  "capabilities": ["sql", "mysql-protocol"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 3306, "preferred": 3307, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/var/lib/mysql", "purgeable": true }
+  ],
+  "files": [
+    { "name": "mariadb_cnf", "template": "files/my.cnf", "target": "/etc/mysql/conf.d/stackvo.cnf", "mode": "0444", "sha256": "469a3c2fa97170261db2b5fad5d6c0a95729eb11c0336c5ab558e08691992f43" }
+  ],
+  "settings": [
+    { "key": "ROOT_PASSWORD", "type": "secret", "default": "root" },
+    { "key": "DATABASE", "type": "string", "default": "stackvo" }
+  ],
+  "connection": {
+    "scheme": "mysql",
+    "port": "main",
+    "defaultUser": "root",
+    "passwordSetting": "ROOT_PASSWORD",
+    "databaseSetting": "DATABASE",
+    "defaultDatabase": "stackvo"
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "861142fcb01f1d28ce1f87ca372159a6df1afb4e72b351d5870bc3abb242a88f" },
+  "support": { "status": "supported" }
+}

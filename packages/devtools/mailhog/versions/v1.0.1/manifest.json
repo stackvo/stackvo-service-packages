@@ -1,0 +1,29 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mailhog",
+  "version": "v1.0.1",
+  "image": {
+    "repository": "mailhog/mailhog",
+    "tag": "v1.0.1"
+  },
+  "capabilities": ["smtp", "mail-catcher"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "smtp", "container": 1025, "preferred": 1025, "protocol": "tcp", "primary": true },
+    { "name": "ui", "container": 8025, "preferred": 8025, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+  ],
+  "connection": {
+    "scheme": "smtp",
+    "port": "smtp"
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "1b3baa3209321f72e4620cfc1ce2f550abba23a8d037932f9eb7963b3994d278" },
+  "support": { "status": "supported" }
+}

@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "cassandra",
+  "category": "databases",
+  "name": { "en": "Apache Cassandra" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "5.0",
+  "legacyEnvPrefix": "SERVICE_CASSANDRA_"
+}

@@ -1,0 +1,34 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "elasticsearch",
+  "version": "7.17.28",
+  "image": {
+    "registry": "docker.elastic.co",
+    "repository": "elasticsearch/elasticsearch",
+    "tag": "7.17.28"
+  },
+  "capabilities": ["search", "elasticsearch-protocol"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 9200, "preferred": 9200, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/usr/share/elasticsearch/data", "purgeable": true }
+  ],
+  "files": [
+    { "name": "elasticsearch_yml", "template": "files/elasticsearch.yml.tpl", "target": "/usr/share/elasticsearch/config/elasticsearch.yml", "mode": "0444", "sha256": "959338f8f3e93fdbadadb6437837b347c5aaac7ada637c96d69a8d1df8d82350" }
+  ],
+  "settings": [
+    { "key": "ES_JAVA_OPTS", "type": "string", "default": "-Xms1g -Xmx1g" },
+    { "key": "ELASTIC_SECURITY", "type": "string", "default": "false" },
+    { "key": "ELASTIC_ENROLLMENT", "type": "string", "default": "false" }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "2fc5eef129ece1fab3f749b9f297a9fdd562ff34eafc3eb408d359fb51b5453c" },
+  "support": { "status": "supported" }
+}

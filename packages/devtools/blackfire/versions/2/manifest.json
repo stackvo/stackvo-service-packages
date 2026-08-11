@@ -1,0 +1,28 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "blackfire",
+  "version": "2",
+  "image": {
+    "repository": "blackfire/blackfire",
+    "tag": "2"
+  },
+  "capabilities": ["admin-ui"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 8707, "preferred": 8707, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "SERVER_ID", "type": "secret", "default": "" },
+    { "key": "SERVER_TOKEN", "type": "secret", "default": "" },
+    { "key": "LOG_LEVEL", "type": "string", "default": "1" }
+  ],
+  "connection": null,
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "4b75d09406af809b96707e9a6b766c077bf72639da24eab9e7f699dd24201e28" },
+  "support": { "status": "supported" }
+}

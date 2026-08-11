@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "grafana",
+  "category": "monitoring",
+  "name": { "en": "Grafana" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "13.1",
+  "legacyEnvPrefix": "SERVICE_GRAFANA_"
+}

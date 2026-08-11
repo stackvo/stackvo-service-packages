@@ -1,0 +1,36 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "rabbitmq",
+  "version": "4.2",
+  "image": {
+    "repository": "rabbitmq",
+    "tag": "4.2-management"
+  },
+  "capabilities": ["queue", "amqp"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 5672, "preferred": 5672, "protocol": "tcp", "primary": true },
+    { "name": "mgmt", "container": 15672, "preferred": 15672, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/var/lib/rabbitmq", "purgeable": true },
+    { "name": "logs", "container": "/var/log/rabbitmq", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "DEFAULT_USER", "type": "string", "default": "admin" },
+    { "key": "DEFAULT_PASS", "type": "secret", "default": "admin" }
+  ],
+  "connection": {
+    "scheme": "amqp",
+    "port": "main",
+    "userSetting": "DEFAULT_USER",
+    "defaultUser": "guest",
+    "passwordSetting": "DEFAULT_PASS"
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "cdafd63b1cf19a2b7345201977c2a74026d80039c828918861bc9dccca1cf921" },
+  "support": { "status": "supported" }
+}

@@ -1,0 +1,30 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "meilisearch",
+  "version": "v1.53",
+  "image": {
+    "repository": "getmeili/meilisearch",
+    "tag": "v1.53"
+  },
+  "capabilities": ["search"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 7700, "preferred": 7700, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/meili_data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "MASTER_KEY", "type": "secret", "default": "stackvo-master-key" }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": { "subdomain": "meilisearch", "port": "main" },
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "cacb9b4efe036ff7166df14d18535742dd248a8269c3c612c8e5da30525e0068" },
+  "support": { "status": "supported" }
+}

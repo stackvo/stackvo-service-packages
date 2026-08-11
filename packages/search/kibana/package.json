@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "kibana",
+  "category": "search",
+  "name": { "en": "Kibana" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "8.11.3",
+  "legacyEnvPrefix": "SERVICE_KIBANA_"
+}

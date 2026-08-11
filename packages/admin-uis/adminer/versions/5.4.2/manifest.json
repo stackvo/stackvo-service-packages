@@ -1,0 +1,29 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "adminer",
+  "version": "5.4.2",
+  "image": {
+    "repository": "adminer",
+    "tag": "5.4.2"
+  },
+  "capabilities": ["admin-ui"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 8080, "preferred": 8082, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "DEFAULT_SERVER", "type": "string", "default": "stackvo-mysql" },
+    { "key": "DESIGN", "type": "string", "default": "pepa-linha" }
+  ],
+  "connection": null,
+  "url": { "subdomain": "adminer", "port": "main" },
+  "dependsOn": [
+    { "capability": "sql", "required": false }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "95bb923ccc239db878fbda73dcfad5e533a5b8f4400f8a5f09cbc1083eb42610" },
+  "support": { "status": "supported" }
+}

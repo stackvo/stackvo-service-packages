@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "memcached",
+  "category": "cache",
+  "name": { "en": "Memcached" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "1.6",
+  "legacyEnvPrefix": "SERVICE_MEMCACHED_"
+}

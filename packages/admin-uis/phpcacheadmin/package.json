@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "phpcacheadmin",
+  "category": "admin-uis",
+  "name": { "en": "phpCacheAdmin" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2.6.0",
+  "legacyEnvPrefix": "SERVICE_PHPCACHEADMIN_"
+}

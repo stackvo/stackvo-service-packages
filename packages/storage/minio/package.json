@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "minio",
+  "category": "storage",
+  "name": { "en": "MinIO" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "RELEASE.2025-09-07T16-13-09Z",
+  "legacyEnvPrefix": "SERVICE_MINIO_"
+}

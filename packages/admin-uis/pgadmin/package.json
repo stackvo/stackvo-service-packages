@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "pgadmin",
+  "category": "admin-uis",
+  "name": { "en": "pgAdmin" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "9.17",
+  "legacyEnvPrefix": "SERVICE_PGADMIN_"
+}

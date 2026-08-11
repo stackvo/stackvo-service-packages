@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mailpit",
+  "category": "devtools",
+  "name": { "en": "Mailpit" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "v1.30",
+  "legacyEnvPrefix": "SERVICE_MAILPIT_"
+}

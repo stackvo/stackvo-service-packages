@@ -1,0 +1,23 @@
+image: "{{ image }}"
+container_name: "{{ instance.container }}"
+restart: unless-stopped
+
+environment:
+  GF_SECURITY_ADMIN_USER: "{{ settings.ADMIN_USER }}"
+  GF_SECURITY_ADMIN_PASSWORD: "{{ settings.ADMIN_PASSWORD }}"
+  GF_INSTALL_PLUGINS: ""
+  GF_SERVER_ROOT_URL: "http://grafana.stackvo.{{ settings.DEFAULT_TLD_SUFFIX }}"
+
+volumes:
+  - "{{ volume.data }}:/var/lib/grafana"
+  - "{{ volume.config }}:/etc/grafana"
+  - "{{ instance.logs }}:/var/log/grafana"
+
+ports:
+  - "{{ port.main }}:3000"
+
+networks:
+  {{ network }}:
+    aliases: {{ instance.aliases }}
+
+user: "{{ settings.HOST_UID }}"
