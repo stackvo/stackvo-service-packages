@@ -9,7 +9,7 @@
   "capabilities": ["sql", "postgres-protocol"],
   "instancing": { "multiple": true, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 5432, "preferred": 5432, "protocol": "tcp", "primary": true }
+    { "name": "main", "container": 5432, "preferred": 5432, "protocol": "tcp", "legacyKey": "SERVICE_POSTGRES_HOST_PORT", "primary": true }
   ],
   "volumes": [
     { "name": "data", "container": "/var/lib/postgresql/data/pgdata", "purgeable": true }
@@ -34,5 +34,5 @@
   "url": null,
   "dependsOn": [],
   "compose": { "file": "compose.yml.tpl", "sha256": "0c48fa656e4c1a010f48fb1b0367470b3afa5c3a685c69af6c7a8b28a7cab932" },
-  "support": { "status": "supported" }
+  "support": {"eolDate":"2025-11-13","source":"https://endoflife.date/api/postgresql.json","status":"eol"}
 }

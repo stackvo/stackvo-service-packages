@@ -9,7 +9,7 @@
   "capabilities": ["document-store"],
   "instancing": { "multiple": true, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 27017, "preferred": 27017, "protocol": "tcp", "primary": true }
+    { "name": "main", "container": 27017, "preferred": 27017, "protocol": "tcp", "legacyKey": "HOST_PORT_MONGO", "primary": true }
   ],
   "volumes": [
     { "name": "data", "container": "/data/db", "purgeable": true }
@@ -36,5 +36,5 @@
   "url": null,
   "dependsOn": [],
   "compose": { "file": "compose.yml.tpl", "sha256": "d4930066e01bd97c1c67113f65ece079254e2017158c2e2de3b5b64ae152a546" },
-  "support": { "status": "supported" }
+  "support": {"eolDate":"2029-10-31","source":"https://endoflife.date/api/mongodb.json","status":"supported"}
 }

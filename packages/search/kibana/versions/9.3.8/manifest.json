@@ -9,7 +9,7 @@
   "capabilities": ["dashboard"],
   "instancing": { "multiple": false, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 5601, "preferred": 5601, "protocol": "tcp", "primary": false }
+    { "name": "main", "container": 5601, "preferred": 5601, "protocol": "tcp", "legacyKey": "HOST_PORT_KIBANA", "primary": false }
   ],
   "volumes": [
     { "name": "data", "container": "/usr/share/kibana/data", "purgeable": true }
@@ -27,5 +27,5 @@
     { "capability": "search", "service": "elasticsearch", "required": true }
   ],
   "compose": { "file": "compose.yml.tpl", "sha256": "111d8287f3e98684943a23d0343b0d19ffa80eba76fd5599e9617c5fb3808491" },
-  "support": { "status": "supported" }
+  "support": {"status":"supported"}
 }

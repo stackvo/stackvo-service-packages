@@ -9,8 +9,8 @@
   "capabilities": ["wide-column"],
   "instancing": { "multiple": true, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 9042, "preferred": 9042, "protocol": "tcp", "primary": true },
-    { "name": "jmx", "container": 7199, "preferred": 7199, "protocol": "tcp", "primary": false }
+    { "name": "main", "container": 9042, "preferred": 9042, "protocol": "tcp", "legacyKey": "HOST_PORT_CASSANDRA", "primary": true },
+    { "name": "jmx", "container": 7199, "preferred": 7199, "protocol": "tcp", "legacyKey": "HOST_PORT_CASSANDRA_JMX", "primary": false }
   ],
   "volumes": [
     { "name": "data", "container": "/var/lib/cassandra", "purgeable": true }
@@ -32,5 +32,5 @@
   "url": null,
   "dependsOn": [],
   "compose": { "file": "compose.yml.tpl", "sha256": "d812b0c8716b7a12688e47fc3f80aa3ae39e3185135cff50b9a3d88ab0f72aee" },
-  "support": { "status": "supported" }
+  "support": {"eolDate":"2024-09-05","source":"https://endoflife.date/api/cassandra.json","status":"eol"}
 }

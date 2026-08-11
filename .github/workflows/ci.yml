@@ -1,0 +1,91 @@
+name: packages
+
+# Two jobs, split by whether they need the network.
+#
+# `gates` is the one that blocks: it reads only this tree and must be able to
+# run in a fresh clone with nothing installed, so it is what a pull request is
+# judged on. `world` asks whether the things these packages point at still exist
+# out there — a real question with an unreliable answer, and a gate that fails
+# because Docker Hub rate-limited a runner is a gate people learn to re-run
+# rather than read.
+#
+# Both are strict at release, which is the one moment the answers must be true
+# at once: see the `release` job's `--strict` flags.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly, because `support` and image tags go stale on the world's schedule
+    # rather than on this repository's. A Monday failure is a maintenance item,
+    # not a regression.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gates:
+    name: gates (no network)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # The schemas are vendored from stackvo/contracts. A copy that has drifted
+      # would let a package pass here and be refused by the client that matters,
+      # so the copy is checked before anything is checked against it.
+      - name: schemas match the contracts they were copied from
+        run: node tools/check-schema-sync.mjs
+
+      - name: manifests, hashes, cross-references
+        run: node tools/validate.mjs
+
+      - name: the index is the tree
+        run: node tools/build-registry.mjs --check
+
+      # Docker is on the runner, so this is both halves: `docker compose config`
+      # and the policy allowlist.
+      - name: every fragment is valid Compose and within policy
+        run: node tools/compose-check.mjs
+
+  world:
+    name: world (network, reports)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: every image tag still resolves
+        run: node tools/probe-tags.mjs
+
+      - name: every support status is still true
+        run: node tools/eol.mjs
+
+  release:
+    name: release (strict)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: [gates]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # At a release the network answers are not advisory. A package offering a
+      # tag that no longer exists fails as a pull error after somebody clicked
+      # Install, and a version that reads `supported` and is not is one the
+      # picker recommends and nobody patches.
+      - name: every image tag still resolves
+        run: node tools/probe-tags.mjs --strict
+
+      - name: every support status is still true
+        run: node tools/eol.mjs --strict

@@ -9,7 +9,7 @@
   "capabilities": ["sql", "mysql-protocol"],
   "instancing": { "multiple": true, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 3306, "preferred": 3306, "protocol": "tcp", "primary": true }
+    { "name": "main", "container": 3306, "preferred": 3306, "protocol": "tcp", "legacyKey": "HOST_PORT_MYSQL", "primary": true }
   ],
   "volumes": [
     { "name": "data", "container": "/var/lib/mysql", "purgeable": true }
@@ -32,5 +32,5 @@
   "url": null,
   "dependsOn": [],
   "compose": { "file": "compose.yml.tpl", "sha256": "8012ddfce6145da5b6d5512cfee2312fa5e10cbdd43c9db37e015c390bf3d8ad" },
-  "support": { "status": "supported" }
+  "support": {"eolDate":"2032-04-30","source":"https://endoflife.date/api/mysql.json","status":"supported"}
 }

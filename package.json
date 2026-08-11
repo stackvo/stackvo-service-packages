@@ -1,0 +1,19 @@
+{
+  "name": "stackvo-service-packages",
+  "private": true,
+  "type": "module",
+  "description": "The service catalogue StackVo installs from. Data, not code.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node tools/check-schema-sync.mjs && node tools/validate.mjs && node tools/build-registry.mjs --check && node tools/compose-check.mjs",
+    "registry": "node tools/build-registry.mjs",
+    "validate": "node tools/validate.mjs",
+    "compose": "node tools/compose-check.mjs",
+    "tags": "node tools/probe-tags.mjs",
+    "eol": "node tools/eol.mjs",
+    "sync-schema": "node tools/check-schema-sync.mjs --update"
+  }
+}

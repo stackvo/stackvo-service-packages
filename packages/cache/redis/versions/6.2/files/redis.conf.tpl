@@ -28,7 +28,7 @@ loglevel notice
 logfile ""
 
 # Security (optional, enable if needed)
-# requirepass {{ REDIS_PASSWORD }}
+# requirepass {{ settings.REDIS_PASSWORD }}
 
 # Enable notifications
 notify-keyspace-events Ex

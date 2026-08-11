@@ -9,7 +9,7 @@
   "capabilities": ["cache", "redis-protocol"],
   "instancing": { "multiple": true, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 6379, "preferred": 6381, "protocol": "tcp", "primary": true }
+    { "name": "main", "container": 6379, "preferred": 6381, "protocol": "tcp", "legacyKey": "SERVICE_VALKEY_HOST_PORT", "primary": true }
   ],
   "volumes": [
     { "name": "data", "container": "/data", "purgeable": true }
@@ -26,5 +26,5 @@
   "url": null,
   "dependsOn": [],
   "compose": { "file": "compose.yml.tpl", "sha256": "707140c4cee371dfd21c2ddeed44448e82fa3ea479579b90b7ccc4a43f6dcc70" },
-  "support": { "status": "supported" }
+  "support": {"status":"supported"}
 }

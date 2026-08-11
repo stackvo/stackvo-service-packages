@@ -11,8 +11,8 @@ network.host: 0.0.0.0
 http.port: 9200
 
 # Disable xpack features unless enabled in .env
-xpack.security.enabled: "{{ ELASTIC_SECURITY | default('false') }}"
-xpack.security.transport.ssl.enabled: "{{ ELASTIC_SSL | default('false') }}"
+xpack.security.enabled: "{{ settings.ELASTIC_SECURITY }}"
+xpack.security.transport.ssl.enabled: "{{ settings.ELASTIC_SSL }}"
 
 # Improve performance for dev/local
 indices.memory.index_buffer_size: 20%

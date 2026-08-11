@@ -9,7 +9,7 @@
   "capabilities": ["admin-ui"],
   "instancing": { "multiple": false, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 8081, "preferred": 8083, "protocol": "tcp", "primary": false }
+    { "name": "main", "container": 8081, "preferred": 8083, "protocol": "tcp", "legacyKey": "SERVICE_MONGO_EXPRESS_HOST_PORT", "primary": false }
   ],
   "volumes": [
   ],
@@ -30,5 +30,5 @@
     { "capability": "document-store", "service": "mongo", "required": true }
   ],
   "compose": { "file": "compose.yml.tpl", "sha256": "4c327878cd46ace56cac397c2b0901ade47566d7dd454537370eef35050218dc" },
-  "support": { "status": "supported" }
+  "support": {"status":"supported"}
 }
