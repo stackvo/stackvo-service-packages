@@ -1,0 +1,38 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "postgres",
+  "version": "15",
+  "image": {
+    "repository": "postgres",
+    "tag": "15"
+  },
+  "capabilities": ["sql", "postgres-protocol"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 5432, "preferred": 5432, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/var/lib/postgresql/data/pgdata", "purgeable": true }
+  ],
+  "files": [
+    { "name": "postgres_conf", "template": "files/postgres.conf.tpl", "target": "/etc/postgresql/postgresql.conf", "mode": "0444", "sha256": "935ce7490991dae377d68d67735ca2dc937a3f62412235a2e6d4eb5fd3be7bdb" }
+  ],
+  "settings": [
+    { "key": "DB", "type": "string", "default": "stackvo" },
+    { "key": "USER", "type": "string", "default": "stackvo" },
+    { "key": "PASSWORD", "type": "secret", "default": "stackvo" }
+  ],
+  "connection": {
+    "scheme": "postgresql",
+    "port": "main",
+    "userSetting": "USER",
+    "defaultUser": "postgres",
+    "passwordSetting": "PASSWORD",
+    "databaseSetting": "DB",
+    "defaultDatabase": "stackvo"
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "0c48fa656e4c1a010f48fb1b0367470b3afa5c3a685c69af6c7a8b28a7cab932" },
+  "support": { "status": "supported" }
+}

@@ -1,0 +1,30 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "typesense",
+  "version": "27.1",
+  "image": {
+    "repository": "typesense/typesense",
+    "tag": "27.1"
+  },
+  "capabilities": ["search"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 8108, "preferred": 8108, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "API_KEY", "type": "secret", "default": "stackvo-api-key" }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": { "subdomain": "typesense", "port": "main" },
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "8fd33b1b17d2c26213765f0cfd7cfcdc11e749ab083908d224f6f29eae64187b" },
+  "support": { "status": "supported" }
+}

@@ -1,0 +1,31 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "kibana",
+  "version": "7.17.28",
+  "image": {
+    "repository": "kibana",
+    "tag": "7.17.28"
+  },
+  "capabilities": ["dashboard"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 5601, "preferred": 5601, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/usr/share/kibana/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "ELASTICSEARCH_HOSTS", "type": "string", "default": "http://stackvo-elasticsearch:9200" },
+    { "key": "SERVER_NAME", "type": "string", "default": "stackvo-kibana" },
+    { "key": "SERVER_HOST", "type": "string", "default": "0.0.0.0" }
+  ],
+  "connection": null,
+  "url": null,
+  "dependsOn": [
+    { "capability": "search", "service": "elasticsearch", "required": true }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "111d8287f3e98684943a23d0343b0d19ffa80eba76fd5599e9617c5fb3808491" },
+  "support": { "status": "supported" }
+}

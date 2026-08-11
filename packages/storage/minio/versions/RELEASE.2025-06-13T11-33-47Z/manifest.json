@@ -1,0 +1,33 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "minio",
+  "version": "RELEASE.2025-06-13T11-33-47Z",
+  "image": {
+    "repository": "minio/minio",
+    "tag": "RELEASE.2025-06-13T11-33-47Z"
+  },
+  "capabilities": ["object-store", "s3"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 9000, "preferred": 9000, "protocol": "tcp", "primary": true },
+    { "name": "console", "container": 9001, "preferred": 9001, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "ROOT_USER", "type": "string", "default": "minioadmin" },
+    { "key": "ROOT_PASSWORD", "type": "secret", "default": "minioadmin" },
+    { "key": "REGION", "type": "string", "default": "us-east-1" }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": { "subdomain": "minio", "port": "console" },
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "e6b9f7d4142d1918f38be601ddc61981d598889755c1650d4d259260110341f9" },
+  "support": { "status": "supported" }
+}

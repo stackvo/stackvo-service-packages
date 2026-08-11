@@ -1,0 +1,30 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mailpit",
+  "version": "v1.30",
+  "image": {
+    "repository": "axllent/mailpit",
+    "tag": "v1.30"
+  },
+  "capabilities": ["smtp", "mail-catcher"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "smtp", "container": 1025, "preferred": 1025, "protocol": "tcp", "primary": true },
+    { "name": "ui", "container": 8025, "preferred": 8025, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+  ],
+  "connection": {
+    "scheme": "smtp",
+    "port": "smtp"
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "928648f69dde7e196aaa7b232352849ff91d4eebc65a4ac5dfc00be723f0655f" },
+  "support": { "status": "supported" }
+}

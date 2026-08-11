@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "adminer",
+  "category": "admin-uis",
+  "name": { "en": "Adminer" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "5.5.1",
+  "legacyEnvPrefix": "SERVICE_ADMINER_"
+}

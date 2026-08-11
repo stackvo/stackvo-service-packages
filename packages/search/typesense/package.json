@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "typesense",
+  "category": "search",
+  "name": { "en": "Typesense" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "27.1",
+  "legacyEnvPrefix": "SERVICE_TYPESENSE_"
+}

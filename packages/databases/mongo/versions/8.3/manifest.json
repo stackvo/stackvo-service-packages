@@ -1,0 +1,40 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mongo",
+  "version": "8.3",
+  "image": {
+    "repository": "mongo",
+    "tag": "8.3"
+  },
+  "capabilities": ["document-store"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 27017, "preferred": 27017, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/data/db", "purgeable": true }
+  ],
+  "files": [
+    { "name": "mongo_conf", "template": "files/mongo.conf.tpl", "target": "/etc/mongo/mongo.conf", "mode": "0444", "sha256": "4bd8c31de3a645242304143e9a7f5c0b7919654ec241fb55fb23adeb8edd385c" }
+  ],
+  "settings": [
+    { "key": "INITDB_ROOT_USERNAME", "type": "string", "default": "root" },
+    { "key": "INITDB_ROOT_PASSWORD", "type": "secret", "default": "root" },
+    { "key": "REPLSET", "type": "string", "default": "rs0" },
+    { "key": "DATABASE", "type": "string", "default": "stackvo" }
+  ],
+  "connection": {
+    "scheme": "mongodb",
+    "port": "main",
+    "userSetting": "INITDB_ROOT_USERNAME",
+    "defaultUser": "root",
+    "passwordSetting": "INITDB_ROOT_PASSWORD",
+    "databaseSetting": "DATABASE",
+    "defaultDatabase": "stackvo",
+    "options": { "authSource": "admin" }
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "d4930066e01bd97c1c67113f65ece079254e2017158c2e2de3b5b64ae152a546" },
+  "support": { "status": "supported" }
+}

@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mariadb",
+  "category": "databases",
+  "name": { "en": "MariaDB" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "10.6",
+  "legacyEnvPrefix": "SERVICE_MARIADB_"
+}

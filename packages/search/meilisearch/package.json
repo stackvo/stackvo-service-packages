@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "meilisearch",
+  "category": "search",
+  "name": { "en": "Meilisearch" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "v1.11",
+  "legacyEnvPrefix": "SERVICE_MEILISEARCH_"
+}

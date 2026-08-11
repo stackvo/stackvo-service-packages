@@ -1,0 +1,30 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "valkey",
+  "version": "8.1",
+  "image": {
+    "repository": "valkey/valkey",
+    "tag": "8.1"
+  },
+  "capabilities": ["cache", "redis-protocol"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 6379, "preferred": 6381, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/data", "purgeable": true }
+  ],
+  "files": [
+    { "name": "valkey_conf", "template": "files/valkey.conf.tpl", "target": "/etc/valkey/valkey.conf", "mode": "0444", "sha256": "231964d937c57cd69ed2105fca6873a44845e5a1f2602c87c703f72939bfe8ab" }
+  ],
+  "settings": [
+  ],
+  "connection": {
+    "scheme": "redis",
+    "port": "main"
+  },
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "707140c4cee371dfd21c2ddeed44448e82fa3ea479579b90b7ccc4a43f6dcc70" },
+  "support": { "status": "supported" }
+}

@@ -1,0 +1,32 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "pgadmin",
+  "version": "8.14",
+  "image": {
+    "repository": "dpage/pgadmin4",
+    "tag": "8.14"
+  },
+  "capabilities": ["admin-ui"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 80, "preferred": 5050, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/var/lib/pgadmin", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "DEFAULT_EMAIL", "type": "string", "default": "admin@stackvo.loc" },
+    { "key": "DEFAULT_PASSWORD", "type": "secret", "default": "admin" },
+    { "key": "SERVER_MODE", "type": "string", "default": "False" },
+    { "key": "MASTER_PASSWORD_REQUIRED", "type": "string", "default": "False" }
+  ],
+  "connection": null,
+  "url": { "subdomain": "pgadmin", "port": "main" },
+  "dependsOn": [
+    { "capability": "postgres-protocol", "required": false }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "023b427c2d95f9b4c9ff7bdbb541d1678c667f379fe76471f82ebc04164157d7" },
+  "support": { "status": "supported" }
+}

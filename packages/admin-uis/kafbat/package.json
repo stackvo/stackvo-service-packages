@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "kafbat",
+  "category": "admin-uis",
+  "name": { "en": "Kafbat UI" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "v1.5.0",
+  "legacyEnvPrefix": "SERVICE_KAFBAT_"
+}

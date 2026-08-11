@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mongo",
+  "category": "databases",
+  "name": { "en": "MongoDB" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "8.0",
+  "legacyEnvPrefix": "SERVICE_MONGO_"
+}

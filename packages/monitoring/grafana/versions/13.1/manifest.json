@@ -1,0 +1,31 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "grafana",
+  "version": "13.1",
+  "image": {
+    "repository": "grafana/grafana",
+    "tag": "13.1"
+  },
+  "capabilities": ["dashboard"],
+  "instancing": { "multiple": false, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 3000, "preferred": 3001, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/var/lib/grafana", "purgeable": true },
+    { "name": "config", "container": "/etc/grafana", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "ADMIN_USER", "type": "string", "default": "admin" },
+    { "key": "ADMIN_PASSWORD", "type": "secret", "default": "admin" },
+    { "key": "DEFAULT_TLD_SUFFIX", "type": "string", "default": "loc" },
+    { "key": "HOST_UID", "type": "string", "default": "472" }
+  ],
+  "connection": null,
+  "url": null,
+  "dependsOn": [],
+  "compose": { "file": "compose.yml.tpl", "sha256": "f2ee2c31f639f36f42bf9791db563e93a259ee03813bcd4af2e9cdf036adc05b" },
+  "support": { "status": "supported" }
+}

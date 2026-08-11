@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mongo-express",
+  "category": "admin-uis",
+  "name": { "en": "Mongo Express" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "1.0.2",
+  "legacyEnvPrefix": "SERVICE_MONGO_EXPRESS_"
+}
