@@ -9,7 +9,7 @@
   "capabilities": ["cache"],
   "instancing": { "multiple": true, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 11211, "preferred": 11211, "protocol": "tcp", "primary": true }
+    { "name": "main", "container": 11211, "preferred": 11211, "protocol": "tcp", "legacyKey": "HOST_PORT_MEMCACHED", "primary": true }
   ],
   "volumes": [
   ],
@@ -28,5 +28,5 @@
   "url": null,
   "dependsOn": [],
   "compose": { "file": "compose.yml.tpl", "sha256": "3439aa75c8ccffdc0cb00673f1b0a4e9bdc137994df26b78bc03b0723a1955fb" },
-  "support": { "status": "supported" }
+  "support": {"status":"supported"}
 }

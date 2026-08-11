@@ -9,7 +9,7 @@
   "capabilities": ["admin-ui"],
   "instancing": { "multiple": false, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 80, "preferred": 8084, "protocol": "tcp", "primary": false }
+    { "name": "main", "container": 80, "preferred": 8084, "protocol": "tcp", "legacyKey": "SERVICE_PHPCACHEADMIN_HOST_PORT", "primary": false }
   ],
   "volumes": [
     { "name": "data", "container": "/var/www/html/data", "purgeable": true }
@@ -30,5 +30,5 @@
     { "capability": "cache", "required": false }
   ],
   "compose": { "file": "compose.yml.tpl", "sha256": "2f583e27b1309c36a4ff7858cb0b190b66721eecf766c48e6e1d21cd8e66ad3f" },
-  "support": { "status": "supported" }
+  "support": {"status":"supported"}
 }

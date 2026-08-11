@@ -1,0 +1,1194 @@
+{
+  "schemaVersion": 1,
+  "sequence": 5,
+  "generatedAt": "2026-08-11T13:57:16.552Z",
+  "packages": [
+    {
+      "service": "adminer",
+      "category": "admin-uis",
+      "name": {
+        "en": "Adminer"
+      },
+      "legacyEnvPrefix": "SERVICE_ADMINER_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "4.8.1",
+          "path": "packages/admin-uis/adminer/versions/4.8.1",
+          "manifestSha256": "be32ff48c84c3d27f0b5e97f0aa45536e53c4e87ac6f0c8522ff4b02cf0154d0",
+          "sizeBytes": 1591,
+          "support": "supported"
+        },
+        {
+          "version": "5.4.2",
+          "path": "packages/admin-uis/adminer/versions/5.4.2",
+          "manifestSha256": "1d1881926ae0471cca041eb9da821933f47a7ade3bfe6e0f4b7e3a52d8c63917",
+          "sizeBytes": 1591,
+          "support": "supported"
+        },
+        {
+          "version": "5.5.1",
+          "path": "packages/admin-uis/adminer/versions/5.5.1",
+          "manifestSha256": "50f75435a33e7d7cdd600c564de2475f42593c1df9f5c2ecf9686767d7845ce3",
+          "sizeBytes": 1591,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "kafbat",
+      "category": "admin-uis",
+      "name": {
+        "en": "Kafbat UI"
+      },
+      "legacyEnvPrefix": "SERVICE_KAFBAT_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "v1.3.0",
+          "path": "packages/admin-uis/kafbat/versions/v1.3.0",
+          "manifestSha256": "2b6b949836581bc591e612b25078a602ae2367e7455ad865f62d1df7bebefea0",
+          "sizeBytes": 1790,
+          "support": "supported"
+        },
+        {
+          "version": "v1.4.2",
+          "path": "packages/admin-uis/kafbat/versions/v1.4.2",
+          "manifestSha256": "7816ca5519364b431474d0d08061b0e0096dab824f25660b047dae6170a2c728",
+          "sizeBytes": 1790,
+          "support": "supported"
+        },
+        {
+          "version": "v1.5.0",
+          "path": "packages/admin-uis/kafbat/versions/v1.5.0",
+          "manifestSha256": "9b969577f4cdb0671fe7e73479b6df23d0a719f219cd560cda2fe230111c4dbb",
+          "sizeBytes": 1790,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "mongo-express",
+      "category": "admin-uis",
+      "name": {
+        "en": "Mongo Express"
+      },
+      "legacyEnvPrefix": "SERVICE_MONGO_EXPRESS_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "0.54",
+          "path": "packages/admin-uis/mongo-express/versions/0.54",
+          "manifestSha256": "477dd706153f79d67022b163e3125cfc7b84d9fcfd88b37ad954636a0947317f",
+          "sizeBytes": 2337,
+          "support": "supported"
+        },
+        {
+          "version": "1.0",
+          "path": "packages/admin-uis/mongo-express/versions/1.0",
+          "manifestSha256": "c6c9a1badb66e699db4fd9c5ebc061c24dfdb061bab226f116766de3c905523f",
+          "sizeBytes": 2335,
+          "support": "supported"
+        },
+        {
+          "version": "1.0.2",
+          "path": "packages/admin-uis/mongo-express/versions/1.0.2",
+          "manifestSha256": "79ebf4479a76ac0d934b8f1c2d1dac9a8521dd79fc3e9d840dc2db04db6dcf2d",
+          "sizeBytes": 2339,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "pgadmin",
+      "category": "admin-uis",
+      "name": {
+        "en": "pgAdmin"
+      },
+      "legacyEnvPrefix": "SERVICE_PGADMIN_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "8.14",
+          "path": "packages/admin-uis/pgadmin/versions/8.14",
+          "manifestSha256": "26564c9751701f5a428586b90ea195540cceef3254efef606631aa261c9005c8",
+          "sizeBytes": 2039,
+          "support": "supported"
+        },
+        {
+          "version": "9.16",
+          "path": "packages/admin-uis/pgadmin/versions/9.16",
+          "manifestSha256": "1be83a5fab0191b6942a233c393ce828299f57e7581538dd18014e35b3dd7338",
+          "sizeBytes": 2039,
+          "support": "supported"
+        },
+        {
+          "version": "9.17",
+          "path": "packages/admin-uis/pgadmin/versions/9.17",
+          "manifestSha256": "b3e3e358a8b39f84cae1a66a52c65f9071c5c7b64897abbcd8b2395b5a65a32b",
+          "sizeBytes": 2039,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "phpcacheadmin",
+      "category": "admin-uis",
+      "name": {
+        "en": "phpCacheAdmin"
+      },
+      "legacyEnvPrefix": "SERVICE_PHPCACHEADMIN_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "2.5.2",
+          "path": "packages/admin-uis/phpcacheadmin/versions/2.5.2",
+          "manifestSha256": "e237e30d6eed02adee71beffb85b2d01c439cb32ab5a63319df9aaae6268bf2f",
+          "sizeBytes": 2516,
+          "support": "supported"
+        },
+        {
+          "version": "2.6.0",
+          "path": "packages/admin-uis/phpcacheadmin/versions/2.6.0",
+          "manifestSha256": "b69c962b8ea5dcddc5bebd8c3a5bddcd47990ad1873257023aff6eb97218e0e1",
+          "sizeBytes": 2516,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "phpmyadmin",
+      "category": "admin-uis",
+      "name": {
+        "en": "phpMyAdmin"
+      },
+      "legacyEnvPrefix": "SERVICE_PHPMYADMIN_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "5.0",
+          "path": "packages/admin-uis/phpmyadmin/versions/5.0",
+          "manifestSha256": "6fec6bf6ef43ce8ab74a708906af8f54cd4b7ff899c10867ac473a43282a4060",
+          "sizeBytes": 1777,
+          "support": "supported"
+        },
+        {
+          "version": "5.1",
+          "path": "packages/admin-uis/phpmyadmin/versions/5.1",
+          "manifestSha256": "9d3577e197e2904b3e125ee5abfa1fb471915e1073e260d766b252d5072dfc46",
+          "sizeBytes": 1777,
+          "support": "supported"
+        },
+        {
+          "version": "5.2",
+          "path": "packages/admin-uis/phpmyadmin/versions/5.2",
+          "manifestSha256": "28a2166cb68525db1f0c48845dc2c0a4531f54db500795fee20977101542303d",
+          "sizeBytes": 1777,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "memcached",
+      "category": "cache",
+      "name": {
+        "en": "Memcached"
+      },
+      "legacyEnvPrefix": "SERVICE_MEMCACHED_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "cache"
+      ],
+      "versions": [
+        {
+          "version": "1.4",
+          "path": "packages/cache/memcached/versions/1.4",
+          "manifestSha256": "75b2f3033ddd5bbb4906352d0a1d88ce150f698a95c4f3fe4b5cdb06d802c7d4",
+          "sizeBytes": 1422,
+          "support": "eol",
+          "eolDate": "2017-07-21"
+        },
+        {
+          "version": "1.5",
+          "path": "packages/cache/memcached/versions/1.5",
+          "manifestSha256": "75f96e2e8c76f118ae3f781442d466cfa46d6f63eb225cc0c39ead0f9e69a045",
+          "sizeBytes": 1422,
+          "support": "eol",
+          "eolDate": "2020-03-09"
+        },
+        {
+          "version": "1.6",
+          "path": "packages/cache/memcached/versions/1.6",
+          "manifestSha256": "ce75e84d50f9f30b6414d2722811007ee3eee3b03a352b3d06635cdd0681d564",
+          "sizeBytes": 1352,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "redis",
+      "category": "cache",
+      "name": {
+        "en": "Redis"
+      },
+      "legacyEnvPrefix": "SERVICE_REDIS_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "cache",
+        "redis-protocol"
+      ],
+      "versions": [
+        {
+          "version": "6.2",
+          "path": "packages/cache/redis/versions/6.2",
+          "manifestSha256": "52db4561bce4916f58352b86a78962413138d97111d207974e286db3cb703207",
+          "sizeBytes": 2058,
+          "support": "supported",
+          "eolDate": "2027-04-01"
+        },
+        {
+          "version": "7.0",
+          "path": "packages/cache/redis/versions/7.0",
+          "manifestSha256": "cbfe359d6ee2f33f728e983e27bb0e8b6045b6ebbf718b5e673f8b12fa579c5c",
+          "sizeBytes": 2052,
+          "support": "eol",
+          "recommended": true,
+          "eolDate": "2024-07-29"
+        },
+        {
+          "version": "7.2",
+          "path": "packages/cache/redis/versions/7.2",
+          "manifestSha256": "dfef4c6da71bfc04e4f7291f404e274098374c4427008cd7f86dca801f78b8f1",
+          "sizeBytes": 2058,
+          "support": "supported",
+          "eolDate": "2029-12-01"
+        },
+        {
+          "version": "7.4",
+          "path": "packages/cache/redis/versions/7.4",
+          "manifestSha256": "2565cc81ca81bb112216f55bd6aba28a8fb4825a3b93d09d35f36a73f38527fb",
+          "sizeBytes": 2058,
+          "support": "supported",
+          "eolDate": "2029-12-01"
+        },
+        {
+          "version": "8.10",
+          "path": "packages/cache/redis/versions/8.10",
+          "manifestSha256": "2b0dab377823fafe16e6cdc8e1ab79a8a702f3c058e276f77e5e8f8f9d7e3618",
+          "sizeBytes": 1988,
+          "support": "supported"
+        },
+        {
+          "version": "8.2",
+          "path": "packages/cache/redis/versions/8.2",
+          "manifestSha256": "9d000f83767ab727c4a6e21b70d73ed774714ed60bbd2372071be5bda845854a",
+          "sizeBytes": 2058,
+          "support": "supported",
+          "eolDate": "2030-09-01"
+        }
+      ]
+    },
+    {
+      "service": "valkey",
+      "category": "cache",
+      "name": {
+        "en": "Valkey"
+      },
+      "legacyEnvPrefix": "SERVICE_VALKEY_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "cache",
+        "redis-protocol"
+      ],
+      "versions": [
+        {
+          "version": "7.2",
+          "path": "packages/cache/valkey/versions/7.2",
+          "manifestSha256": "d9383d3655139262ecb96d9f9779956fed0746a87c36d9575a19d61b502e8a88",
+          "sizeBytes": 2159,
+          "support": "supported",
+          "eolDate": "2029-04-16"
+        },
+        {
+          "version": "8",
+          "path": "packages/cache/valkey/versions/8",
+          "manifestSha256": "bb8eabe5f3916c9d1fec19916f18c54cd34326a97c9b5a4b74f3313b58c74f81",
+          "sizeBytes": 2082,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "8.1",
+          "path": "packages/cache/valkey/versions/8.1",
+          "manifestSha256": "38659428a8998587230d991aa21880310a5011c7ad1b6c8cce457dce2b694f6a",
+          "sizeBytes": 2159,
+          "support": "supported",
+          "eolDate": "2030-03-31"
+        },
+        {
+          "version": "9.0",
+          "path": "packages/cache/valkey/versions/9.0",
+          "manifestSha256": "86cff037fd19cf1fbb0b01beff39ca6359ff839f4dd6396aa3dc939d0f1d6546",
+          "sizeBytes": 2159,
+          "support": "supported",
+          "eolDate": "2028-10-21"
+        },
+        {
+          "version": "9.1",
+          "path": "packages/cache/valkey/versions/9.1",
+          "manifestSha256": "ad70def3e74f0154c16ab8b1c14cb163290eaaec92233f4ddcd5b43b82401c5d",
+          "sizeBytes": 2086,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "cassandra",
+      "category": "databases",
+      "name": {
+        "en": "Apache Cassandra"
+      },
+      "legacyEnvPrefix": "SERVICE_CASSANDRA_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "wide-column"
+      ],
+      "versions": [
+        {
+          "version": "3.11",
+          "path": "packages/databases/cassandra/versions/3.11",
+          "manifestSha256": "682bd4508f473c0d7bf20a67573600a2e62d3255f2a1a803588ef42a54dea462",
+          "sizeBytes": 2162,
+          "support": "eol",
+          "eolDate": "2024-09-05"
+        },
+        {
+          "version": "4.0",
+          "path": "packages/databases/cassandra/versions/4.0",
+          "manifestSha256": "9d6e02ace16aeed7a8a694308f56337583810a6644c44889e7ed4efcd08d3c1e",
+          "sizeBytes": 2090,
+          "support": "supported"
+        },
+        {
+          "version": "4.1",
+          "path": "packages/databases/cassandra/versions/4.1",
+          "manifestSha256": "19352163f4f1e9c92e61a968a48628d84abb383c8236267522d934d85f23aa3c",
+          "sizeBytes": 2090,
+          "support": "supported"
+        },
+        {
+          "version": "5.0",
+          "path": "packages/databases/cassandra/versions/5.0",
+          "manifestSha256": "98fd77830b7a4477b235b4c73322d5c6e90017f8adcd85eee27ba42507f5cf24",
+          "sizeBytes": 2090,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "mariadb",
+      "category": "databases",
+      "name": {
+        "en": "MariaDB"
+      },
+      "legacyEnvPrefix": "SERVICE_MARIADB_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "mysql-protocol",
+        "sql"
+      ],
+      "versions": [
+        {
+          "version": "10.11",
+          "path": "packages/databases/mariadb/versions/10.11",
+          "manifestSha256": "a8ed4d7a2b6e6bdaf6a00b4bd5e724839d75915b08536f87da67debfd48d0f03",
+          "sizeBytes": 2680,
+          "support": "supported",
+          "eolDate": "2028-02-16"
+        },
+        {
+          "version": "10.5",
+          "path": "packages/databases/mariadb/versions/10.5",
+          "manifestSha256": "6dfb4ee72c4e9ccab0b5b496658fcd16601a06f14931f22aec3e66b1183f10cf",
+          "sizeBytes": 2672,
+          "support": "eol",
+          "eolDate": "2025-06-24"
+        },
+        {
+          "version": "10.6",
+          "path": "packages/databases/mariadb/versions/10.6",
+          "manifestSha256": "5463a71eb9f7e10311e3fd5c247fdf88bdf8f70a2ce55ee81e07701b818d08cd",
+          "sizeBytes": 2672,
+          "support": "eol",
+          "recommended": true,
+          "eolDate": "2026-07-06"
+        },
+        {
+          "version": "11.4",
+          "path": "packages/databases/mariadb/versions/11.4",
+          "manifestSha256": "46773f2c6e6c76a729d5b6309e91123393c06c27c9fdb9045f54eeb90876b10a",
+          "sizeBytes": 2678,
+          "support": "supported",
+          "eolDate": "2029-05-29"
+        },
+        {
+          "version": "11.8",
+          "path": "packages/databases/mariadb/versions/11.8",
+          "manifestSha256": "74d516660a2f7ab3125c414e96fe133fc69b17098d4e08153d83a56c546ee389",
+          "sizeBytes": 2678,
+          "support": "supported",
+          "eolDate": "2028-06-04"
+        },
+        {
+          "version": "12.3",
+          "path": "packages/databases/mariadb/versions/12.3",
+          "manifestSha256": "2b644c50820788ce5359546a34f8e4c406257818e94142f110396da625196454",
+          "sizeBytes": 2604,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "mongo",
+      "category": "databases",
+      "name": {
+        "en": "MongoDB"
+      },
+      "legacyEnvPrefix": "SERVICE_MONGO_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "document-store"
+      ],
+      "versions": [
+        {
+          "version": "5.0",
+          "path": "packages/databases/mongo/versions/5.0",
+          "manifestSha256": "16dd52bc31828aa072110eb6c193bcff4f5e879bd76ee31bf08ff310f4900699",
+          "sizeBytes": 4486,
+          "support": "eol",
+          "eolDate": "2024-10-31"
+        },
+        {
+          "version": "6.0",
+          "path": "packages/databases/mongo/versions/6.0",
+          "manifestSha256": "51eb1097126e7f3bbc20440d52079f7ab21ea04941d59e3d05145021db476576",
+          "sizeBytes": 4486,
+          "support": "eol",
+          "eolDate": "2025-07-31"
+        },
+        {
+          "version": "7.0",
+          "path": "packages/databases/mongo/versions/7.0",
+          "manifestSha256": "90c05e28b72c09971ae10a1a7cd84193aa3ecd973d93bd8a04d8dc23154223e9",
+          "sizeBytes": 4492,
+          "support": "supported",
+          "eolDate": "2027-08-31"
+        },
+        {
+          "version": "8.0",
+          "path": "packages/databases/mongo/versions/8.0",
+          "manifestSha256": "080cf10a49de546af4d80a860aaecb9743a83e3b2a8dfcbe50761e181704b7de",
+          "sizeBytes": 4492,
+          "support": "supported",
+          "recommended": true,
+          "eolDate": "2029-10-31"
+        },
+        {
+          "version": "8.2",
+          "path": "packages/databases/mongo/versions/8.2",
+          "manifestSha256": "0d33e609bcec37228b551e16f6166f26588710aeb3018b229ac1d6d525f3cc76",
+          "sizeBytes": 4486,
+          "support": "eol",
+          "eolDate": "2026-07-31"
+        },
+        {
+          "version": "8.3",
+          "path": "packages/databases/mongo/versions/8.3",
+          "manifestSha256": "fa6db68d84bc714d6535bffcc5032ba8bb29cf5ead11e0b71fe16e826cba2294",
+          "sizeBytes": 4492,
+          "support": "supported",
+          "eolDate": "2029-10-31"
+        }
+      ]
+    },
+    {
+      "service": "mysql",
+      "category": "databases",
+      "name": {
+        "en": "MySQL"
+      },
+      "legacyEnvPrefix": "SERVICE_MYSQL_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "mysql-protocol",
+        "sql"
+      ],
+      "versions": [
+        {
+          "version": "5.7",
+          "path": "packages/databases/mysql/versions/5.7",
+          "manifestSha256": "c8fd87fecd19082ef296897f002bc7b611da923840c68076aefdbfd425650803",
+          "sizeBytes": 2766,
+          "support": "eol",
+          "eolDate": "2023-10-31"
+        },
+        {
+          "version": "8.0",
+          "path": "packages/databases/mysql/versions/8.0",
+          "manifestSha256": "789ba1d5013a5b0d938bafcd2f350a0f986471c5da059f7f5ebf6f8d896095bb",
+          "sizeBytes": 2766,
+          "support": "eol",
+          "recommended": true,
+          "eolDate": "2026-04-30"
+        },
+        {
+          "version": "8.4",
+          "path": "packages/databases/mysql/versions/8.4",
+          "manifestSha256": "97daf1b1ef661c98fab710987ba3a9c2451698cf51bd58d98c651d9c6b6335c5",
+          "sizeBytes": 2772,
+          "support": "supported",
+          "eolDate": "2032-04-30"
+        },
+        {
+          "version": "9.4",
+          "path": "packages/databases/mysql/versions/9.4",
+          "manifestSha256": "e81978b89fa8fa7e885a1f288632f9466dcefd385d7a95516e35d42323b92698",
+          "sizeBytes": 3293,
+          "support": "eol",
+          "eolDate": "2025-10-21"
+        },
+        {
+          "version": "9.7",
+          "path": "packages/databases/mysql/versions/9.7",
+          "manifestSha256": "6188021679186c1614a88daf845b7aef2fc7d2219905c5f838a771beae2048f5",
+          "sizeBytes": 3299,
+          "support": "supported",
+          "eolDate": "2034-04-21"
+        }
+      ]
+    },
+    {
+      "service": "postgres",
+      "category": "databases",
+      "name": {
+        "en": "PostgreSQL"
+      },
+      "legacyEnvPrefix": "SERVICE_POSTGRES_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "postgres-protocol",
+        "sql"
+      ],
+      "versions": [
+        {
+          "version": "12",
+          "path": "packages/databases/postgres/versions/12",
+          "manifestSha256": "e31cd9d204d75692ed826e0db9aa3ba16178a374c1b74d375f8c60be1212240d",
+          "sizeBytes": 4399,
+          "support": "eol",
+          "eolDate": "2024-11-21"
+        },
+        {
+          "version": "13",
+          "path": "packages/databases/postgres/versions/13",
+          "manifestSha256": "c2fba6f21b15b91fe79da54f3f3b1d07929f301aadc88a8a06df346e421d7efc",
+          "sizeBytes": 4399,
+          "support": "eol",
+          "eolDate": "2025-11-13"
+        },
+        {
+          "version": "14",
+          "path": "packages/databases/postgres/versions/14",
+          "manifestSha256": "424aa71e02eb174808ca696f5c2a32a98aae6e49d71fc974b53f969dee21d44f",
+          "sizeBytes": 4405,
+          "support": "supported",
+          "recommended": true,
+          "eolDate": "2026-11-12"
+        },
+        {
+          "version": "15",
+          "path": "packages/databases/postgres/versions/15",
+          "manifestSha256": "1d8423ec19cdc0336256b2d7d9aa2aae07cbe1e635a8dc45090e708c013b7dfe",
+          "sizeBytes": 4405,
+          "support": "supported",
+          "eolDate": "2027-11-11"
+        },
+        {
+          "version": "16",
+          "path": "packages/databases/postgres/versions/16",
+          "manifestSha256": "6c416e333827dee989061c273ba69b837652582345c5d87825471a656918e6fd",
+          "sizeBytes": 4405,
+          "support": "supported",
+          "eolDate": "2028-11-09"
+        },
+        {
+          "version": "17",
+          "path": "packages/databases/postgres/versions/17",
+          "manifestSha256": "bbd33fb5b29c5d8a9acac0f83ee18f71585473feb98d1ce9cd8808c5510ff479",
+          "sizeBytes": 4405,
+          "support": "supported",
+          "eolDate": "2029-11-08"
+        },
+        {
+          "version": "18",
+          "path": "packages/databases/postgres/versions/18",
+          "manifestSha256": "3a8d23a31f452c8b1efcd81cde64034465c58db8ebe977298428351afa1390e6",
+          "sizeBytes": 4405,
+          "support": "supported",
+          "eolDate": "2030-11-14"
+        }
+      ]
+    },
+    {
+      "service": "blackfire",
+      "category": "devtools",
+      "name": {
+        "en": "Blackfire"
+      },
+      "legacyEnvPrefix": "SERVICE_BLACKFIRE_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "2",
+          "path": "packages/devtools/blackfire/versions/2",
+          "manifestSha256": "d3a757215208b31fb4f8bd00a26ba5cb6b8ec0fb910f63569610be625303a2a9",
+          "sizeBytes": 1281,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "2.30.3",
+          "path": "packages/devtools/blackfire/versions/2.30.3",
+          "manifestSha256": "7e24e72f1e7001a66bddeb986e4dc335f70b4c553daebc77463ff0f7cf5fd60a",
+          "sizeBytes": 1291,
+          "support": "supported"
+        },
+        {
+          "version": "2026.8.0",
+          "path": "packages/devtools/blackfire/versions/2026.8.0",
+          "manifestSha256": "b90b7f16967e52eaa716946c60d160509de14ac95feb659be073d6b27b972db2",
+          "sizeBytes": 1295,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "mailhog",
+      "category": "devtools",
+      "name": {
+        "en": "MailHog"
+      },
+      "legacyEnvPrefix": "SERVICE_MAILHOG_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "mail-catcher",
+        "smtp"
+      ],
+      "versions": [
+        {
+          "version": "v1.0.0",
+          "path": "packages/devtools/mailhog/versions/v1.0.0",
+          "manifestSha256": "515cc01cf0a98afd6b57d6e232b9827fe8d0a36130b514d3fc28681fdd76fccb",
+          "sizeBytes": 1142,
+          "support": "supported"
+        },
+        {
+          "version": "v1.0.1",
+          "path": "packages/devtools/mailhog/versions/v1.0.1",
+          "manifestSha256": "85e9b3042ed4fa7602b4ed7bce2e6168170cea23e5f3757e509764d87b9f3260",
+          "sizeBytes": 1142,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "mailpit",
+      "category": "devtools",
+      "name": {
+        "en": "Mailpit"
+      },
+      "legacyEnvPrefix": "SERVICE_MAILPIT_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "mail-catcher",
+        "smtp"
+      ],
+      "versions": [
+        {
+          "version": "v1.28",
+          "path": "packages/devtools/mailpit/versions/v1.28",
+          "manifestSha256": "59dcd060c4ecf306feb061959d2acdd63fe225b460dd2ece8334aaad0554e4b9",
+          "sizeBytes": 1238,
+          "support": "supported"
+        },
+        {
+          "version": "v1.29",
+          "path": "packages/devtools/mailpit/versions/v1.29",
+          "manifestSha256": "f354d949fe0e4c343f23fb2deffc6ce3b69637ae5ab1ab8760f74cd12066c6bf",
+          "sizeBytes": 1238,
+          "support": "supported"
+        },
+        {
+          "version": "v1.30",
+          "path": "packages/devtools/mailpit/versions/v1.30",
+          "manifestSha256": "617d8f759ac7f9a8c7140042d0f3f14c027452c7f913699d49436c3e874f4f15",
+          "sizeBytes": 1238,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "grafana",
+      "category": "monitoring",
+      "name": {
+        "en": "Grafana"
+      },
+      "legacyEnvPrefix": "SERVICE_GRAFANA_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "dashboard"
+      ],
+      "versions": [
+        {
+          "version": "10.4.19",
+          "path": "packages/monitoring/grafana/versions/10.4.19",
+          "manifestSha256": "bb0ed9230c171d99861c9da8d5707026e9e90055fea9e7c9212ed4a4ad26e5de",
+          "sizeBytes": 1767,
+          "support": "eol",
+          "eolDate": "2025-06-05"
+        },
+        {
+          "version": "11.6",
+          "path": "packages/monitoring/grafana/versions/11.6",
+          "manifestSha256": "cd6b205f855a132d83258141fd9950bab9247074ea2e9a1da9ef72dc80595d19",
+          "sizeBytes": 1761,
+          "support": "eol",
+          "eolDate": "2026-06-25"
+        },
+        {
+          "version": "12.4",
+          "path": "packages/monitoring/grafana/versions/12.4",
+          "manifestSha256": "e77f08d676d0138cb701ab62b9abcc925286852b96532ebb7f1aaeae82dc2812",
+          "sizeBytes": 1767,
+          "support": "supported",
+          "eolDate": "2027-05-24"
+        },
+        {
+          "version": "13.1",
+          "path": "packages/monitoring/grafana/versions/13.1",
+          "manifestSha256": "892f093582691dcf5bf8cdf4a09c4a991d091d34dd1641d7f24fab7946d41c9e",
+          "sizeBytes": 1767,
+          "support": "supported",
+          "recommended": true,
+          "eolDate": "2027-03-20"
+        }
+      ]
+    },
+    {
+      "service": "kafka",
+      "category": "queue",
+      "name": {
+        "en": "Apache Kafka"
+      },
+      "legacyEnvPrefix": "SERVICE_KAFKA_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "kafka-protocol",
+        "queue"
+      ],
+      "versions": [
+        {
+          "version": "6.2.15",
+          "path": "packages/queue/kafka/versions/6.2.15",
+          "manifestSha256": "ab36c90171801cacc97abd7ce86a664aa967c08b8e882d45f510790a6657d260",
+          "sizeBytes": 2398,
+          "support": "supported"
+        },
+        {
+          "version": "7.5.0",
+          "path": "packages/queue/kafka/versions/7.5.0",
+          "manifestSha256": "cb9052a3f5015e141d11ce5f2302feb8618f83291f8df2a1fe39347eefafcb83",
+          "sizeBytes": 2396,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "7.9.9",
+          "path": "packages/queue/kafka/versions/7.9.9",
+          "manifestSha256": "5a8cc14d19b300644000600943f34227dea497df541563523cf3a6bfd489e443",
+          "sizeBytes": 2396,
+          "support": "supported"
+        },
+        {
+          "version": "8.3.1",
+          "path": "packages/queue/kafka/versions/8.3.1",
+          "manifestSha256": "cf3e41f2261e7cccbc2404091e9c2b3c4bc7ffb5715fdec2ca3b06e916592dc8",
+          "sizeBytes": 2396,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "rabbitmq",
+      "category": "queue",
+      "name": {
+        "en": "RabbitMQ"
+      },
+      "legacyEnvPrefix": "SERVICE_RABBITMQ_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "amqp",
+        "queue"
+      ],
+      "versions": [
+        {
+          "version": "3",
+          "path": "packages/queue/rabbitmq/versions/3",
+          "manifestSha256": "430474e562607c9c913ed3b63e786c39596096d6bc72ff2f0cff42027b4d9477",
+          "sizeBytes": 1723,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "3.13",
+          "path": "packages/queue/rabbitmq/versions/3.13",
+          "manifestSha256": "55e72b1c3af3dfc666c8fb7600a0535f31c8d02f64bf6e85bc28363eeb185be1",
+          "sizeBytes": 1798,
+          "support": "eol",
+          "eolDate": "2024-09-17"
+        },
+        {
+          "version": "4",
+          "path": "packages/queue/rabbitmq/versions/4",
+          "manifestSha256": "0ddeda5890054a1680020e4709a2d643744add5e960cd7dd8a543095b986f3cc",
+          "sizeBytes": 1723,
+          "support": "supported"
+        },
+        {
+          "version": "4.2",
+          "path": "packages/queue/rabbitmq/versions/4.2",
+          "manifestSha256": "11b0b082f3ece92ebbdf741d2511cdde852c02843d793f2f302863091c0be0a2",
+          "sizeBytes": 1796,
+          "support": "eol",
+          "eolDate": "2026-07-31"
+        },
+        {
+          "version": "4.3",
+          "path": "packages/queue/rabbitmq/versions/4.3",
+          "manifestSha256": "9068833e769bb4ca6e04c9c8b947fb9f23bda19d62a231498116c31880c93830",
+          "sizeBytes": 1727,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "elasticsearch",
+      "category": "search",
+      "name": {
+        "en": "Elasticsearch"
+      },
+      "legacyEnvPrefix": "SERVICE_ELASTICSEARCH_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "elasticsearch-protocol",
+        "search"
+      ],
+      "versions": [
+        {
+          "version": "7.17.28",
+          "path": "packages/search/elasticsearch/versions/7.17.28",
+          "manifestSha256": "df9c8cbcf06485ee49b44d2c8a5cdd09e7d9c9c100aa630e2195102fb66cde35",
+          "sizeBytes": 2905,
+          "support": "eol",
+          "eolDate": "2026-01-15"
+        },
+        {
+          "version": "8.11.3",
+          "path": "packages/search/elasticsearch/versions/8.11.3",
+          "manifestSha256": "d99f719c526c3f7538b3cbc0026a01aeb765f1aee57888f3e64ab093ecf7e007",
+          "sizeBytes": 2829,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "8.19.19",
+          "path": "packages/search/elasticsearch/versions/8.19.19",
+          "manifestSha256": "78a65454d53285bc32fbdc43c9916ec2bd291b87dc695f68d3ca5d8f97e00965",
+          "sizeBytes": 2911,
+          "support": "supported",
+          "eolDate": "2027-07-15"
+        },
+        {
+          "version": "9.3.8",
+          "path": "packages/search/elasticsearch/versions/9.3.8",
+          "manifestSha256": "31deb874cabc86b96414b9ef5979cb7de2863aec3d590b5da8d8396d020b6e51",
+          "sizeBytes": 2827,
+          "support": "supported"
+        },
+        {
+          "version": "9.4.4",
+          "path": "packages/search/elasticsearch/versions/9.4.4",
+          "manifestSha256": "b82d95551ad1fee778beca55501b509f02539de6593fb7d220948fd477f42446",
+          "sizeBytes": 2827,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "kibana",
+      "category": "search",
+      "name": {
+        "en": "Kibana"
+      },
+      "legacyEnvPrefix": "SERVICE_KIBANA_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "dashboard"
+      ],
+      "versions": [
+        {
+          "version": "7.17.28",
+          "path": "packages/search/kibana/versions/7.17.28",
+          "manifestSha256": "cd022c72436609519fda63ae8c7b65db0ebff340586fee0bd947edcbefb70f3d",
+          "sizeBytes": 1751,
+          "support": "eol",
+          "eolDate": "2026-01-15"
+        },
+        {
+          "version": "8.11.3",
+          "path": "packages/search/kibana/versions/8.11.3",
+          "manifestSha256": "22da0566d33d72e3eab0ecff1668273692be36e2f52d08ed801337f9f8441bd0",
+          "sizeBytes": 1675,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "8.19.19",
+          "path": "packages/search/kibana/versions/8.19.19",
+          "manifestSha256": "7d194c54316746c3b71d6083102a4cb56a9e0fd94dfe3f31e5c1ccf6f8b4984a",
+          "sizeBytes": 1757,
+          "support": "supported",
+          "eolDate": "2027-07-15"
+        },
+        {
+          "version": "9.3.8",
+          "path": "packages/search/kibana/versions/9.3.8",
+          "manifestSha256": "a0aa45b0ee43e20e510059c6dad26babcb24ccecbcdfb822938cdb75959b3069",
+          "sizeBytes": 1673,
+          "support": "supported"
+        },
+        {
+          "version": "9.4.4",
+          "path": "packages/search/kibana/versions/9.4.4",
+          "manifestSha256": "c91bbedcebef3c871a5e0b086f9b49f72f853a405fe8fa8b05900d376f13909e",
+          "sizeBytes": 1673,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "meilisearch",
+      "category": "search",
+      "name": {
+        "en": "Meilisearch"
+      },
+      "legacyEnvPrefix": "SERVICE_MEILISEARCH_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "search"
+      ],
+      "versions": [
+        {
+          "version": "v1.11",
+          "path": "packages/search/meilisearch/versions/v1.11",
+          "manifestSha256": "8246ba1b371dbcc9014d515d107ee0adc97c3a1fe4b184dc6078adf0c1bd3064",
+          "sizeBytes": 1701,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "v1.52",
+          "path": "packages/search/meilisearch/versions/v1.52",
+          "manifestSha256": "2fd8c879e184e206dc64218db3a0d91bf2bf481f1e7f077dd2489831ba313191",
+          "sizeBytes": 1701,
+          "support": "supported"
+        },
+        {
+          "version": "v1.53",
+          "path": "packages/search/meilisearch/versions/v1.53",
+          "manifestSha256": "661e9c33296775ca643a7f3f469285154091796ff5f7c88c759d477d2ad0875f",
+          "sizeBytes": 1701,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "typesense",
+      "category": "search",
+      "name": {
+        "en": "Typesense"
+      },
+      "legacyEnvPrefix": "SERVICE_TYPESENSE_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "search"
+      ],
+      "versions": [
+        {
+          "version": "27.1",
+          "path": "packages/search/typesense/versions/27.1",
+          "manifestSha256": "10b48e6fcc9e3efd54566c6ed4ca47b1b2d5107c6aede3d79fec781ba2285074",
+          "sizeBytes": 1693,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "28.0",
+          "path": "packages/search/typesense/versions/28.0",
+          "manifestSha256": "b95a2bc24ae6524711b6bdfc044245bcf138544ff165e5768e4e76989c2e0719",
+          "sizeBytes": 1693,
+          "support": "supported"
+        },
+        {
+          "version": "29.1",
+          "path": "packages/search/typesense/versions/29.1",
+          "manifestSha256": "f14d7f3ba8ab030c983247ab0cc632fee0576fdee80d6ec1a663f8e449b844e2",
+          "sizeBytes": 1693,
+          "support": "supported"
+        },
+        {
+          "version": "30.2",
+          "path": "packages/search/typesense/versions/30.2",
+          "manifestSha256": "20c90fe02dbc53b2d102b2a0fafbac054566dff2486858cd25208510f035cf44",
+          "sizeBytes": 1693,
+          "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "minio",
+      "category": "storage",
+      "name": {
+        "en": "MinIO"
+      },
+      "legacyEnvPrefix": "SERVICE_MINIO_",
+      "instancing": {
+        "multiple": false
+      },
+      "capabilities": [
+        "object-store",
+        "s3"
+      ],
+      "versions": [
+        {
+          "version": "RELEASE.2025-04-22T22-12-26Z",
+          "path": "packages/storage/minio/versions/RELEASE.2025-04-22T22-12-26Z",
+          "manifestSha256": "de5426201d346a24d25507cc247e014687a0391714ccfed76e15957c3890cff6",
+          "sizeBytes": 2118,
+          "support": "supported"
+        },
+        {
+          "version": "RELEASE.2025-06-13T11-33-47Z",
+          "path": "packages/storage/minio/versions/RELEASE.2025-06-13T11-33-47Z",
+          "manifestSha256": "fde39b869274b05e6fbd5951bb356d1a3f7bd04a58a125056be577eea8696f66",
+          "sizeBytes": 2118,
+          "support": "supported"
+        },
+        {
+          "version": "RELEASE.2025-07-23T15-54-02Z",
+          "path": "packages/storage/minio/versions/RELEASE.2025-07-23T15-54-02Z",
+          "manifestSha256": "aa31af4e5b3a64d5e981cfdc6278d1fbd39c396535653f12c6da8ce93c20f519",
+          "sizeBytes": 2118,
+          "support": "supported"
+        },
+        {
+          "version": "RELEASE.2025-09-07T16-13-09Z",
+          "path": "packages/storage/minio/versions/RELEASE.2025-09-07T16-13-09Z",
+          "manifestSha256": "c5a96a6de6c298772a287fee92ef39d7d51f420d8ab3362c2fc9f79cfc5fb135",
+          "sizeBytes": 2118,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    }
+  ]
+}

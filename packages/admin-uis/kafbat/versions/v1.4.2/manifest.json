@@ -9,7 +9,7 @@
   "capabilities": ["admin-ui"],
   "instancing": { "multiple": false, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 8080, "preferred": 8080, "protocol": "tcp", "primary": false }
+    { "name": "main", "container": 8080, "preferred": 8080, "protocol": "tcp", "legacyKey": "SERVICE_KAFBAT_HOST_PORT", "primary": false }
   ],
   "volumes": [
   ],
@@ -26,5 +26,5 @@
     { "capability": "queue", "service": "kafka", "required": true }
   ],
   "compose": { "file": "compose.yml.tpl", "sha256": "03cbbc7f47882eac3e1845dec8250bfa6dde5d82ab500cf285c9208feb3acd29" },
-  "support": { "status": "supported" }
+  "support": {"status":"supported"}
 }

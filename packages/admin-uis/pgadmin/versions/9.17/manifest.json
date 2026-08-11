@@ -9,7 +9,7 @@
   "capabilities": ["admin-ui"],
   "instancing": { "multiple": false, "identity": "version" },
   "ports": [
-    { "name": "main", "container": 80, "preferred": 5050, "protocol": "tcp", "primary": false }
+    { "name": "main", "container": 80, "preferred": 5050, "protocol": "tcp", "legacyKey": "SERVICE_PGADMIN_HOST_PORT", "primary": false }
   ],
   "volumes": [
     { "name": "data", "container": "/var/lib/pgadmin", "purgeable": true }
@@ -28,5 +28,5 @@
     { "capability": "postgres-protocol", "required": false }
   ],
   "compose": { "file": "compose.yml.tpl", "sha256": "023b427c2d95f9b4c9ff7bdbb541d1678c667f379fe76471f82ebc04164157d7" },
-  "support": { "status": "supported" }
+  "support": {"status":"supported"}
 }
