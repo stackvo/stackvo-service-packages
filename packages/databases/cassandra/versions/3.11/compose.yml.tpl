@@ -21,9 +21,3 @@ ports:
 networks:
   {{ network }}:
     aliases: {{ instance.aliases }}
-
-healthcheck:
-  test: ["CMD-SHELL", "cqlsh -e 'describe cluster'"]
-  interval: 30s
-  timeout: 10s
-  retries: 5

@@ -7,7 +7,7 @@
     "tag": "RELEASE.2025-04-22T22-12-26Z"
   },
   "capabilities": ["object-store", "s3"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 9000, "preferred": 9000, "protocol": "tcp", "legacyKey": "SERVICE_MINIO_HOST_PORT", "primary": true },
     { "name": "console", "container": 9001, "preferred": 9001, "protocol": "tcp", "legacyKey": "SERVICE_MINIO_CONSOLE_HOST_PORT", "primary": false }
@@ -28,6 +28,7 @@
   },
   "url": { "subdomain": "minio", "port": "console" },
   "dependsOn": [],
+  "health": { "test": ["CMD", "mc", "ready", "local"], "interval": "10s", "retries": 12, "startPeriod": "10s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "e6b9f7d4142d1918f38be601ddc61981d598889755c1650d4d259260110341f9" },
   "support": {"status":"supported"}
 }

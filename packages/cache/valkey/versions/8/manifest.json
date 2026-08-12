@@ -25,6 +25,7 @@
   },
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD", "valkey-cli", "ping"], "interval": "10s", "retries": 10, "startPeriod": "5s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "707140c4cee371dfd21c2ddeed44448e82fa3ea479579b90b7ccc4a43f6dcc70" },
   "support": {"status":"supported"}
 }

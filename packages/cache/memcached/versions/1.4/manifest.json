@@ -27,6 +27,7 @@
   },
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "timeout 2 bash -c '</dev/tcp/127.0.0.1/11211'"], "interval": "10s", "retries": 10, "startPeriod": "5s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "3439aa75c8ccffdc0cb00673f1b0a4e9bdc137994df26b78bc03b0723a1955fb" },
   "support": {"eolDate":"2017-07-21","source":"https://endoflife.date/api/memcached.json","status":"eol"}
 }

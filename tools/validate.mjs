@@ -46,6 +46,17 @@ const dirs = (path) =>
     ? readdirSync(path).filter((n) => !n.startsWith('.') && statSync(join(path, n)).isDirectory())
     : [];
 
+/// Services that may ship without a healthcheck, and why.
+///
+/// Deliberately keyed by service rather than by version: "this one cannot be
+/// asked whether it is ready" is a fact about what the software is, and a
+/// version-shaped exemption would be a place for one to hide.
+const HEALTH_EXEMPT = {
+  blackfire:
+    'the agent is an outbound probe. It opens no readiness endpoint, and a check that ' +
+    'proved the process was running would pass for a reason unrelated to whether profiling works.',
+};
+
 const packageSchema = readJson(join(ROOT, 'schema/package.schema.json'));
 const versionSchema = readJson(join(ROOT, 'schema/package-version.schema.json'));
 
@@ -240,6 +251,29 @@ for (const category of dirs(PACKAGES)) {
           if (!/^(settings|port|volume|file|instance|companion)\./.test(name) && name !== 'image' && name !== 'network') {
             err(vat, 'RAW_PLACEHOLDER', `${file.template} reads {{ ${name} }}, which is not a handle`);
           }
+        }
+      }
+      // ---- readiness --------------------------------------------------
+      //
+      // A package without a healthcheck is not a package with a lenient one:
+      // `depends_on: condition: service_healthy` against a service that never
+      // declared readiness waits for the process to exist and calls that
+      // healthy. `docker compose up --wait` did exactly that for the whole
+      // catalogue and reported two MySQLs up that both refused connections —
+      // the container was building its datadir.
+      //
+      // So the absence has to be a sentence somebody wrote, not a field
+      // somebody skipped. NO_HEALTH is an error; the way to satisfy it is a
+      // healthcheck or a line in this table.
+      if (!manifest.health) {
+        const why = HEALTH_EXEMPT[manifest.service];
+        if (!why) {
+          err(
+            vat,
+            'NO_HEALTH',
+            'declares no healthcheck. Add one to the manifest, or add this service to ' +
+              'HEALTH_EXEMPT in tools/validate.mjs with the reason it cannot have one'
+          );
         }
       }
       for (const companion of manifest.companions ?? []) {

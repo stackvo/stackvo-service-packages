@@ -33,6 +33,7 @@
   },
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD", "pg_isready", "-h", "127.0.0.1"], "interval": "10s", "retries": 12, "startPeriod": "30s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "0c48fa656e4c1a010f48fb1b0367470b3afa5c3a685c69af6c7a8b28a7cab932" },
   "support": {"eolDate":"2028-11-09","source":"https://endoflife.date/api/postgresql.json","status":"supported"}
 }

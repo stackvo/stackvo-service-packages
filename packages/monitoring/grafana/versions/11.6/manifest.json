@@ -7,7 +7,7 @@
     "tag": "11.6"
   },
   "capabilities": ["dashboard"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 3000, "preferred": 3001, "protocol": "tcp", "legacyKey": "HOST_PORT_GRAFANA", "primary": false }
   ],
@@ -26,6 +26,7 @@
   "connection": null,
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:3000/api/health"], "interval": "10s", "retries": 12, "startPeriod": "20s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "f2ee2c31f639f36f42bf9791db563e93a259ee03813bcd4af2e9cdf036adc05b" },
   "support": {"eolDate":"2026-06-25","source":"https://endoflife.date/api/grafana.json","status":"eol"}
 }
