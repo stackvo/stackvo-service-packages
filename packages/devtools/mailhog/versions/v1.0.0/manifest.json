@@ -25,6 +25,6 @@
   "url": { "subdomain": "mailhog", "port": "ui" },
   "dependsOn": [],
   "health": { "test": ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8025/api/v2/messages"], "interval": "10s", "retries": 10, "startPeriod": "5s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "be7eaa14a2c9d31ff0c22c3f591c672f2feccfa8d93ca8d7379b52eec85fc466" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "e2382ca932b13a5a090d22bf804aa9993e9da9575f7e44035722cb374a52ed7a" },
   "support": {"status":"supported"}
 }

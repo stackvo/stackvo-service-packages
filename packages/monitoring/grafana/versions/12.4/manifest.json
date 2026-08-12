@@ -27,6 +27,6 @@
   "url": { "subdomain": "grafana", "port": "main" },
   "dependsOn": [],
   "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:3000/api/health"], "interval": "10s", "retries": 12, "startPeriod": "20s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "94f7612e24d1899813eaa7d39f125c211948b90c20d767b1311e6da06de70fd8" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "8ddebc480b272d5e16b9735461e03d8e7e9b73d76db4bcefcff1c144abc4c1e7" },
   "support": {"eolDate":"2027-05-24","source":"https://endoflife.date/api/grafana.json","status":"supported"}
 }

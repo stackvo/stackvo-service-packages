@@ -29,6 +29,6 @@
   "url": { "subdomain": "minio", "port": "console" },
   "dependsOn": [],
   "health": { "test": ["CMD", "mc", "ready", "local"], "interval": "10s", "retries": 12, "startPeriod": "10s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "e6b9f7d4142d1918f38be601ddc61981d598889755c1650d4d259260110341f9" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "693e2790e0360ac0efbe383e123a58f0063180b08883cd9448ce3ef85d7a5c87" },
   "support": {"status":"supported"}
 }

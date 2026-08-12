@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 11,
-  "generatedAt": "2026-08-12T09:03:17.436Z",
+  "sequence": 12,
+  "generatedAt": "2026-08-12T12:42:05.509Z",
   "packages": [
     {
       "service": "adminer",
@@ -20,22 +20,22 @@
         {
           "version": "4.8.1",
           "path": "packages/admin-uis/adminer/versions/4.8.1",
-          "manifestSha256": "3aeec3d5eb3bf09fc0d9aead8985b6883823cb3470143597b7e64ccc8b9c0fe3",
-          "sizeBytes": 1733,
+          "manifestSha256": "7badc5a5420114f21fdde71a1dda47cb0b369f4ddcf7c0de418f586f0442baca",
+          "sizeBytes": 1938,
           "support": "supported"
         },
         {
           "version": "5.4.2",
           "path": "packages/admin-uis/adminer/versions/5.4.2",
-          "manifestSha256": "6441d24bc2e121ac348110eadd0d89a60dfee40da923ddf604239cc628c4d3c0",
-          "sizeBytes": 1733,
+          "manifestSha256": "5e571736a1fe5951b9d2024cf13a15dd3f537273493f60a710a62f720b4a44f7",
+          "sizeBytes": 1938,
           "support": "supported"
         },
         {
           "version": "5.5.1",
           "path": "packages/admin-uis/adminer/versions/5.5.1",
-          "manifestSha256": "073c985aab38b4110ef9d0ca922cb340bafd395a5f6c2305a55f1fa77f82bc8b",
-          "sizeBytes": 1733,
+          "manifestSha256": "0cc8a29baa8186d7ff7141d8346e6bf4ec4390a720273bd577236f099d00e254",
+          "sizeBytes": 1938,
           "support": "supported",
           "recommended": true
         }
@@ -58,22 +58,22 @@
         {
           "version": "v1.3.0",
           "path": "packages/admin-uis/kafbat/versions/v1.3.0",
-          "manifestSha256": "221ecf8980aebaa2b340469244c200710bc95c948234ca7241170059232245c6",
-          "sizeBytes": 1946,
+          "manifestSha256": "f32eb712de29e456282d0adbbd553a622b290bc91a66d377a1f8e99ffea3e79e",
+          "sizeBytes": 2151,
           "support": "supported"
         },
         {
           "version": "v1.4.2",
           "path": "packages/admin-uis/kafbat/versions/v1.4.2",
-          "manifestSha256": "88d884929d6259d7a0cf6ca3ba7bd40a8cbbd1665d83d7e5b892acfff98ba605",
-          "sizeBytes": 1946,
+          "manifestSha256": "922f65bb26a5f783ddeea7915fa204ad72a3a7c1713dd4d987770105b0278dec",
+          "sizeBytes": 2151,
           "support": "supported"
         },
         {
           "version": "v1.5.0",
           "path": "packages/admin-uis/kafbat/versions/v1.5.0",
-          "manifestSha256": "ebac0b20ee43255ac65550da86ccfd2be8cb3aff62e9e42f9bc6954dca14c4a4",
-          "sizeBytes": 1946,
+          "manifestSha256": "56f05093cabf3cc7fc94dfd4b7112df8f0f0fe8eb5ac7180d4c50de4c63fdf49",
+          "sizeBytes": 2151,
           "support": "supported",
           "recommended": true
         }
@@ -96,22 +96,22 @@
         {
           "version": "0.54",
           "path": "packages/admin-uis/mongo-express/versions/0.54",
-          "manifestSha256": "da4db7ea94b4304bb7f03bbf7c7914683be93ab178bdae59d5bec6db90580b72",
-          "sizeBytes": 2479,
+          "manifestSha256": "9ffc940e5c817b2ba1d483ffe4556046a601f3614d0f61200bb9931ac73e0772",
+          "sizeBytes": 2684,
           "support": "supported"
         },
         {
           "version": "1.0",
           "path": "packages/admin-uis/mongo-express/versions/1.0",
-          "manifestSha256": "60a8591991445462b0cae41622fa09e9c74c67367ae1c4965d3f3d31a050c2a8",
-          "sizeBytes": 2477,
+          "manifestSha256": "acc2daf148d6f8503720d0cf14e80594bfdd1d48511db5ad659db84cffb498e3",
+          "sizeBytes": 2682,
           "support": "supported"
         },
         {
           "version": "1.0.2",
           "path": "packages/admin-uis/mongo-express/versions/1.0.2",
-          "manifestSha256": "50cc154c58465fa08097f434ddaa76b34b1605cab30d6f1a79ba123ec7825603",
-          "sizeBytes": 2481,
+          "manifestSha256": "19cf0326a42439a719c1e48a2815bfd60d6161851f471c211c48f8fd764ebcaf",
+          "sizeBytes": 2686,
           "support": "supported",
           "recommended": true
         }
@@ -134,22 +134,22 @@
         {
           "version": "8.14",
           "path": "packages/admin-uis/pgadmin/versions/8.14",
-          "manifestSha256": "af80ffce26f54c8004d2eeef23db8d3d0ae3f3795bf67405c1801ee7b0e63b54",
-          "sizeBytes": 2187,
+          "manifestSha256": "078f34158c71283c696e6631cb1434fd265b37dfe5096032a7f1e30bf2fcb946",
+          "sizeBytes": 2392,
           "support": "supported"
         },
         {
           "version": "9.16",
           "path": "packages/admin-uis/pgadmin/versions/9.16",
-          "manifestSha256": "cf224968e26b8b8ae839400eb568e978837bc09d6a1985f63ccc1c22473bbf88",
-          "sizeBytes": 2187,
+          "manifestSha256": "ae51d21724f9248714ea6375722f2bf9bba2e3d8ab175f50aaeeae652475ec35",
+          "sizeBytes": 2392,
           "support": "supported"
         },
         {
           "version": "9.17",
           "path": "packages/admin-uis/pgadmin/versions/9.17",
-          "manifestSha256": "48afbc9b429988fa651a06e52c6743639ee2ead182e2b2182b26c6f3628fc6e9",
-          "sizeBytes": 2187,
+          "manifestSha256": "a01d3b7c22383b9026433693ff935cc21b13b27a92b688eb246a0f9ed73c8f26",
+          "sizeBytes": 2392,
           "support": "supported",
           "recommended": true
         }
@@ -172,15 +172,15 @@
         {
           "version": "2.5.2",
           "path": "packages/admin-uis/phpcacheadmin/versions/2.5.2",
-          "manifestSha256": "a4d543ee7f83a9c199529d18ca31478a70b65a38e59ee7b1bdb4100466c1daba",
-          "sizeBytes": 2656,
+          "manifestSha256": "ebe3b5c681655ca9c12f95156a96f2c1775021a6fd50a7240070241dfb59aa8f",
+          "sizeBytes": 2861,
           "support": "supported"
         },
         {
           "version": "2.6.0",
           "path": "packages/admin-uis/phpcacheadmin/versions/2.6.0",
-          "manifestSha256": "8470fc56b70ebafc59c66221e1ec5be9331e4a86346655fe5221cc4fd1bac6e4",
-          "sizeBytes": 2656,
+          "manifestSha256": "b05de35cc8a6b293414a8686ea2956df5c119291b99e52cd43a1c11f5e2844f4",
+          "sizeBytes": 2861,
           "support": "supported",
           "recommended": true
         }
@@ -203,22 +203,22 @@
         {
           "version": "5.0",
           "path": "packages/admin-uis/phpmyadmin/versions/5.0",
-          "manifestSha256": "e28e86187a2bce8b5c0fbd1966fc921eb5bc005d33d21ed3ff11398ae66485c7",
-          "sizeBytes": 1917,
+          "manifestSha256": "f3b485afbf42eb9431d60f65446a90d645a342a982fbd5ab68a5ecc1845ee0ab",
+          "sizeBytes": 2122,
           "support": "supported"
         },
         {
           "version": "5.1",
           "path": "packages/admin-uis/phpmyadmin/versions/5.1",
-          "manifestSha256": "a2cef11bb2fda566e0c60b7a4034758f8bba2b7becffbe5020922a78b6f96f73",
-          "sizeBytes": 1917,
+          "manifestSha256": "7eadd1ff255a008d57c9a73e83d09780825053de340cda28a0351eaa2a635724",
+          "sizeBytes": 2122,
           "support": "supported"
         },
         {
           "version": "5.2",
           "path": "packages/admin-uis/phpmyadmin/versions/5.2",
-          "manifestSha256": "778cd4d46f32762ba59258c264d298dd6a548c089976d4290511ebd6f381d697",
-          "sizeBytes": 1917,
+          "manifestSha256": "7ddecff6ffe5fa6e8abc6845a989d3f1c023db399c66449514336f72c52bce16",
+          "sizeBytes": 2122,
           "support": "supported",
           "recommended": true
         }
@@ -749,15 +749,15 @@
         {
           "version": "v1.0.0",
           "path": "packages/devtools/mailhog/versions/v1.0.0",
-          "manifestSha256": "0d0c40529aeee49dba73cd8b4d881c163921f0d2a1ddf6864754117f54e0668c",
-          "sizeBytes": 1653,
+          "manifestSha256": "b74c210af60594b69795434e2f7bdf53234ae870485ebda480354c9d3356289e",
+          "sizeBytes": 1858,
           "support": "supported"
         },
         {
           "version": "v1.0.1",
           "path": "packages/devtools/mailhog/versions/v1.0.1",
-          "manifestSha256": "2f82648292876f6d4301ca954308b679aec55750461fc5b21de648471de95669",
-          "sizeBytes": 1653,
+          "manifestSha256": "09ec94ceab5aef05c7cb96dc65b9629e784be0675a3c462a9c217717a3e943a3",
+          "sizeBytes": 1858,
           "support": "supported",
           "recommended": true
         }
@@ -781,22 +781,22 @@
         {
           "version": "v1.28",
           "path": "packages/devtools/mailpit/versions/v1.28",
-          "manifestSha256": "f91941c85de167ccf5e2f5ba6578f71bef21debe4e08e802b6a09555cdb2904c",
-          "sizeBytes": 1703,
+          "manifestSha256": "df8e4d85eeced23ba7c42a905f87b9db4dc7d6da59e0a9b90802e2d6260b2c4d",
+          "sizeBytes": 1908,
           "support": "supported"
         },
         {
           "version": "v1.29",
           "path": "packages/devtools/mailpit/versions/v1.29",
-          "manifestSha256": "eb8b3464a6e1d3edcb19792a08b23dc097c9c3d5a1fc7bec00b9640ce1fada3e",
-          "sizeBytes": 1703,
+          "manifestSha256": "c2bb9c63e87a9525d062f7d34ed3cf5086df2be9ea1fcbe118d62ee5a45eb464",
+          "sizeBytes": 1908,
           "support": "supported"
         },
         {
           "version": "v1.30",
           "path": "packages/devtools/mailpit/versions/v1.30",
-          "manifestSha256": "c7898152562f30bb583744c9d919429cc7c07bc65d68e4436cca3e312cda0f6c",
-          "sizeBytes": 1703,
+          "manifestSha256": "1e9293433eb3eb8acf15d74e35c10ed698ee365b5cd4af0fef41d50c70e1478e",
+          "sizeBytes": 1908,
           "support": "supported",
           "recommended": true
         }
@@ -819,32 +819,32 @@
         {
           "version": "10.4.19",
           "path": "packages/monitoring/grafana/versions/10.4.19",
-          "manifestSha256": "095bfbbea4746a9f31787f80b0450f45119384074aaf43bff0d6132b1fe98b0a",
-          "sizeBytes": 2278,
+          "manifestSha256": "424069b1414666429d8275042dd7249bb821c68fc3394b4e083836a064497d81",
+          "sizeBytes": 2483,
           "support": "eol",
           "eolDate": "2025-06-05"
         },
         {
           "version": "11.6",
           "path": "packages/monitoring/grafana/versions/11.6",
-          "manifestSha256": "6bd9dd49eeb5c0bebaa109b94151ecd1a4b8dd715ddc974898fdf6214ec336fb",
-          "sizeBytes": 2272,
+          "manifestSha256": "b100003ac165d6d553f457753657fe8fee7e1dd8a8c5c966f0c2d19f45cbeae0",
+          "sizeBytes": 2477,
           "support": "eol",
           "eolDate": "2026-06-25"
         },
         {
           "version": "12.4",
           "path": "packages/monitoring/grafana/versions/12.4",
-          "manifestSha256": "eec79936c8d03320e639aef58c153c1385fa115e9db5d4e43b2e93a3f5a05edb",
-          "sizeBytes": 2278,
+          "manifestSha256": "a625bd6b4454797817ca1e82956cc358624eed21a5dc0bf089d288282797a2f8",
+          "sizeBytes": 2483,
           "support": "supported",
           "eolDate": "2027-05-24"
         },
         {
           "version": "13.1",
           "path": "packages/monitoring/grafana/versions/13.1",
-          "manifestSha256": "30551167fb4cc4f2f0d14b28fef31a7c9e511244858dce3bfa22ad2b3a31c5c1",
-          "sizeBytes": 2278,
+          "manifestSha256": "e65ee012c854782d317ef2cac9f9f83c9e3b0e9715d49ca4eecbb5f29764ba34",
+          "sizeBytes": 2483,
           "support": "supported",
           "recommended": true,
           "eolDate": "2027-03-20"
@@ -915,39 +915,39 @@
         {
           "version": "3",
           "path": "packages/queue/rabbitmq/versions/3",
-          "manifestSha256": "734a09efb8f90be136ad00dbe7896acf73c9395617a6db74bf70cf46937b90b2",
-          "sizeBytes": 2209,
+          "manifestSha256": "356dda820225b21bfa96d54cafd6ff31dc82b158d31681ce9fde68680fae2b0c",
+          "sizeBytes": 2414,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "3.13",
           "path": "packages/queue/rabbitmq/versions/3.13",
-          "manifestSha256": "dcf2347a744fe79dd6a4c4f2acfdb16615296703244e1dfa81d34181dd56baa9",
-          "sizeBytes": 2284,
+          "manifestSha256": "143b4446b006bf4b8cfc4e3e3d85e7c84a45ea31f62819a7f941f4d2e7c40b18",
+          "sizeBytes": 2489,
           "support": "eol",
           "eolDate": "2024-09-17"
         },
         {
           "version": "4",
           "path": "packages/queue/rabbitmq/versions/4",
-          "manifestSha256": "bc399799d281bd525d25ac21c0316653de9392b4c8e4b906f21737863dbf7e27",
-          "sizeBytes": 2209,
+          "manifestSha256": "c335a224f8a364786ccd38400f121e3846219fd52059a25711159fcce26d2a99",
+          "sizeBytes": 2414,
           "support": "supported"
         },
         {
           "version": "4.2",
           "path": "packages/queue/rabbitmq/versions/4.2",
-          "manifestSha256": "966f83328ce4cb73a76806a2d7eda9c7de4a78664fe44da50963236d6e063276",
-          "sizeBytes": 2282,
+          "manifestSha256": "47029b41fe5e09b50079ee8eef16f27574e637175108eca791369fcf9996a748",
+          "sizeBytes": 2487,
           "support": "eol",
           "eolDate": "2026-07-31"
         },
         {
           "version": "4.3",
           "path": "packages/queue/rabbitmq/versions/4.3",
-          "manifestSha256": "a2da663a6f5fd739cb0d10a6bcd241e1de9d292f52039e4cec54d17f1bd4b126",
-          "sizeBytes": 2213,
+          "manifestSha256": "6be70d12c37bdf41ade8bef28f064cb81cf49b4ae6c0c80f462788884825d3d7",
+          "sizeBytes": 2418,
           "support": "supported"
         }
       ]
@@ -1024,39 +1024,39 @@
         {
           "version": "7.17.28",
           "path": "packages/search/kibana/versions/7.17.28",
-          "manifestSha256": "b6286ca9f01b3231f65a6b3e1adea666df5df92cb121f7ea3d7ca8cabe219080",
-          "sizeBytes": 2127,
+          "manifestSha256": "630e40653dcba3c6812adb4a8b4700175e7c73ad0133fbf3b739b94047822667",
+          "sizeBytes": 2332,
           "support": "eol",
           "eolDate": "2026-01-15"
         },
         {
           "version": "8.11.3",
           "path": "packages/search/kibana/versions/8.11.3",
-          "manifestSha256": "55b14329484c163918f62446e1b92d339e2da8304890c4928c4afa7fab59c1f7",
-          "sizeBytes": 2051,
+          "manifestSha256": "0128d8dad117c602fe2bda2278bddec573910dcb38325ecde4d5e117ee3d7770",
+          "sizeBytes": 2256,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "8.19.19",
           "path": "packages/search/kibana/versions/8.19.19",
-          "manifestSha256": "bde8fa073e6d6afc73dd588354e666b840310d0d0dbf49913804c3f542c8f758",
-          "sizeBytes": 2133,
+          "manifestSha256": "f54c06a9f15d686dca23b90ebfd264d651fe4b7bdd1818463aa1bcf44e7a11b2",
+          "sizeBytes": 2338,
           "support": "supported",
           "eolDate": "2027-07-15"
         },
         {
           "version": "9.3.8",
           "path": "packages/search/kibana/versions/9.3.8",
-          "manifestSha256": "1d90c14be83dbb51e563728ca5f62c540a11b86da8a11fdfa3f3f96a672eff6e",
-          "sizeBytes": 2049,
+          "manifestSha256": "7c838cdb4be764cba12ae6415cd94d3c42e25c39cd929a9f71da31fc702cc2fa",
+          "sizeBytes": 2254,
           "support": "supported"
         },
         {
           "version": "9.4.4",
           "path": "packages/search/kibana/versions/9.4.4",
-          "manifestSha256": "3f692440a1708f352995b8a748886c421ccbdde67df4cdad71732fa462aa7cff",
-          "sizeBytes": 2049,
+          "manifestSha256": "f12cb54c8824462896c38cda52dfe47910fcf891c696ce8f0e606bfb1f6a9b86",
+          "sizeBytes": 2254,
           "support": "supported"
         }
       ]
@@ -1078,23 +1078,23 @@
         {
           "version": "v1.11",
           "path": "packages/search/meilisearch/versions/v1.11",
-          "manifestSha256": "6a9e1221bc4dd21b713fb4226ad2c0831e870b4684d1b9897223576d02e9d4d2",
-          "sizeBytes": 1850,
+          "manifestSha256": "cd41fa5f6772bed30cb7a5e9bb821ebfd575d252685bd7802f2fa170bb80c127",
+          "sizeBytes": 2055,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "v1.52",
           "path": "packages/search/meilisearch/versions/v1.52",
-          "manifestSha256": "2a8e50bd277ef056308f875e6453d577825cf978d1fbdcad4acb7739fad0e610",
-          "sizeBytes": 1850,
+          "manifestSha256": "c8b3b5174168004fdf45c559d9e3bbd2684268e6ee3175acbe5f58ae4624abcd",
+          "sizeBytes": 2055,
           "support": "supported"
         },
         {
           "version": "v1.53",
           "path": "packages/search/meilisearch/versions/v1.53",
-          "manifestSha256": "1e9c5cde7a597ad2b8b227e478261946e2cad278b2639bfdc3407854846ac8ad",
-          "sizeBytes": 1850,
+          "manifestSha256": "ec5c3dc3a6a8f880ae69f67a8e00b86a6a19fdc8cc932c925f31b92dd47cb6e8",
+          "sizeBytes": 2055,
           "support": "supported"
         }
       ]
@@ -1116,30 +1116,30 @@
         {
           "version": "27.1",
           "path": "packages/search/typesense/versions/27.1",
-          "manifestSha256": "f165f45157f1e2ea4d5e8305fa62ff9fae8d748a74d5598818c8b19c7a493dfc",
-          "sizeBytes": 1835,
+          "manifestSha256": "60916ca30212dc56a32cc114c79500de05a7ca4681b27ec1354e8f82104c8cef",
+          "sizeBytes": 2040,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "28.0",
           "path": "packages/search/typesense/versions/28.0",
-          "manifestSha256": "e342c699ddf3f65fa51e88c9aa4fade8b4443c06c47723aaa18f5c9b839102c7",
-          "sizeBytes": 1835,
+          "manifestSha256": "f9bff2f7b517a21556d3a65a514dc19076879511b7acca8c8ef3a88fca04d138",
+          "sizeBytes": 2040,
           "support": "supported"
         },
         {
           "version": "29.1",
           "path": "packages/search/typesense/versions/29.1",
-          "manifestSha256": "c3c2dc7a0c2ead49114605895a4d31c1cff299b37e6c1f2d4e0a5c1c96960c90",
-          "sizeBytes": 1835,
+          "manifestSha256": "c762b0509aa7be2b21eac39f9917ce2deff7e1c98b9dc3ea69cdbd08d228491c",
+          "sizeBytes": 2040,
           "support": "supported"
         },
         {
           "version": "30.2",
           "path": "packages/search/typesense/versions/30.2",
-          "manifestSha256": "38e769b4a19b8162a0b9e4f049fc8680b4b1191c9235fc767e9680075576c186",
-          "sizeBytes": 1835,
+          "manifestSha256": "02ea38607b3c0d7174cbbdb0a0be00610dd98312d3ec408411095cb235f6bdcd",
+          "sizeBytes": 2040,
           "support": "supported"
         }
       ]
@@ -1162,29 +1162,29 @@
         {
           "version": "RELEASE.2025-04-22T22-12-26Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-04-22T22-12-26Z",
-          "manifestSha256": "3d8dc5de23c115199e5f6e4e427926abd550e19b2d84e823d4db8e935a28414f",
-          "sizeBytes": 2230,
+          "manifestSha256": "19dffef388f68775efe605007b29558bc60796c795f03fe1a92591dad7c831bd",
+          "sizeBytes": 2435,
           "support": "supported"
         },
         {
           "version": "RELEASE.2025-06-13T11-33-47Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-06-13T11-33-47Z",
-          "manifestSha256": "9455d476d2889e75e748dc202b5b019af625b319d5344209b0f721b73cfea3af",
-          "sizeBytes": 2230,
+          "manifestSha256": "d551a4eea50a1572aed3f05f505a0900061bc69b2c58c6f3f4e0eb5d304600db",
+          "sizeBytes": 2435,
           "support": "supported"
         },
         {
           "version": "RELEASE.2025-07-23T15-54-02Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-07-23T15-54-02Z",
-          "manifestSha256": "7341145ac78cb113d448d3655fd7e8458e5b5e35a35d3b0b31ea16b27aae83c1",
-          "sizeBytes": 2230,
+          "manifestSha256": "fe63155381d6fa941079f571f2e0a77e065817a8b62f55ed35718bc0dfa87d4a",
+          "sizeBytes": 2435,
           "support": "supported"
         },
         {
           "version": "RELEASE.2025-09-07T16-13-09Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-09-07T16-13-09Z",
-          "manifestSha256": "112652368083e0280b08b30985a92f34968fd93ef1bfc8c97dcde8c78a27f60c",
-          "sizeBytes": 2230,
+          "manifestSha256": "941efc20cf6ff42af928c8e8eba10fa73c19a4a2b0fec110d1098de94ad63320",
+          "sizeBytes": 2435,
           "support": "supported",
           "recommended": true
         }

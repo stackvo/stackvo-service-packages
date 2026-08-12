@@ -28,6 +28,6 @@
     { "capability": "postgres-protocol", "required": false }
   ],
   "health": { "test": ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:80/misc/ping"], "interval": "15s", "retries": 12, "startPeriod": "30s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "023b427c2d95f9b4c9ff7bdbb541d1678c667f379fe76471f82ebc04164157d7" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "a623c99076a548a9dcdd34acb0e9ecaa912db7d3897ca3533df81de6007ee90b" },
   "support": {"status":"supported"}
 }
