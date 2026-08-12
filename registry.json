@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 9,
-  "generatedAt": "2026-08-11T19:39:24.289Z",
+  "sequence": 10,
+  "generatedAt": "2026-08-12T07:13:29.470Z",
   "packages": [
     {
       "service": "adminer",
@@ -596,8 +596,8 @@
         {
           "version": "8.4",
           "path": "packages/databases/mysql/versions/8.4",
-          "manifestSha256": "2833083a6ce585edd4501ed66c02a0fb78021eccda370f26035037caded90ed3",
-          "sizeBytes": 2902,
+          "manifestSha256": "653869151fdaa20833f43a09799458a630b8446bba554c4fba11e20563413eb7",
+          "sizeBytes": 3671,
           "support": "supported",
           "eolDate": "2032-04-30"
         },

@@ -15,7 +15,7 @@
     { "name": "data", "container": "/var/lib/mysql", "purgeable": true }
   ],
   "files": [
-    { "name": "mysql_cnf", "template": "files/my.cnf.tpl", "target": "/etc/mysql/conf.d/stackvo.cnf", "mode": "0444", "sha256": "abaa771cbd3892a14294001bea011c05920f236ee4f5ca95a2097c6515d48bac" }
+    { "name": "mysql_cnf", "template": "files/my.cnf.tpl", "target": "/etc/mysql/conf.d/stackvo.cnf", "mode": "0444", "sha256": "6565417037f0f3e49cf88ef0f5edc355b23c552fa1acad9afcfa4feb3336fdf3" }
   ],
   "settings": [
     { "key": "ROOT_PASSWORD", "type": "secret", "default": "root" },
@@ -32,6 +32,6 @@
   "url": null,
   "dependsOn": [],
   "health": { "test": ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"], "interval": "10s", "retries": 12, "startPeriod": "30s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "8012ddfce6145da5b6d5512cfee2312fa5e10cbdd43c9db37e015c390bf3d8ad" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "c0c837628aa3faff54bca020247ba64cffa328c8e0d504e5f4bfe717a9b2f5b3" },
   "support": {"eolDate":"2032-04-30","source":"https://endoflife.date/api/mysql.json","status":"supported"}
 }

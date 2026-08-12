@@ -1,3 +1,17 @@
+# MySQL 8.4 — `skip-character-set-client-handshake` is gone from this file and
+# from the compose command, and it was measured against a running container
+# rather than read about: 8.4.11 exits 1 with
+#
+#   [ERROR] [MY-000068] [Server] unknown option
+#           '--skip-character-set-client-handshake'
+#   [ERROR] [MY-010119] [Server] Aborting
+#
+# The 9.x directories carry the same removal with the note "removed in 9.0".
+# That attribution is wrong by one release — it is already gone in 8.4 — and
+# this file is the version that proves it. The symptom is a container in a
+# restart loop and an instance the app reports as enabled and not running, so
+# it costs a while to find: the fatal line is the last of forty, under a
+# `mysql.plugin doesn't exist` that looks more like the cause and is not.
 ###################################################################
 # STACKVO MYSQL DEFAULT CONFIG (my.cnf)
 ###################################################################
@@ -19,7 +33,7 @@ thread_cache_size=50
 character-set-server=utf8mb4
 collation-server=utf8mb4_unicode_ci
 init-connect='SET NAMES utf8mb4'
-skip-character-set-client-handshake
+# skip-character-set-client-handshake
 
 # Logging
 slow_query_log=1
