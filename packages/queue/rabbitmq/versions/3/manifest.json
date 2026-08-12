@@ -7,7 +7,7 @@
     "tag": "3-management"
   },
   "capabilities": ["queue", "amqp"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 5672, "preferred": 5672, "protocol": "tcp", "legacyKey": "HOST_PORT_RABBITMQ", "primary": true },
     { "name": "mgmt", "container": 15672, "preferred": 15672, "protocol": "tcp", "legacyKey": "HOST_PORT_RABBITMQ_MGMT", "primary": false }
@@ -31,6 +31,7 @@
   },
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD", "rabbitmq-diagnostics", "-q", "ping"], "interval": "15s", "retries": 12, "startPeriod": "40s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "cdafd63b1cf19a2b7345201977c2a74026d80039c828918861bc9dccca1cf921" },
   "support": {"status":"supported"}
 }

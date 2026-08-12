@@ -7,7 +7,7 @@
     "tag": "29.1"
   },
   "capabilities": ["search"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 8108, "preferred": 8108, "protocol": "tcp", "legacyKey": "SERVICE_TYPESENSE_HOST_PORT", "primary": true }
   ],
@@ -25,6 +25,7 @@
   },
   "url": { "subdomain": "typesense", "port": "main" },
   "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "timeout 2 bash -c '</dev/tcp/127.0.0.1/8108'"], "interval": "10s", "retries": 10, "startPeriod": "10s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "8fd33b1b17d2c26213765f0cfd7cfcdc11e749ab083908d224f6f29eae64187b" },
   "support": {"status":"supported"}
 }

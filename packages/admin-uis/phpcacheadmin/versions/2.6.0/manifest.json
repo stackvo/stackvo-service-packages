@@ -7,7 +7,7 @@
     "tag": "2.6.0"
   },
   "capabilities": ["admin-ui"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 80, "preferred": 8084, "protocol": "tcp", "legacyKey": "SERVICE_PHPCACHEADMIN_HOST_PORT", "primary": false }
   ],
@@ -29,6 +29,7 @@
   "dependsOn": [
     { "capability": "cache", "required": false }
   ],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:80/"], "interval": "15s", "retries": 8, "startPeriod": "15s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "2f583e27b1309c36a4ff7858cb0b190b66721eecf766c48e6e1d21cd8e66ad3f" },
   "support": {"status":"supported"}
 }

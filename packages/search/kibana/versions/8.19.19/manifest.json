@@ -7,7 +7,7 @@
     "tag": "8.19.19"
   },
   "capabilities": ["dashboard"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 5601, "preferred": 5601, "protocol": "tcp", "legacyKey": "HOST_PORT_KIBANA", "primary": false }
   ],
@@ -26,6 +26,7 @@
   "dependsOn": [
     { "capability": "search", "service": "elasticsearch", "required": true }
   ],
-  "compose": { "file": "compose.yml.tpl", "sha256": "111d8287f3e98684943a23d0343b0d19ffa80eba76fd5599e9617c5fb3808491" },
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:5601/api/status"], "interval": "15s", "retries": 20, "startPeriod": "60s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "3583d40798c1878925b8f73cedaa356e4efece2a5ea6db832a9e66f88b00ec6e" },
   "support": {"eolDate":"2027-07-15","source":"https://endoflife.date/api/elasticsearch.json","status":"supported"}
 }

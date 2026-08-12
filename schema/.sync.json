@@ -2,8 +2,8 @@
   "source": "stackvo/contracts",
   "files": {
     "package.schema.json": "e7011d3b0bc0f4fb12a8a36fd0f47cc8dc88922e46b9b9320e7e9a656668d098",
-    "package-version.schema.json": "339d22c8ae5a7e6347b58dd897a8ffa08061f659525d3c026a7ba9d1c73642fe",
+    "package-version.schema.json": "1aa324d6d1005c9eacc2abec865a20e27a31ea536f80080c2f48588d70b418d1",
     "registry.schema.json": "9a121825eec8eb415b5acd763d8da3939111df72c7b517dc92409cbb962fe6b8",
-    "compose-policy.json": "371b2e2d270b1b5e2949395f6aac87d300850959460222bb796943714840f3ce"
+    "compose-policy.json": "0efcd21c106d708647891148e73a5029780c0b48ad97356e774d1cafe6c02814"
   }
 }

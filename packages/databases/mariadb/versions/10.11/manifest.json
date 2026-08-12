@@ -31,6 +31,7 @@
   },
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"], "interval": "10s", "retries": 12, "startPeriod": "30s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "861142fcb01f1d28ce1f87ca372159a6df1afb4e72b351d5870bc3abb242a88f" },
   "support": {"eolDate":"2028-02-16","source":"https://endoflife.date/api/mariadb.json","status":"supported"}
 }

@@ -7,7 +7,7 @@
     "tag": "v1.28"
   },
   "capabilities": ["smtp", "mail-catcher"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "smtp", "container": 1025, "preferred": 1025, "protocol": "tcp", "legacyKey": "HOST_PORT_MAILPIT_SMTP", "primary": true },
     { "name": "ui", "container": 8025, "preferred": 8025, "protocol": "tcp", "legacyKey": "HOST_PORT_MAILPIT_UI", "primary": false }
@@ -25,6 +25,7 @@
   },
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD", "/mailpit", "readyz"], "interval": "10s", "retries": 10, "startPeriod": "5s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "928648f69dde7e196aaa7b232352849ff91d4eebc65a4ac5dfc00be723f0655f" },
   "support": {"status":"supported"}
 }

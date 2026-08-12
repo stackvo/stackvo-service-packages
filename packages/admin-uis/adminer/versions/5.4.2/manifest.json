@@ -7,7 +7,7 @@
     "tag": "5.4.2"
   },
   "capabilities": ["admin-ui"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 8080, "preferred": 8082, "protocol": "tcp", "legacyKey": "SERVICE_ADMINER_HOST_PORT", "primary": false }
   ],
@@ -24,6 +24,7 @@
   "dependsOn": [
     { "capability": "sql", "required": false }
   ],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:8080/"], "interval": "15s", "retries": 8, "startPeriod": "10s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "95bb923ccc239db878fbda73dcfad5e533a5b8f4400f8a5f09cbc1083eb42610" },
   "support": {"status":"supported"}
 }

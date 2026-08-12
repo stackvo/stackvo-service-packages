@@ -7,7 +7,7 @@
     "tag": "v1.53"
   },
   "capabilities": ["search"],
-  "instancing": { "multiple": false, "identity": "version" },
+  "instancing": { "multiple": true, "identity": "version" },
   "ports": [
     { "name": "main", "container": 7700, "preferred": 7700, "protocol": "tcp", "legacyKey": "SERVICE_MEILISEARCH_HOST_PORT", "primary": true }
   ],
@@ -25,6 +25,7 @@
   },
   "url": { "subdomain": "meilisearch", "port": "main" },
   "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:7700/health"], "interval": "10s", "retries": 10, "startPeriod": "10s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "cacb9b4efe036ff7166df14d18535742dd248a8269c3c612c8e5da30525e0068" },
   "support": {"status":"supported"}
 }

@@ -17,9 +17,3 @@ ports:
 networks:
   {{ network }}:
     aliases: {{ instance.aliases }}
-
-healthcheck:
-  test: ["CMD-SHELL", "curl -f http://localhost:5601/api/status || exit 1"]
-  interval: 30s
-  timeout: 10s
-  retries: 5

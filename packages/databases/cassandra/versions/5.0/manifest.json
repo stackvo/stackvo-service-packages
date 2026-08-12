@@ -31,6 +31,7 @@
   },
   "url": null,
   "dependsOn": [],
-  "compose": { "file": "compose.yml.tpl", "sha256": "d812b0c8716b7a12688e47fc3f80aa3ae39e3185135cff50b9a3d88ab0f72aee" },
+  "health": { "test": ["CMD-SHELL", "cqlsh -e 'describe cluster'"], "interval": "15s", "retries": 20, "startPeriod": "90s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "de5c19135ec9aa693da58c38a81711845ca72d21aa19b257f7f520d3b2c1adff" },
   "support": {"status":"supported"}
 }

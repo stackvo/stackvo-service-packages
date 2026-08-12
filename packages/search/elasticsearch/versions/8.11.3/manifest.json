@@ -30,6 +30,7 @@
   },
   "url": null,
   "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:9200/_cluster/health"], "interval": "15s", "retries": 15, "startPeriod": "45s" },
   "compose": { "file": "compose.yml.tpl", "sha256": "2fc5eef129ece1fab3f749b9f297a9fdd562ff34eafc3eb408d359fb51b5453c" },
   "support": {"status":"supported"}
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 5,
-  "generatedAt": "2026-08-11T13:57:16.552Z",
+  "sequence": 9,
+  "generatedAt": "2026-08-11T19:39:24.289Z",
   "packages": [
     {
       "service": "adminer",
@@ -11,7 +11,7 @@
       },
       "legacyEnvPrefix": "SERVICE_ADMINER_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "admin-ui"
@@ -20,22 +20,22 @@
         {
           "version": "4.8.1",
           "path": "packages/admin-uis/adminer/versions/4.8.1",
-          "manifestSha256": "be32ff48c84c3d27f0b5e97f0aa45536e53c4e87ac6f0c8522ff4b02cf0154d0",
-          "sizeBytes": 1591,
+          "manifestSha256": "3aeec3d5eb3bf09fc0d9aead8985b6883823cb3470143597b7e64ccc8b9c0fe3",
+          "sizeBytes": 1733,
           "support": "supported"
         },
         {
           "version": "5.4.2",
           "path": "packages/admin-uis/adminer/versions/5.4.2",
-          "manifestSha256": "1d1881926ae0471cca041eb9da821933f47a7ade3bfe6e0f4b7e3a52d8c63917",
-          "sizeBytes": 1591,
+          "manifestSha256": "6441d24bc2e121ac348110eadd0d89a60dfee40da923ddf604239cc628c4d3c0",
+          "sizeBytes": 1733,
           "support": "supported"
         },
         {
           "version": "5.5.1",
           "path": "packages/admin-uis/adminer/versions/5.5.1",
-          "manifestSha256": "50f75435a33e7d7cdd600c564de2475f42593c1df9f5c2ecf9686767d7845ce3",
-          "sizeBytes": 1591,
+          "manifestSha256": "073c985aab38b4110ef9d0ca922cb340bafd395a5f6c2305a55f1fa77f82bc8b",
+          "sizeBytes": 1733,
           "support": "supported",
           "recommended": true
         }
@@ -49,7 +49,7 @@
       },
       "legacyEnvPrefix": "SERVICE_KAFBAT_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "admin-ui"
@@ -58,22 +58,22 @@
         {
           "version": "v1.3.0",
           "path": "packages/admin-uis/kafbat/versions/v1.3.0",
-          "manifestSha256": "2b6b949836581bc591e612b25078a602ae2367e7455ad865f62d1df7bebefea0",
-          "sizeBytes": 1790,
+          "manifestSha256": "221ecf8980aebaa2b340469244c200710bc95c948234ca7241170059232245c6",
+          "sizeBytes": 1946,
           "support": "supported"
         },
         {
           "version": "v1.4.2",
           "path": "packages/admin-uis/kafbat/versions/v1.4.2",
-          "manifestSha256": "7816ca5519364b431474d0d08061b0e0096dab824f25660b047dae6170a2c728",
-          "sizeBytes": 1790,
+          "manifestSha256": "88d884929d6259d7a0cf6ca3ba7bd40a8cbbd1665d83d7e5b892acfff98ba605",
+          "sizeBytes": 1946,
           "support": "supported"
         },
         {
           "version": "v1.5.0",
           "path": "packages/admin-uis/kafbat/versions/v1.5.0",
-          "manifestSha256": "9b969577f4cdb0671fe7e73479b6df23d0a719f219cd560cda2fe230111c4dbb",
-          "sizeBytes": 1790,
+          "manifestSha256": "ebac0b20ee43255ac65550da86ccfd2be8cb3aff62e9e42f9bc6954dca14c4a4",
+          "sizeBytes": 1946,
           "support": "supported",
           "recommended": true
         }
@@ -87,7 +87,7 @@
       },
       "legacyEnvPrefix": "SERVICE_MONGO_EXPRESS_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "admin-ui"
@@ -96,22 +96,22 @@
         {
           "version": "0.54",
           "path": "packages/admin-uis/mongo-express/versions/0.54",
-          "manifestSha256": "477dd706153f79d67022b163e3125cfc7b84d9fcfd88b37ad954636a0947317f",
-          "sizeBytes": 2337,
+          "manifestSha256": "da4db7ea94b4304bb7f03bbf7c7914683be93ab178bdae59d5bec6db90580b72",
+          "sizeBytes": 2479,
           "support": "supported"
         },
         {
           "version": "1.0",
           "path": "packages/admin-uis/mongo-express/versions/1.0",
-          "manifestSha256": "c6c9a1badb66e699db4fd9c5ebc061c24dfdb061bab226f116766de3c905523f",
-          "sizeBytes": 2335,
+          "manifestSha256": "60a8591991445462b0cae41622fa09e9c74c67367ae1c4965d3f3d31a050c2a8",
+          "sizeBytes": 2477,
           "support": "supported"
         },
         {
           "version": "1.0.2",
           "path": "packages/admin-uis/mongo-express/versions/1.0.2",
-          "manifestSha256": "79ebf4479a76ac0d934b8f1c2d1dac9a8521dd79fc3e9d840dc2db04db6dcf2d",
-          "sizeBytes": 2339,
+          "manifestSha256": "50cc154c58465fa08097f434ddaa76b34b1605cab30d6f1a79ba123ec7825603",
+          "sizeBytes": 2481,
           "support": "supported",
           "recommended": true
         }
@@ -125,7 +125,7 @@
       },
       "legacyEnvPrefix": "SERVICE_PGADMIN_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "admin-ui"
@@ -134,22 +134,22 @@
         {
           "version": "8.14",
           "path": "packages/admin-uis/pgadmin/versions/8.14",
-          "manifestSha256": "26564c9751701f5a428586b90ea195540cceef3254efef606631aa261c9005c8",
-          "sizeBytes": 2039,
+          "manifestSha256": "af80ffce26f54c8004d2eeef23db8d3d0ae3f3795bf67405c1801ee7b0e63b54",
+          "sizeBytes": 2187,
           "support": "supported"
         },
         {
           "version": "9.16",
           "path": "packages/admin-uis/pgadmin/versions/9.16",
-          "manifestSha256": "1be83a5fab0191b6942a233c393ce828299f57e7581538dd18014e35b3dd7338",
-          "sizeBytes": 2039,
+          "manifestSha256": "cf224968e26b8b8ae839400eb568e978837bc09d6a1985f63ccc1c22473bbf88",
+          "sizeBytes": 2187,
           "support": "supported"
         },
         {
           "version": "9.17",
           "path": "packages/admin-uis/pgadmin/versions/9.17",
-          "manifestSha256": "b3e3e358a8b39f84cae1a66a52c65f9071c5c7b64897abbcd8b2395b5a65a32b",
-          "sizeBytes": 2039,
+          "manifestSha256": "48afbc9b429988fa651a06e52c6743639ee2ead182e2b2182b26c6f3628fc6e9",
+          "sizeBytes": 2187,
           "support": "supported",
           "recommended": true
         }
@@ -163,7 +163,7 @@
       },
       "legacyEnvPrefix": "SERVICE_PHPCACHEADMIN_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "admin-ui"
@@ -172,15 +172,15 @@
         {
           "version": "2.5.2",
           "path": "packages/admin-uis/phpcacheadmin/versions/2.5.2",
-          "manifestSha256": "e237e30d6eed02adee71beffb85b2d01c439cb32ab5a63319df9aaae6268bf2f",
-          "sizeBytes": 2516,
+          "manifestSha256": "a4d543ee7f83a9c199529d18ca31478a70b65a38e59ee7b1bdb4100466c1daba",
+          "sizeBytes": 2656,
           "support": "supported"
         },
         {
           "version": "2.6.0",
           "path": "packages/admin-uis/phpcacheadmin/versions/2.6.0",
-          "manifestSha256": "b69c962b8ea5dcddc5bebd8c3a5bddcd47990ad1873257023aff6eb97218e0e1",
-          "sizeBytes": 2516,
+          "manifestSha256": "8470fc56b70ebafc59c66221e1ec5be9331e4a86346655fe5221cc4fd1bac6e4",
+          "sizeBytes": 2656,
           "support": "supported",
           "recommended": true
         }
@@ -194,7 +194,7 @@
       },
       "legacyEnvPrefix": "SERVICE_PHPMYADMIN_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "admin-ui"
@@ -203,22 +203,22 @@
         {
           "version": "5.0",
           "path": "packages/admin-uis/phpmyadmin/versions/5.0",
-          "manifestSha256": "6fec6bf6ef43ce8ab74a708906af8f54cd4b7ff899c10867ac473a43282a4060",
-          "sizeBytes": 1777,
+          "manifestSha256": "e28e86187a2bce8b5c0fbd1966fc921eb5bc005d33d21ed3ff11398ae66485c7",
+          "sizeBytes": 1917,
           "support": "supported"
         },
         {
           "version": "5.1",
           "path": "packages/admin-uis/phpmyadmin/versions/5.1",
-          "manifestSha256": "9d3577e197e2904b3e125ee5abfa1fb471915e1073e260d766b252d5072dfc46",
-          "sizeBytes": 1777,
+          "manifestSha256": "a2cef11bb2fda566e0c60b7a4034758f8bba2b7becffbe5020922a78b6f96f73",
+          "sizeBytes": 1917,
           "support": "supported"
         },
         {
           "version": "5.2",
           "path": "packages/admin-uis/phpmyadmin/versions/5.2",
-          "manifestSha256": "28a2166cb68525db1f0c48845dc2c0a4531f54db500795fee20977101542303d",
-          "sizeBytes": 1777,
+          "manifestSha256": "778cd4d46f32762ba59258c264d298dd6a548c089976d4290511ebd6f381d697",
+          "sizeBytes": 1917,
           "support": "supported",
           "recommended": true
         }
@@ -241,24 +241,24 @@
         {
           "version": "1.4",
           "path": "packages/cache/memcached/versions/1.4",
-          "manifestSha256": "75b2f3033ddd5bbb4906352d0a1d88ce150f698a95c4f3fe4b5cdb06d802c7d4",
-          "sizeBytes": 1422,
+          "manifestSha256": "9837505ababa52e9d35a00ad9ef679560d692b689c8b2e7d26cca098bf05d84b",
+          "sizeBytes": 1565,
           "support": "eol",
           "eolDate": "2017-07-21"
         },
         {
           "version": "1.5",
           "path": "packages/cache/memcached/versions/1.5",
-          "manifestSha256": "75f96e2e8c76f118ae3f781442d466cfa46d6f63eb225cc0c39ead0f9e69a045",
-          "sizeBytes": 1422,
+          "manifestSha256": "b62c34a63502d07d4ed1202038997ad9b7c7d48ddd93f5eee5076502b9976cb2",
+          "sizeBytes": 1565,
           "support": "eol",
           "eolDate": "2020-03-09"
         },
         {
           "version": "1.6",
           "path": "packages/cache/memcached/versions/1.6",
-          "manifestSha256": "ce75e84d50f9f30b6414d2722811007ee3eee3b03a352b3d06635cdd0681d564",
-          "sizeBytes": 1352,
+          "manifestSha256": "16e7e6e405e47bb2eaf4bbafeb8f46abe781ee663e898e41cf633a93229d9926",
+          "sizeBytes": 1495,
           "support": "supported",
           "recommended": true
         }
@@ -282,16 +282,16 @@
         {
           "version": "6.2",
           "path": "packages/cache/redis/versions/6.2",
-          "manifestSha256": "52db4561bce4916f58352b86a78962413138d97111d207974e286db3cb703207",
-          "sizeBytes": 2058,
+          "manifestSha256": "ef25a250bbbdaf16837abe37254596d042067ae7c65e1a304148a053679c61da",
+          "sizeBytes": 2167,
           "support": "supported",
           "eolDate": "2027-04-01"
         },
         {
           "version": "7.0",
           "path": "packages/cache/redis/versions/7.0",
-          "manifestSha256": "cbfe359d6ee2f33f728e983e27bb0e8b6045b6ebbf718b5e673f8b12fa579c5c",
-          "sizeBytes": 2052,
+          "manifestSha256": "c73a2283b419d4ec86ee296ccba264d1f624b06e9c61a9a050ffceab95d5f28f",
+          "sizeBytes": 2161,
           "support": "eol",
           "recommended": true,
           "eolDate": "2024-07-29"
@@ -299,31 +299,31 @@
         {
           "version": "7.2",
           "path": "packages/cache/redis/versions/7.2",
-          "manifestSha256": "dfef4c6da71bfc04e4f7291f404e274098374c4427008cd7f86dca801f78b8f1",
-          "sizeBytes": 2058,
+          "manifestSha256": "2feb50b0ae15458252baaa4630a187acc80348895096fb7e2e8978d1ce8f4e35",
+          "sizeBytes": 2167,
           "support": "supported",
           "eolDate": "2029-12-01"
         },
         {
           "version": "7.4",
           "path": "packages/cache/redis/versions/7.4",
-          "manifestSha256": "2565cc81ca81bb112216f55bd6aba28a8fb4825a3b93d09d35f36a73f38527fb",
-          "sizeBytes": 2058,
+          "manifestSha256": "20b3cc83097bf2f9628e338893530f1e661bf9a27e3e3325e9bde050930af5b1",
+          "sizeBytes": 2167,
           "support": "supported",
           "eolDate": "2029-12-01"
         },
         {
           "version": "8.10",
           "path": "packages/cache/redis/versions/8.10",
-          "manifestSha256": "2b0dab377823fafe16e6cdc8e1ab79a8a702f3c058e276f77e5e8f8f9d7e3618",
-          "sizeBytes": 1988,
+          "manifestSha256": "90680523ab361cba51f87c7a83ac56b36586b1eb8a0c71ed64eb4d2c3c56f442",
+          "sizeBytes": 2097,
           "support": "supported"
         },
         {
           "version": "8.2",
           "path": "packages/cache/redis/versions/8.2",
-          "manifestSha256": "9d000f83767ab727c4a6e21b70d73ed774714ed60bbd2372071be5bda845854a",
-          "sizeBytes": 2058,
+          "manifestSha256": "4d6e71f6746c46099f36e5f474aa67cdeb885d4ebf72784cb3ee97662c28ed2b",
+          "sizeBytes": 2167,
           "support": "supported",
           "eolDate": "2030-09-01"
         }
@@ -347,40 +347,40 @@
         {
           "version": "7.2",
           "path": "packages/cache/valkey/versions/7.2",
-          "manifestSha256": "d9383d3655139262ecb96d9f9779956fed0746a87c36d9575a19d61b502e8a88",
-          "sizeBytes": 2159,
+          "manifestSha256": "65764e2d7cf2bc4e4697769dc12c7b706506c229b54fcb4443823d4ec06beec3",
+          "sizeBytes": 2269,
           "support": "supported",
           "eolDate": "2029-04-16"
         },
         {
           "version": "8",
           "path": "packages/cache/valkey/versions/8",
-          "manifestSha256": "bb8eabe5f3916c9d1fec19916f18c54cd34326a97c9b5a4b74f3313b58c74f81",
-          "sizeBytes": 2082,
+          "manifestSha256": "5db4d463547fc183c9993b402487774bd5a678460c440aed3811b6767974a40b",
+          "sizeBytes": 2192,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "8.1",
           "path": "packages/cache/valkey/versions/8.1",
-          "manifestSha256": "38659428a8998587230d991aa21880310a5011c7ad1b6c8cce457dce2b694f6a",
-          "sizeBytes": 2159,
+          "manifestSha256": "c22d0bb91ac0e610b4154eb01891d9007252fc44cb7dba32c99a565a53118b51",
+          "sizeBytes": 2269,
           "support": "supported",
           "eolDate": "2030-03-31"
         },
         {
           "version": "9.0",
           "path": "packages/cache/valkey/versions/9.0",
-          "manifestSha256": "86cff037fd19cf1fbb0b01beff39ca6359ff839f4dd6396aa3dc939d0f1d6546",
-          "sizeBytes": 2159,
+          "manifestSha256": "1df8f5a0292fa153c3b8fc5ef55b5a1028ab4b5aa09477759c754ec477904504",
+          "sizeBytes": 2269,
           "support": "supported",
           "eolDate": "2028-10-21"
         },
         {
           "version": "9.1",
           "path": "packages/cache/valkey/versions/9.1",
-          "manifestSha256": "ad70def3e74f0154c16ab8b1c14cb163290eaaec92233f4ddcd5b43b82401c5d",
-          "sizeBytes": 2086,
+          "manifestSha256": "0263e866351721bb7ed12a231b1d5ba1874daf8b1e8f3c11a4d2b83d75453f24",
+          "sizeBytes": 2196,
           "support": "supported"
         }
       ]
@@ -402,30 +402,30 @@
         {
           "version": "3.11",
           "path": "packages/databases/cassandra/versions/3.11",
-          "manifestSha256": "682bd4508f473c0d7bf20a67573600a2e62d3255f2a1a803588ef42a54dea462",
-          "sizeBytes": 2162,
+          "manifestSha256": "2b182284db6a385c9fa73a66fc6a4f0d7210f56d0e29a0109f1bacffb1dea559",
+          "sizeBytes": 2177,
           "support": "eol",
           "eolDate": "2024-09-05"
         },
         {
           "version": "4.0",
           "path": "packages/databases/cassandra/versions/4.0",
-          "manifestSha256": "9d6e02ace16aeed7a8a694308f56337583810a6644c44889e7ed4efcd08d3c1e",
-          "sizeBytes": 2090,
+          "manifestSha256": "93a153218797fa4b25154090bf928241d2e9f6c51521b8705fe88f44d698dd34",
+          "sizeBytes": 2105,
           "support": "supported"
         },
         {
           "version": "4.1",
           "path": "packages/databases/cassandra/versions/4.1",
-          "manifestSha256": "19352163f4f1e9c92e61a968a48628d84abb383c8236267522d934d85f23aa3c",
-          "sizeBytes": 2090,
+          "manifestSha256": "6264f8ffb6f6b109e5cece0e47d50c1e17be799515e015eb80ca105eb1327e30",
+          "sizeBytes": 2105,
           "support": "supported"
         },
         {
           "version": "5.0",
           "path": "packages/databases/cassandra/versions/5.0",
-          "manifestSha256": "98fd77830b7a4477b235b4c73322d5c6e90017f8adcd85eee27ba42507f5cf24",
-          "sizeBytes": 2090,
+          "manifestSha256": "bb812ecbfde719dcbe35ce55aa06a0eed98381a6daaf82d1ad8555280e97331d",
+          "sizeBytes": 2105,
           "support": "supported",
           "recommended": true
         }
@@ -449,24 +449,24 @@
         {
           "version": "10.11",
           "path": "packages/databases/mariadb/versions/10.11",
-          "manifestSha256": "a8ed4d7a2b6e6bdaf6a00b4bd5e724839d75915b08536f87da67debfd48d0f03",
-          "sizeBytes": 2680,
+          "manifestSha256": "333a64b52426d2e1202ccd9326b45e2a5339b664d0cb91d4292f83082d347f9d",
+          "sizeBytes": 2824,
           "support": "supported",
           "eolDate": "2028-02-16"
         },
         {
           "version": "10.5",
           "path": "packages/databases/mariadb/versions/10.5",
-          "manifestSha256": "6dfb4ee72c4e9ccab0b5b496658fcd16601a06f14931f22aec3e66b1183f10cf",
-          "sizeBytes": 2672,
+          "manifestSha256": "2e7391c461ea62fd8f20125b52876b84f572312e097acc2c524e8d08e94e0b0d",
+          "sizeBytes": 2816,
           "support": "eol",
           "eolDate": "2025-06-24"
         },
         {
           "version": "10.6",
           "path": "packages/databases/mariadb/versions/10.6",
-          "manifestSha256": "5463a71eb9f7e10311e3fd5c247fdf88bdf8f70a2ce55ee81e07701b818d08cd",
-          "sizeBytes": 2672,
+          "manifestSha256": "7d2e5ae04a43994080bff5b8a5af58dc2038cecc806ded78bfb15ddf4cda3113",
+          "sizeBytes": 2816,
           "support": "eol",
           "recommended": true,
           "eolDate": "2026-07-06"
@@ -474,24 +474,24 @@
         {
           "version": "11.4",
           "path": "packages/databases/mariadb/versions/11.4",
-          "manifestSha256": "46773f2c6e6c76a729d5b6309e91123393c06c27c9fdb9045f54eeb90876b10a",
-          "sizeBytes": 2678,
+          "manifestSha256": "b847201a21066073ab0da08bc6596b45c7d4e993f4f92494344826cd41949d8e",
+          "sizeBytes": 2822,
           "support": "supported",
           "eolDate": "2029-05-29"
         },
         {
           "version": "11.8",
           "path": "packages/databases/mariadb/versions/11.8",
-          "manifestSha256": "74d516660a2f7ab3125c414e96fe133fc69b17098d4e08153d83a56c546ee389",
-          "sizeBytes": 2678,
+          "manifestSha256": "f78fca57d7508d97e4053ddabac7545c266cce5122f173113233c150a272a7c9",
+          "sizeBytes": 2822,
           "support": "supported",
           "eolDate": "2028-06-04"
         },
         {
           "version": "12.3",
           "path": "packages/databases/mariadb/versions/12.3",
-          "manifestSha256": "2b644c50820788ce5359546a34f8e4c406257818e94142f110396da625196454",
-          "sizeBytes": 2604,
+          "manifestSha256": "2eb5ed52cf943cb6a382df02df6b6160d27013da5b337fea8ac9742cc1cc775f",
+          "sizeBytes": 2748,
           "support": "supported"
         }
       ]
@@ -513,32 +513,32 @@
         {
           "version": "5.0",
           "path": "packages/databases/mongo/versions/5.0",
-          "manifestSha256": "16dd52bc31828aa072110eb6c193bcff4f5e879bd76ee31bf08ff310f4900699",
-          "sizeBytes": 4486,
+          "manifestSha256": "f6f7557c941c92818706d19bd01e303e782d3709013aaa7f2048cf3f51611541",
+          "sizeBytes": 4634,
           "support": "eol",
           "eolDate": "2024-10-31"
         },
         {
           "version": "6.0",
           "path": "packages/databases/mongo/versions/6.0",
-          "manifestSha256": "51eb1097126e7f3bbc20440d52079f7ab21ea04941d59e3d05145021db476576",
-          "sizeBytes": 4486,
+          "manifestSha256": "ac83d3e2741c63d68a05a53536c85177d363511d4ee6d63882ba8904906da56f",
+          "sizeBytes": 4634,
           "support": "eol",
           "eolDate": "2025-07-31"
         },
         {
           "version": "7.0",
           "path": "packages/databases/mongo/versions/7.0",
-          "manifestSha256": "90c05e28b72c09971ae10a1a7cd84193aa3ecd973d93bd8a04d8dc23154223e9",
-          "sizeBytes": 4492,
+          "manifestSha256": "ed70b5fe9dc016c66cb52d7bb6a87c80521ffb4ef7d3f8937ff13e720be25a3c",
+          "sizeBytes": 4640,
           "support": "supported",
           "eolDate": "2027-08-31"
         },
         {
           "version": "8.0",
           "path": "packages/databases/mongo/versions/8.0",
-          "manifestSha256": "080cf10a49de546af4d80a860aaecb9743a83e3b2a8dfcbe50761e181704b7de",
-          "sizeBytes": 4492,
+          "manifestSha256": "ec09054bfd79f3b7e6377756b4f46717301ecb2d26f1aa26a5e3a6363983234b",
+          "sizeBytes": 4640,
           "support": "supported",
           "recommended": true,
           "eolDate": "2029-10-31"
@@ -546,16 +546,16 @@
         {
           "version": "8.2",
           "path": "packages/databases/mongo/versions/8.2",
-          "manifestSha256": "0d33e609bcec37228b551e16f6166f26588710aeb3018b229ac1d6d525f3cc76",
-          "sizeBytes": 4486,
+          "manifestSha256": "c9c1a36d0a15ca3c815532b336e75b6357122033ba63000486c7594d1d298bad",
+          "sizeBytes": 4634,
           "support": "eol",
           "eolDate": "2026-07-31"
         },
         {
           "version": "8.3",
           "path": "packages/databases/mongo/versions/8.3",
-          "manifestSha256": "fa6db68d84bc714d6535bffcc5032ba8bb29cf5ead11e0b71fe16e826cba2294",
-          "sizeBytes": 4492,
+          "manifestSha256": "754421aa26ad16497b18be3a420520f2e488a3b0b5214e99441410ce458b884e",
+          "sizeBytes": 4640,
           "support": "supported",
           "eolDate": "2029-10-31"
         }
@@ -579,16 +579,16 @@
         {
           "version": "5.7",
           "path": "packages/databases/mysql/versions/5.7",
-          "manifestSha256": "c8fd87fecd19082ef296897f002bc7b611da923840c68076aefdbfd425650803",
-          "sizeBytes": 2766,
+          "manifestSha256": "9681e8d6a0793110715385ffebe86a61c7c9029885a6e9efc645d5ba40afd2c5",
+          "sizeBytes": 2896,
           "support": "eol",
           "eolDate": "2023-10-31"
         },
         {
           "version": "8.0",
           "path": "packages/databases/mysql/versions/8.0",
-          "manifestSha256": "789ba1d5013a5b0d938bafcd2f350a0f986471c5da059f7f5ebf6f8d896095bb",
-          "sizeBytes": 2766,
+          "manifestSha256": "d503e12a0ed2403526e92f0f8c4adf60a3e2b801922f36bd3db20fa501a8bec3",
+          "sizeBytes": 2896,
           "support": "eol",
           "recommended": true,
           "eolDate": "2026-04-30"
@@ -596,24 +596,24 @@
         {
           "version": "8.4",
           "path": "packages/databases/mysql/versions/8.4",
-          "manifestSha256": "97daf1b1ef661c98fab710987ba3a9c2451698cf51bd58d98c651d9c6b6335c5",
-          "sizeBytes": 2772,
+          "manifestSha256": "2833083a6ce585edd4501ed66c02a0fb78021eccda370f26035037caded90ed3",
+          "sizeBytes": 2902,
           "support": "supported",
           "eolDate": "2032-04-30"
         },
         {
           "version": "9.4",
           "path": "packages/databases/mysql/versions/9.4",
-          "manifestSha256": "e81978b89fa8fa7e885a1f288632f9466dcefd385d7a95516e35d42323b92698",
-          "sizeBytes": 3293,
+          "manifestSha256": "59c9e2d29d9cb3a52f994e017112f7a94ee38b53e34a838386c99bc467ea9240",
+          "sizeBytes": 3423,
           "support": "eol",
           "eolDate": "2025-10-21"
         },
         {
           "version": "9.7",
           "path": "packages/databases/mysql/versions/9.7",
-          "manifestSha256": "6188021679186c1614a88daf845b7aef2fc7d2219905c5f838a771beae2048f5",
-          "sizeBytes": 3299,
+          "manifestSha256": "4d5a2a823d1f5922c03a773ff64cffa9ff25924125c5e7903120e983a98ee754",
+          "sizeBytes": 3429,
           "support": "supported",
           "eolDate": "2034-04-21"
         }
@@ -637,24 +637,24 @@
         {
           "version": "12",
           "path": "packages/databases/postgres/versions/12",
-          "manifestSha256": "e31cd9d204d75692ed826e0db9aa3ba16178a374c1b74d375f8c60be1212240d",
-          "sizeBytes": 4399,
+          "manifestSha256": "5e1ec3bb13ae438b4da4b5c57c55f79628d08f241036832852fd776fe9e4f131",
+          "sizeBytes": 4521,
           "support": "eol",
           "eolDate": "2024-11-21"
         },
         {
           "version": "13",
           "path": "packages/databases/postgres/versions/13",
-          "manifestSha256": "c2fba6f21b15b91fe79da54f3f3b1d07929f301aadc88a8a06df346e421d7efc",
-          "sizeBytes": 4399,
+          "manifestSha256": "4c9d6b2e7eec1fd425d61f42d53735e45cfd993bad8cd28c545e185917a8ecad",
+          "sizeBytes": 4521,
           "support": "eol",
           "eolDate": "2025-11-13"
         },
         {
           "version": "14",
           "path": "packages/databases/postgres/versions/14",
-          "manifestSha256": "424aa71e02eb174808ca696f5c2a32a98aae6e49d71fc974b53f969dee21d44f",
-          "sizeBytes": 4405,
+          "manifestSha256": "97442aeb7f9e1010a70e12306601038d49a522afc6d474d665bc412480a64216",
+          "sizeBytes": 4527,
           "support": "supported",
           "recommended": true,
           "eolDate": "2026-11-12"
@@ -662,32 +662,32 @@
         {
           "version": "15",
           "path": "packages/databases/postgres/versions/15",
-          "manifestSha256": "1d8423ec19cdc0336256b2d7d9aa2aae07cbe1e635a8dc45090e708c013b7dfe",
-          "sizeBytes": 4405,
+          "manifestSha256": "f7277c3ef2e6cbc4eeada4b8e357066630580f0d83979ed0cf0501804bc5210c",
+          "sizeBytes": 4527,
           "support": "supported",
           "eolDate": "2027-11-11"
         },
         {
           "version": "16",
           "path": "packages/databases/postgres/versions/16",
-          "manifestSha256": "6c416e333827dee989061c273ba69b837652582345c5d87825471a656918e6fd",
-          "sizeBytes": 4405,
+          "manifestSha256": "2ef1e2d406c5d2b2e26bcc9d8bcc3ba6ec6529b500c514cf35c325dba6705653",
+          "sizeBytes": 4527,
           "support": "supported",
           "eolDate": "2028-11-09"
         },
         {
           "version": "17",
           "path": "packages/databases/postgres/versions/17",
-          "manifestSha256": "bbd33fb5b29c5d8a9acac0f83ee18f71585473feb98d1ce9cd8808c5510ff479",
-          "sizeBytes": 4405,
+          "manifestSha256": "240ec6a06d22ef9a14b6a31e0b4ec48d5c4ab2487aaedebb580dff8f024c77c9",
+          "sizeBytes": 4527,
           "support": "supported",
           "eolDate": "2029-11-08"
         },
         {
           "version": "18",
           "path": "packages/databases/postgres/versions/18",
-          "manifestSha256": "3a8d23a31f452c8b1efcd81cde64034465c58db8ebe977298428351afa1390e6",
-          "sizeBytes": 4405,
+          "manifestSha256": "2a4a25317dcee3b9c73eaa04cc5902c1810ebdabf9be6c73d76248f043de2710",
+          "sizeBytes": 4527,
           "support": "supported",
           "eolDate": "2030-11-14"
         }
@@ -739,7 +739,7 @@
       },
       "legacyEnvPrefix": "SERVICE_MAILHOG_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "mail-catcher",
@@ -749,15 +749,15 @@
         {
           "version": "v1.0.0",
           "path": "packages/devtools/mailhog/versions/v1.0.0",
-          "manifestSha256": "515cc01cf0a98afd6b57d6e232b9827fe8d0a36130b514d3fc28681fdd76fccb",
-          "sizeBytes": 1142,
+          "manifestSha256": "fb49d892417a878efceefa1f420efe03c209a3735c1191f0266ebb47951a1c51",
+          "sizeBytes": 1297,
           "support": "supported"
         },
         {
           "version": "v1.0.1",
           "path": "packages/devtools/mailhog/versions/v1.0.1",
-          "manifestSha256": "85e9b3042ed4fa7602b4ed7bce2e6168170cea23e5f3757e509764d87b9f3260",
-          "sizeBytes": 1142,
+          "manifestSha256": "7ab189bb71c32749174a3da7a5daa8e5bc54d2cd0b0e671cfc62e8e18a9bfb89",
+          "sizeBytes": 1297,
           "support": "supported",
           "recommended": true
         }
@@ -771,7 +771,7 @@
       },
       "legacyEnvPrefix": "SERVICE_MAILPIT_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "mail-catcher",
@@ -781,22 +781,22 @@
         {
           "version": "v1.28",
           "path": "packages/devtools/mailpit/versions/v1.28",
-          "manifestSha256": "59dcd060c4ecf306feb061959d2acdd63fe225b460dd2ece8334aaad0554e4b9",
-          "sizeBytes": 1238,
+          "manifestSha256": "8dae7a8cb13f8a0b867e02ef8d9b16ad6eeb03592c350005482bfa519fd7d3e9",
+          "sizeBytes": 1347,
           "support": "supported"
         },
         {
           "version": "v1.29",
           "path": "packages/devtools/mailpit/versions/v1.29",
-          "manifestSha256": "f354d949fe0e4c343f23fb2deffc6ce3b69637ae5ab1ab8760f74cd12066c6bf",
-          "sizeBytes": 1238,
+          "manifestSha256": "ac16386bd42cd2fbc1e96701bcb3d0bd2988a7570a275e24aa740fba6ae74288",
+          "sizeBytes": 1347,
           "support": "supported"
         },
         {
           "version": "v1.30",
           "path": "packages/devtools/mailpit/versions/v1.30",
-          "manifestSha256": "617d8f759ac7f9a8c7140042d0f3f14c027452c7f913699d49436c3e874f4f15",
-          "sizeBytes": 1238,
+          "manifestSha256": "5a3dee932e2270b34541ff59807bbc1e178f27df7fc34041ffa38dafeafa174f",
+          "sizeBytes": 1347,
           "support": "supported",
           "recommended": true
         }
@@ -810,7 +810,7 @@
       },
       "legacyEnvPrefix": "SERVICE_GRAFANA_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "dashboard"
@@ -819,32 +819,32 @@
         {
           "version": "10.4.19",
           "path": "packages/monitoring/grafana/versions/10.4.19",
-          "manifestSha256": "bb0ed9230c171d99861c9da8d5707026e9e90055fea9e7c9212ed4a4ad26e5de",
-          "sizeBytes": 1767,
+          "manifestSha256": "1ba0e92c2ba4b400e17e4d1aaea4e61c3a1475764915ddaeceac701fbbd7f55b",
+          "sizeBytes": 1920,
           "support": "eol",
           "eolDate": "2025-06-05"
         },
         {
           "version": "11.6",
           "path": "packages/monitoring/grafana/versions/11.6",
-          "manifestSha256": "cd6b205f855a132d83258141fd9950bab9247074ea2e9a1da9ef72dc80595d19",
-          "sizeBytes": 1761,
+          "manifestSha256": "d8eba34896de385de02094083cfb02d98a457610597ab642be3682363758ab23",
+          "sizeBytes": 1914,
           "support": "eol",
           "eolDate": "2026-06-25"
         },
         {
           "version": "12.4",
           "path": "packages/monitoring/grafana/versions/12.4",
-          "manifestSha256": "e77f08d676d0138cb701ab62b9abcc925286852b96532ebb7f1aaeae82dc2812",
-          "sizeBytes": 1767,
+          "manifestSha256": "c40969fb8fa9c063cb6a1c4d99527f1f8c1dc35f20f8d008916c290e1b947a26",
+          "sizeBytes": 1920,
           "support": "supported",
           "eolDate": "2027-05-24"
         },
         {
           "version": "13.1",
           "path": "packages/monitoring/grafana/versions/13.1",
-          "manifestSha256": "892f093582691dcf5bf8cdf4a09c4a991d091d34dd1641d7f24fab7946d41c9e",
-          "sizeBytes": 1767,
+          "manifestSha256": "19dccb177ad89910b47c040aa1f2f2bd8952d737c5ea0c96ab2604bc7374d859",
+          "sizeBytes": 1920,
           "support": "supported",
           "recommended": true,
           "eolDate": "2027-03-20"
@@ -869,30 +869,30 @@
         {
           "version": "6.2.15",
           "path": "packages/queue/kafka/versions/6.2.15",
-          "manifestSha256": "ab36c90171801cacc97abd7ce86a664aa967c08b8e882d45f510790a6657d260",
-          "sizeBytes": 2398,
+          "manifestSha256": "340c48baff6fff55369e06aff645d7a46a5b9d680217482387f6a36599625840",
+          "sizeBytes": 2692,
           "support": "supported"
         },
         {
           "version": "7.5.0",
           "path": "packages/queue/kafka/versions/7.5.0",
-          "manifestSha256": "cb9052a3f5015e141d11ce5f2302feb8618f83291f8df2a1fe39347eefafcb83",
-          "sizeBytes": 2396,
+          "manifestSha256": "9e3f080721a793f5118e76b9fd34a7b914626e82c63a2ab02b5a9ceb961b6d1e",
+          "sizeBytes": 2690,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "7.9.9",
           "path": "packages/queue/kafka/versions/7.9.9",
-          "manifestSha256": "5a8cc14d19b300644000600943f34227dea497df541563523cf3a6bfd489e443",
-          "sizeBytes": 2396,
+          "manifestSha256": "0b095eb31410ad9e9cb0082fea1712b0697b0eab80927ac5bcf74caa2e3c5ad8",
+          "sizeBytes": 2690,
           "support": "supported"
         },
         {
           "version": "8.3.1",
           "path": "packages/queue/kafka/versions/8.3.1",
-          "manifestSha256": "cf3e41f2261e7cccbc2404091e9c2b3c4bc7ffb5715fdec2ca3b06e916592dc8",
-          "sizeBytes": 2396,
+          "manifestSha256": "d71b01d08a60dab33e140757ce5aefcffd48bd85a6a50114f73a4536f1e8c3f1",
+          "sizeBytes": 2690,
           "support": "supported"
         }
       ]
@@ -905,7 +905,7 @@
       },
       "legacyEnvPrefix": "SERVICE_RABBITMQ_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "amqp",
@@ -915,39 +915,39 @@
         {
           "version": "3",
           "path": "packages/queue/rabbitmq/versions/3",
-          "manifestSha256": "430474e562607c9c913ed3b63e786c39596096d6bc72ff2f0cff42027b4d9477",
-          "sizeBytes": 1723,
+          "manifestSha256": "22267fb52e8f2279bacc44b26a2d2d0f1a8e662c6a450239478964219fb4e8e1",
+          "sizeBytes": 1849,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "3.13",
           "path": "packages/queue/rabbitmq/versions/3.13",
-          "manifestSha256": "55e72b1c3af3dfc666c8fb7600a0535f31c8d02f64bf6e85bc28363eeb185be1",
-          "sizeBytes": 1798,
+          "manifestSha256": "ad97cabcb0f9005b7055fd1d5f296158f04d000dfb0a91275b300fa83a1a7749",
+          "sizeBytes": 1924,
           "support": "eol",
           "eolDate": "2024-09-17"
         },
         {
           "version": "4",
           "path": "packages/queue/rabbitmq/versions/4",
-          "manifestSha256": "0ddeda5890054a1680020e4709a2d643744add5e960cd7dd8a543095b986f3cc",
-          "sizeBytes": 1723,
+          "manifestSha256": "b250f0db47254fb8f383b38a351535461e2231245685ecc477a26900838c5a05",
+          "sizeBytes": 1849,
           "support": "supported"
         },
         {
           "version": "4.2",
           "path": "packages/queue/rabbitmq/versions/4.2",
-          "manifestSha256": "11b0b082f3ece92ebbdf741d2511cdde852c02843d793f2f302863091c0be0a2",
-          "sizeBytes": 1796,
+          "manifestSha256": "c66ef0662fb9223ad324f248a2b480237286374023cf89656d37b6def15429cb",
+          "sizeBytes": 1922,
           "support": "eol",
           "eolDate": "2026-07-31"
         },
         {
           "version": "4.3",
           "path": "packages/queue/rabbitmq/versions/4.3",
-          "manifestSha256": "9068833e769bb4ca6e04c9c8b947fb9f23bda19d62a231498116c31880c93830",
-          "sizeBytes": 1727,
+          "manifestSha256": "98fef82a9d21c00d309cf55402f7c0a3ce35faca79d443b893b18fc0d9847dc7",
+          "sizeBytes": 1853,
           "support": "supported"
         }
       ]
@@ -970,39 +970,39 @@
         {
           "version": "7.17.28",
           "path": "packages/search/elasticsearch/versions/7.17.28",
-          "manifestSha256": "df9c8cbcf06485ee49b44d2c8a5cdd09e7d9c9c100aa630e2195102fb66cde35",
-          "sizeBytes": 2905,
+          "manifestSha256": "0e2b857f1b74e031ca1b12cdbbc819ae594a93aa8de9b714357efa4a0e1b16bd",
+          "sizeBytes": 3064,
           "support": "eol",
           "eolDate": "2026-01-15"
         },
         {
           "version": "8.11.3",
           "path": "packages/search/elasticsearch/versions/8.11.3",
-          "manifestSha256": "d99f719c526c3f7538b3cbc0026a01aeb765f1aee57888f3e64ab093ecf7e007",
-          "sizeBytes": 2829,
+          "manifestSha256": "aef79ef57b8fb73a78b4dc9cf2374a038da5a19b25bf796ddb034a210c7adfb0",
+          "sizeBytes": 2988,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "8.19.19",
           "path": "packages/search/elasticsearch/versions/8.19.19",
-          "manifestSha256": "78a65454d53285bc32fbdc43c9916ec2bd291b87dc695f68d3ca5d8f97e00965",
-          "sizeBytes": 2911,
+          "manifestSha256": "a39b5229697ec02ae98c8c074ea01150f6363ac55d0f2f93ca93ba8389e1d55e",
+          "sizeBytes": 3070,
           "support": "supported",
           "eolDate": "2027-07-15"
         },
         {
           "version": "9.3.8",
           "path": "packages/search/elasticsearch/versions/9.3.8",
-          "manifestSha256": "31deb874cabc86b96414b9ef5979cb7de2863aec3d590b5da8d8396d020b6e51",
-          "sizeBytes": 2827,
+          "manifestSha256": "2fe560d11d493db06c2ae8e79bf3e4031ed2935090fa73d9a13ad03c1f73fce0",
+          "sizeBytes": 2986,
           "support": "supported"
         },
         {
           "version": "9.4.4",
           "path": "packages/search/elasticsearch/versions/9.4.4",
-          "manifestSha256": "b82d95551ad1fee778beca55501b509f02539de6593fb7d220948fd477f42446",
-          "sizeBytes": 2827,
+          "manifestSha256": "b0661180f239c499bc215be1d21947775b9ea918f1106048c8108d695983dc0c",
+          "sizeBytes": 2986,
           "support": "supported"
         }
       ]
@@ -1015,7 +1015,7 @@
       },
       "legacyEnvPrefix": "SERVICE_KIBANA_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "dashboard"
@@ -1024,39 +1024,39 @@
         {
           "version": "7.17.28",
           "path": "packages/search/kibana/versions/7.17.28",
-          "manifestSha256": "cd022c72436609519fda63ae8c7b65db0ebff340586fee0bd947edcbefb70f3d",
-          "sizeBytes": 1751,
+          "manifestSha256": "343a5f4da6bb3ed8045f5571c56e254b6034eccafb3e9812333b24a9e31659e2",
+          "sizeBytes": 1770,
           "support": "eol",
           "eolDate": "2026-01-15"
         },
         {
           "version": "8.11.3",
           "path": "packages/search/kibana/versions/8.11.3",
-          "manifestSha256": "22da0566d33d72e3eab0ecff1668273692be36e2f52d08ed801337f9f8441bd0",
-          "sizeBytes": 1675,
+          "manifestSha256": "3d212c25c8997bae82c6aeb9d30de0c9e34e11890b378867010219e5886727f2",
+          "sizeBytes": 1694,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "8.19.19",
           "path": "packages/search/kibana/versions/8.19.19",
-          "manifestSha256": "7d194c54316746c3b71d6083102a4cb56a9e0fd94dfe3f31e5c1ccf6f8b4984a",
-          "sizeBytes": 1757,
+          "manifestSha256": "0ea2661174da981ff1c9f4721e829acaefa0efd3d2b5cbf49a6e2fbb4f8d3315",
+          "sizeBytes": 1776,
           "support": "supported",
           "eolDate": "2027-07-15"
         },
         {
           "version": "9.3.8",
           "path": "packages/search/kibana/versions/9.3.8",
-          "manifestSha256": "a0aa45b0ee43e20e510059c6dad26babcb24ccecbcdfb822938cdb75959b3069",
-          "sizeBytes": 1673,
+          "manifestSha256": "8eb6ac63b7b256abc050a97eace1c16e22e3352d5ede42daf001a9a289b7942d",
+          "sizeBytes": 1692,
           "support": "supported"
         },
         {
           "version": "9.4.4",
           "path": "packages/search/kibana/versions/9.4.4",
-          "manifestSha256": "c91bbedcebef3c871a5e0b086f9b49f72f853a405fe8fa8b05900d376f13909e",
-          "sizeBytes": 1673,
+          "manifestSha256": "37efcf6fb217ccb31cbda80c5de68e47a6d781f8f841222e7fc2a6fcf7bd192a",
+          "sizeBytes": 1692,
           "support": "supported"
         }
       ]
@@ -1069,7 +1069,7 @@
       },
       "legacyEnvPrefix": "SERVICE_MEILISEARCH_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "search"
@@ -1078,23 +1078,23 @@
         {
           "version": "v1.11",
           "path": "packages/search/meilisearch/versions/v1.11",
-          "manifestSha256": "8246ba1b371dbcc9014d515d107ee0adc97c3a1fe4b184dc6078adf0c1bd3064",
-          "sizeBytes": 1701,
+          "manifestSha256": "6a9e1221bc4dd21b713fb4226ad2c0831e870b4684d1b9897223576d02e9d4d2",
+          "sizeBytes": 1850,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "v1.52",
           "path": "packages/search/meilisearch/versions/v1.52",
-          "manifestSha256": "2fd8c879e184e206dc64218db3a0d91bf2bf481f1e7f077dd2489831ba313191",
-          "sizeBytes": 1701,
+          "manifestSha256": "2a8e50bd277ef056308f875e6453d577825cf978d1fbdcad4acb7739fad0e610",
+          "sizeBytes": 1850,
           "support": "supported"
         },
         {
           "version": "v1.53",
           "path": "packages/search/meilisearch/versions/v1.53",
-          "manifestSha256": "661e9c33296775ca643a7f3f469285154091796ff5f7c88c759d477d2ad0875f",
-          "sizeBytes": 1701,
+          "manifestSha256": "1e9c5cde7a597ad2b8b227e478261946e2cad278b2639bfdc3407854846ac8ad",
+          "sizeBytes": 1850,
           "support": "supported"
         }
       ]
@@ -1107,7 +1107,7 @@
       },
       "legacyEnvPrefix": "SERVICE_TYPESENSE_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "search"
@@ -1116,30 +1116,30 @@
         {
           "version": "27.1",
           "path": "packages/search/typesense/versions/27.1",
-          "manifestSha256": "10b48e6fcc9e3efd54566c6ed4ca47b1b2d5107c6aede3d79fec781ba2285074",
-          "sizeBytes": 1693,
+          "manifestSha256": "f165f45157f1e2ea4d5e8305fa62ff9fae8d748a74d5598818c8b19c7a493dfc",
+          "sizeBytes": 1835,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "28.0",
           "path": "packages/search/typesense/versions/28.0",
-          "manifestSha256": "b95a2bc24ae6524711b6bdfc044245bcf138544ff165e5768e4e76989c2e0719",
-          "sizeBytes": 1693,
+          "manifestSha256": "e342c699ddf3f65fa51e88c9aa4fade8b4443c06c47723aaa18f5c9b839102c7",
+          "sizeBytes": 1835,
           "support": "supported"
         },
         {
           "version": "29.1",
           "path": "packages/search/typesense/versions/29.1",
-          "manifestSha256": "f14d7f3ba8ab030c983247ab0cc632fee0576fdee80d6ec1a663f8e449b844e2",
-          "sizeBytes": 1693,
+          "manifestSha256": "c3c2dc7a0c2ead49114605895a4d31c1cff299b37e6c1f2d4e0a5c1c96960c90",
+          "sizeBytes": 1835,
           "support": "supported"
         },
         {
           "version": "30.2",
           "path": "packages/search/typesense/versions/30.2",
-          "manifestSha256": "20c90fe02dbc53b2d102b2a0fafbac054566dff2486858cd25208510f035cf44",
-          "sizeBytes": 1693,
+          "manifestSha256": "38e769b4a19b8162a0b9e4f049fc8680b4b1191c9235fc767e9680075576c186",
+          "sizeBytes": 1835,
           "support": "supported"
         }
       ]
@@ -1152,7 +1152,7 @@
       },
       "legacyEnvPrefix": "SERVICE_MINIO_",
       "instancing": {
-        "multiple": false
+        "multiple": true
       },
       "capabilities": [
         "object-store",
@@ -1162,29 +1162,29 @@
         {
           "version": "RELEASE.2025-04-22T22-12-26Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-04-22T22-12-26Z",
-          "manifestSha256": "de5426201d346a24d25507cc247e014687a0391714ccfed76e15957c3890cff6",
-          "sizeBytes": 2118,
+          "manifestSha256": "3d8dc5de23c115199e5f6e4e427926abd550e19b2d84e823d4db8e935a28414f",
+          "sizeBytes": 2230,
           "support": "supported"
         },
         {
           "version": "RELEASE.2025-06-13T11-33-47Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-06-13T11-33-47Z",
-          "manifestSha256": "fde39b869274b05e6fbd5951bb356d1a3f7bd04a58a125056be577eea8696f66",
-          "sizeBytes": 2118,
+          "manifestSha256": "9455d476d2889e75e748dc202b5b019af625b319d5344209b0f721b73cfea3af",
+          "sizeBytes": 2230,
           "support": "supported"
         },
         {
           "version": "RELEASE.2025-07-23T15-54-02Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-07-23T15-54-02Z",
-          "manifestSha256": "aa31af4e5b3a64d5e981cfdc6278d1fbd39c396535653f12c6da8ce93c20f519",
-          "sizeBytes": 2118,
+          "manifestSha256": "7341145ac78cb113d448d3655fd7e8458e5b5e35a35d3b0b31ea16b27aae83c1",
+          "sizeBytes": 2230,
           "support": "supported"
         },
         {
           "version": "RELEASE.2025-09-07T16-13-09Z",
           "path": "packages/storage/minio/versions/RELEASE.2025-09-07T16-13-09Z",
-          "manifestSha256": "c5a96a6de6c298772a287fee92ef39d7d51f420d8ab3362c2fc9f79cfc5fb135",
-          "sizeBytes": 2118,
+          "manifestSha256": "112652368083e0280b08b30985a92f34968fd93ef1bfc8c97dcde8c78a27f60c",
+          "sizeBytes": 2230,
           "support": "supported",
           "recommended": true
         }
