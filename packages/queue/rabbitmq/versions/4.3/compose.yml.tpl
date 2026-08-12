@@ -18,3 +18,10 @@ ports:
 networks:
   {{ network }}:
     aliases: {{ instance.aliases }}
+
+labels:
+  - "traefik.enable=true"
+  - "traefik.http.routers.{{ instance.slug }}.rule=Host(`{{ instance.domain }}`)"
+  - "traefik.http.routers.{{ instance.slug }}.entrypoints=websecure"
+  - "traefik.http.routers.{{ instance.slug }}.tls=true"
+  - "traefik.http.services.{{ instance.slug }}.loadbalancer.server.port=15672"

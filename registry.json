@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 10,
-  "generatedAt": "2026-08-12T07:13:29.470Z",
+  "sequence": 11,
+  "generatedAt": "2026-08-12T09:03:17.436Z",
   "packages": [
     {
       "service": "adminer",
@@ -749,15 +749,15 @@
         {
           "version": "v1.0.0",
           "path": "packages/devtools/mailhog/versions/v1.0.0",
-          "manifestSha256": "fb49d892417a878efceefa1f420efe03c209a3735c1191f0266ebb47951a1c51",
-          "sizeBytes": 1297,
+          "manifestSha256": "0d0c40529aeee49dba73cd8b4d881c163921f0d2a1ddf6864754117f54e0668c",
+          "sizeBytes": 1653,
           "support": "supported"
         },
         {
           "version": "v1.0.1",
           "path": "packages/devtools/mailhog/versions/v1.0.1",
-          "manifestSha256": "7ab189bb71c32749174a3da7a5daa8e5bc54d2cd0b0e671cfc62e8e18a9bfb89",
-          "sizeBytes": 1297,
+          "manifestSha256": "2f82648292876f6d4301ca954308b679aec55750461fc5b21de648471de95669",
+          "sizeBytes": 1653,
           "support": "supported",
           "recommended": true
         }
@@ -781,22 +781,22 @@
         {
           "version": "v1.28",
           "path": "packages/devtools/mailpit/versions/v1.28",
-          "manifestSha256": "8dae7a8cb13f8a0b867e02ef8d9b16ad6eeb03592c350005482bfa519fd7d3e9",
-          "sizeBytes": 1347,
+          "manifestSha256": "f91941c85de167ccf5e2f5ba6578f71bef21debe4e08e802b6a09555cdb2904c",
+          "sizeBytes": 1703,
           "support": "supported"
         },
         {
           "version": "v1.29",
           "path": "packages/devtools/mailpit/versions/v1.29",
-          "manifestSha256": "ac16386bd42cd2fbc1e96701bcb3d0bd2988a7570a275e24aa740fba6ae74288",
-          "sizeBytes": 1347,
+          "manifestSha256": "eb8b3464a6e1d3edcb19792a08b23dc097c9c3d5a1fc7bec00b9640ce1fada3e",
+          "sizeBytes": 1703,
           "support": "supported"
         },
         {
           "version": "v1.30",
           "path": "packages/devtools/mailpit/versions/v1.30",
-          "manifestSha256": "5a3dee932e2270b34541ff59807bbc1e178f27df7fc34041ffa38dafeafa174f",
-          "sizeBytes": 1347,
+          "manifestSha256": "c7898152562f30bb583744c9d919429cc7c07bc65d68e4436cca3e312cda0f6c",
+          "sizeBytes": 1703,
           "support": "supported",
           "recommended": true
         }
@@ -819,32 +819,32 @@
         {
           "version": "10.4.19",
           "path": "packages/monitoring/grafana/versions/10.4.19",
-          "manifestSha256": "1ba0e92c2ba4b400e17e4d1aaea4e61c3a1475764915ddaeceac701fbbd7f55b",
-          "sizeBytes": 1920,
+          "manifestSha256": "095bfbbea4746a9f31787f80b0450f45119384074aaf43bff0d6132b1fe98b0a",
+          "sizeBytes": 2278,
           "support": "eol",
           "eolDate": "2025-06-05"
         },
         {
           "version": "11.6",
           "path": "packages/monitoring/grafana/versions/11.6",
-          "manifestSha256": "d8eba34896de385de02094083cfb02d98a457610597ab642be3682363758ab23",
-          "sizeBytes": 1914,
+          "manifestSha256": "6bd9dd49eeb5c0bebaa109b94151ecd1a4b8dd715ddc974898fdf6214ec336fb",
+          "sizeBytes": 2272,
           "support": "eol",
           "eolDate": "2026-06-25"
         },
         {
           "version": "12.4",
           "path": "packages/monitoring/grafana/versions/12.4",
-          "manifestSha256": "c40969fb8fa9c063cb6a1c4d99527f1f8c1dc35f20f8d008916c290e1b947a26",
-          "sizeBytes": 1920,
+          "manifestSha256": "eec79936c8d03320e639aef58c153c1385fa115e9db5d4e43b2e93a3f5a05edb",
+          "sizeBytes": 2278,
           "support": "supported",
           "eolDate": "2027-05-24"
         },
         {
           "version": "13.1",
           "path": "packages/monitoring/grafana/versions/13.1",
-          "manifestSha256": "19dccb177ad89910b47c040aa1f2f2bd8952d737c5ea0c96ab2604bc7374d859",
-          "sizeBytes": 1920,
+          "manifestSha256": "30551167fb4cc4f2f0d14b28fef31a7c9e511244858dce3bfa22ad2b3a31c5c1",
+          "sizeBytes": 2278,
           "support": "supported",
           "recommended": true,
           "eolDate": "2027-03-20"
@@ -915,39 +915,39 @@
         {
           "version": "3",
           "path": "packages/queue/rabbitmq/versions/3",
-          "manifestSha256": "22267fb52e8f2279bacc44b26a2d2d0f1a8e662c6a450239478964219fb4e8e1",
-          "sizeBytes": 1849,
+          "manifestSha256": "734a09efb8f90be136ad00dbe7896acf73c9395617a6db74bf70cf46937b90b2",
+          "sizeBytes": 2209,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "3.13",
           "path": "packages/queue/rabbitmq/versions/3.13",
-          "manifestSha256": "ad97cabcb0f9005b7055fd1d5f296158f04d000dfb0a91275b300fa83a1a7749",
-          "sizeBytes": 1924,
+          "manifestSha256": "dcf2347a744fe79dd6a4c4f2acfdb16615296703244e1dfa81d34181dd56baa9",
+          "sizeBytes": 2284,
           "support": "eol",
           "eolDate": "2024-09-17"
         },
         {
           "version": "4",
           "path": "packages/queue/rabbitmq/versions/4",
-          "manifestSha256": "b250f0db47254fb8f383b38a351535461e2231245685ecc477a26900838c5a05",
-          "sizeBytes": 1849,
+          "manifestSha256": "bc399799d281bd525d25ac21c0316653de9392b4c8e4b906f21737863dbf7e27",
+          "sizeBytes": 2209,
           "support": "supported"
         },
         {
           "version": "4.2",
           "path": "packages/queue/rabbitmq/versions/4.2",
-          "manifestSha256": "c66ef0662fb9223ad324f248a2b480237286374023cf89656d37b6def15429cb",
-          "sizeBytes": 1922,
+          "manifestSha256": "966f83328ce4cb73a76806a2d7eda9c7de4a78664fe44da50963236d6e063276",
+          "sizeBytes": 2282,
           "support": "eol",
           "eolDate": "2026-07-31"
         },
         {
           "version": "4.3",
           "path": "packages/queue/rabbitmq/versions/4.3",
-          "manifestSha256": "98fef82a9d21c00d309cf55402f7c0a3ce35faca79d443b893b18fc0d9847dc7",
-          "sizeBytes": 1853,
+          "manifestSha256": "a2da663a6f5fd739cb0d10a6bcd241e1de9d292f52039e4cec54d17f1bd4b126",
+          "sizeBytes": 2213,
           "support": "supported"
         }
       ]
@@ -1024,39 +1024,39 @@
         {
           "version": "7.17.28",
           "path": "packages/search/kibana/versions/7.17.28",
-          "manifestSha256": "343a5f4da6bb3ed8045f5571c56e254b6034eccafb3e9812333b24a9e31659e2",
-          "sizeBytes": 1770,
+          "manifestSha256": "b6286ca9f01b3231f65a6b3e1adea666df5df92cb121f7ea3d7ca8cabe219080",
+          "sizeBytes": 2127,
           "support": "eol",
           "eolDate": "2026-01-15"
         },
         {
           "version": "8.11.3",
           "path": "packages/search/kibana/versions/8.11.3",
-          "manifestSha256": "3d212c25c8997bae82c6aeb9d30de0c9e34e11890b378867010219e5886727f2",
-          "sizeBytes": 1694,
+          "manifestSha256": "55b14329484c163918f62446e1b92d339e2da8304890c4928c4afa7fab59c1f7",
+          "sizeBytes": 2051,
           "support": "supported",
           "recommended": true
         },
         {
           "version": "8.19.19",
           "path": "packages/search/kibana/versions/8.19.19",
-          "manifestSha256": "0ea2661174da981ff1c9f4721e829acaefa0efd3d2b5cbf49a6e2fbb4f8d3315",
-          "sizeBytes": 1776,
+          "manifestSha256": "bde8fa073e6d6afc73dd588354e666b840310d0d0dbf49913804c3f542c8f758",
+          "sizeBytes": 2133,
           "support": "supported",
           "eolDate": "2027-07-15"
         },
         {
           "version": "9.3.8",
           "path": "packages/search/kibana/versions/9.3.8",
-          "manifestSha256": "8eb6ac63b7b256abc050a97eace1c16e22e3352d5ede42daf001a9a289b7942d",
-          "sizeBytes": 1692,
+          "manifestSha256": "1d90c14be83dbb51e563728ca5f62c540a11b86da8a11fdfa3f3f96a672eff6e",
+          "sizeBytes": 2049,
           "support": "supported"
         },
         {
           "version": "9.4.4",
           "path": "packages/search/kibana/versions/9.4.4",
-          "manifestSha256": "37efcf6fb217ccb31cbda80c5de68e47a6d781f8f841222e7fc2a6fcf7bd192a",
-          "sizeBytes": 1692,
+          "manifestSha256": "3f692440a1708f352995b8a748886c421ccbdde67df4cdad71732fa462aa7cff",
+          "sizeBytes": 2049,
           "support": "supported"
         }
       ]

@@ -29,9 +29,9 @@
     "defaultUser": "guest",
     "passwordSetting": "DEFAULT_PASS"
   },
-  "url": null,
+  "url": { "subdomain": "rabbitmq", "port": "mgmt" },
   "dependsOn": [],
   "health": { "test": ["CMD", "rabbitmq-diagnostics", "-q", "ping"], "interval": "15s", "retries": 12, "startPeriod": "40s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "cdafd63b1cf19a2b7345201977c2a74026d80039c828918861bc9dccca1cf921" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "feda38a082f81b088454264a2a5ba55a336c9e8f9cba8b27637f9df5187adb1f" },
   "support": {"status":"supported"}
 }

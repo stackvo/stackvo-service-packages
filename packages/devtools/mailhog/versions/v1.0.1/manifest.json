@@ -22,9 +22,9 @@
     "scheme": "smtp",
     "port": "smtp"
   },
-  "url": null,
+  "url": { "subdomain": "mailhog", "port": "ui" },
   "dependsOn": [],
   "health": { "test": ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8025/api/v2/messages"], "interval": "10s", "retries": 10, "startPeriod": "5s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "1b3baa3209321f72e4620cfc1ce2f550abba23a8d037932f9eb7963b3994d278" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "be7eaa14a2c9d31ff0c22c3f591c672f2feccfa8d93ca8d7379b52eec85fc466" },
   "support": {"status":"supported"}
 }

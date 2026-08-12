@@ -22,11 +22,11 @@
     { "key": "SERVER_HOST", "type": "string", "default": "0.0.0.0" }
   ],
   "connection": null,
-  "url": null,
+  "url": { "subdomain": "kibana", "port": "main" },
   "dependsOn": [
     { "capability": "search", "service": "elasticsearch", "required": true }
   ],
   "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:5601/api/status"], "interval": "15s", "retries": 20, "startPeriod": "60s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "3583d40798c1878925b8f73cedaa356e4efece2a5ea6db832a9e66f88b00ec6e" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "dd3c0a89b7bcf0a9dc3b8cc9b1378635a6bb096d17e0dac59de2382be0cf265c" },
   "support": {"status":"supported"}
 }

@@ -21,3 +21,10 @@ networks:
     aliases: {{ instance.aliases }}
 
 user: "{{ settings.HOST_UID }}"
+
+labels:
+  - "traefik.enable=true"
+  - "traefik.http.routers.{{ instance.slug }}.rule=Host(`{{ instance.domain }}`)"
+  - "traefik.http.routers.{{ instance.slug }}.entrypoints=websecure"
+  - "traefik.http.routers.{{ instance.slug }}.tls=true"
+  - "traefik.http.services.{{ instance.slug }}.loadbalancer.server.port=3000"
