@@ -23,9 +23,9 @@
     "scheme": "smtp",
     "port": "smtp"
   },
-  "url": null,
+  "url": { "subdomain": "mailpit", "port": "ui" },
   "dependsOn": [],
   "health": { "test": ["CMD", "/mailpit", "readyz"], "interval": "10s", "retries": 10, "startPeriod": "5s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "928648f69dde7e196aaa7b232352849ff91d4eebc65a4ac5dfc00be723f0655f" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "28a3c7272fc5edb7c38cd337327aeced007c20cf041d04a5069150f1ca89a3db" },
   "support": {"status":"supported"}
 }
