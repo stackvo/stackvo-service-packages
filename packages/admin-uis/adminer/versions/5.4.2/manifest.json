@@ -25,6 +25,6 @@
     { "capability": "sql", "required": false }
   ],
   "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:8080/"], "interval": "15s", "retries": 8, "startPeriod": "10s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "95bb923ccc239db878fbda73dcfad5e533a5b8f4400f8a5f09cbc1083eb42610" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "b86dd0333393ec813ed0945fd3ffebfe08eafd5e3802deb283e06acb9161074d" },
   "support": {"status":"supported"}
 }

@@ -26,6 +26,6 @@
     { "capability": "queue", "service": "kafka", "required": true }
   ],
   "health": { "test": ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8080/actuator/health"], "interval": "15s", "retries": 15, "startPeriod": "40s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "03cbbc7f47882eac3e1845dec8250bfa6dde5d82ab500cf285c9208feb3acd29" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "39dbc09b0dc042663fe5bc53fb28108cea1176b0d47b07a46ec52aff8a420761" },
   "support": {"status":"supported"}
 }

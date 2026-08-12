@@ -27,6 +27,6 @@
     { "capability": "search", "service": "elasticsearch", "required": true }
   ],
   "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:5601/api/status"], "interval": "15s", "retries": 20, "startPeriod": "60s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "dd3c0a89b7bcf0a9dc3b8cc9b1378635a6bb096d17e0dac59de2382be0cf265c" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "139b9383dadf334faf6249fb87e5a98e98bd1bc0a524fbac20a17e9ab89e8bbe" },
   "support": {"status":"supported"}
 }

@@ -25,3 +25,5 @@ labels:
   - "traefik.http.routers.{{ instance.slug }}.entrypoints=websecure"
   - "traefik.http.routers.{{ instance.slug }}.tls=true"
   - "traefik.http.services.{{ instance.slug }}.loadbalancer.server.port=15672"
+  - "traefik.http.middlewares.{{ instance.slug }}-revalidate.headers.customResponseHeaders.Cache-Control=no-cache"
+  - "traefik.http.routers.{{ instance.slug }}.middlewares={{ instance.slug }}-revalidate"

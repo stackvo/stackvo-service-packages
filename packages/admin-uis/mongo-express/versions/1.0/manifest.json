@@ -30,6 +30,6 @@
     { "capability": "document-store", "service": "mongo", "required": true }
   ],
   "health": { "test": ["CMD-SHELL", "timeout 2 bash -c '</dev/tcp/127.0.0.1/8081'"], "interval": "15s", "retries": 10, "startPeriod": "20s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "4c327878cd46ace56cac397c2b0901ade47566d7dd454537370eef35050218dc" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "448de0082877fe59bbf0093c7bc1a791ac5bd85f5c20a543b771bccc4d4ca86b" },
   "support": {"status":"supported"}
 }

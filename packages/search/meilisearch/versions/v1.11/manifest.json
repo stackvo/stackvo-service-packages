@@ -26,6 +26,6 @@
   "url": { "subdomain": "meilisearch", "port": "main" },
   "dependsOn": [],
   "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:7700/health"], "interval": "10s", "retries": 10, "startPeriod": "10s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "cacb9b4efe036ff7166df14d18535742dd248a8269c3c612c8e5da30525e0068" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "d8cb2c2452771ee3ddca5f8e463ec70e94b383466afe438a4e292e83ec62b093" },
   "support": {"status":"supported"}
 }

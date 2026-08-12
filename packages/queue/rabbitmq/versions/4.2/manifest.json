@@ -32,6 +32,6 @@
   "url": { "subdomain": "rabbitmq", "port": "mgmt" },
   "dependsOn": [],
   "health": { "test": ["CMD", "rabbitmq-diagnostics", "-q", "ping"], "interval": "15s", "retries": 12, "startPeriod": "40s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "feda38a082f81b088454264a2a5ba55a336c9e8f9cba8b27637f9df5187adb1f" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "309a17c2d940d5c1893b94dfd6b325ce9e0bc9b2382b15eef7ce8cfe4fb5d33f" },
   "support": {"eolDate":"2026-07-31","source":"https://endoflife.date/api/rabbitmq.json","status":"eol"}
 }

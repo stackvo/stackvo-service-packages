@@ -30,6 +30,6 @@
     { "capability": "cache", "required": false }
   ],
   "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:80/"], "interval": "15s", "retries": 8, "startPeriod": "15s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "2f583e27b1309c36a4ff7858cb0b190b66721eecf766c48e6e1d21cd8e66ad3f" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "14ee68316c8d194ffb96a048c88ab039ea71502fab57e3a66fb202554888c595" },
   "support": {"status":"supported"}
 }

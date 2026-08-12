@@ -26,6 +26,6 @@
   "url": { "subdomain": "mailpit", "port": "ui" },
   "dependsOn": [],
   "health": { "test": ["CMD", "/mailpit", "readyz"], "interval": "10s", "retries": 10, "startPeriod": "5s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "28a3c7272fc5edb7c38cd337327aeced007c20cf041d04a5069150f1ca89a3db" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "2f88ba3eff1c93fabbc7e08cfbd820ccb719ee308333c3a0c3e1787809797d52" },
   "support": {"status":"supported"}
 }
