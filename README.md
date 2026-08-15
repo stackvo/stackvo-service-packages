@@ -20,8 +20,12 @@ packages/<category>/<service>/
     └── files/…                  # config files the service mounts
 ```
 
-**25 services, 101 versions.** Eight categories: `databases`, `cache`, `queue`,
+**27 services, 107 versions.** Eight categories: `databases`, `cache`, `queue`,
 `search`, `storage`, `monitoring`, `devtools`, `admin-uis`.
+
+The last two — Solr and ClickHouse — are the first that were never templates in
+the app's binary. Every other entry here arrived by migration; these arrived as
+packages, which is what the tree was built for.
 
 `registry.json` at the root is the index a client fetches first. It is
 **generated** by `tools/build-registry.mjs` and never hand-edited — CI fails a
