@@ -68,6 +68,8 @@ const PRODUCTS = {
   elasticsearch: 'elasticsearch',
   kibana: 'elasticsearch',
   grafana: 'grafana',
+  solr: 'solr',
+  clickhouse: 'clickhouse',
 };
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf8'));

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 12,
-  "generatedAt": "2026-08-12T12:42:05.509Z",
+  "sequence": 13,
+  "generatedAt": "2026-08-15T07:27:28.841Z",
   "packages": [
     {
       "service": "adminer",
@@ -426,6 +426,45 @@
           "path": "packages/databases/cassandra/versions/5.0",
           "manifestSha256": "bb812ecbfde719dcbe35ce55aa06a0eed98381a6daaf82d1ad8555280e97331d",
           "sizeBytes": 2105,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "clickhouse",
+      "category": "databases",
+      "name": {
+        "en": "ClickHouse"
+      },
+      "legacyEnvPrefix": "SERVICE_CLICKHOUSE_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "olap",
+        "sql"
+      ],
+      "versions": [
+        {
+          "version": "26.5",
+          "path": "packages/databases/clickhouse/versions/26.5",
+          "manifestSha256": "af8c4664a978198920d6b758425e5376b197f46df771fa444be4c420e6767991",
+          "sizeBytes": 2486,
+          "support": "supported"
+        },
+        {
+          "version": "26.6",
+          "path": "packages/databases/clickhouse/versions/26.6",
+          "manifestSha256": "5dcd3254e181646e9f4db5ad35634cac64438afd9f9a9795e02c0a7385343ffe",
+          "sizeBytes": 2486,
+          "support": "supported"
+        },
+        {
+          "version": "26.7",
+          "path": "packages/databases/clickhouse/versions/26.7",
+          "manifestSha256": "f00b47ebd86605d30624be5c2f4e3fc0645ee7977789c9d3bc79f1dd859c366a",
+          "sizeBytes": 2486,
           "support": "supported",
           "recommended": true
         }
@@ -1096,6 +1135,44 @@
           "manifestSha256": "ec5c3dc3a6a8f880ae69f67a8e00b86a6a19fdc8cc932c925f31b92dd47cb6e8",
           "sizeBytes": 2055,
           "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "solr",
+      "category": "search",
+      "name": {
+        "en": "Apache Solr"
+      },
+      "legacyEnvPrefix": "SERVICE_SOLR_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "search"
+      ],
+      "versions": [
+        {
+          "version": "9.7",
+          "path": "packages/search/solr/versions/9.7",
+          "manifestSha256": "57205f0ec858fc2ef17583135adc9ec98944f434c2e1c850007a5df7af8a4f19",
+          "sizeBytes": 1970,
+          "support": "supported"
+        },
+        {
+          "version": "9.8",
+          "path": "packages/search/solr/versions/9.8",
+          "manifestSha256": "73ce0f7855423d07de729ccb11491f85eb898fe380244576ea32edeb7ba536af",
+          "sizeBytes": 1970,
+          "support": "supported"
+        },
+        {
+          "version": "9.9",
+          "path": "packages/search/solr/versions/9.9",
+          "manifestSha256": "b1a96e34bc492b26c9226a5a7f7a8152c002081d57cdfbd12052a047fb267938",
+          "sizeBytes": 1970,
+          "support": "supported",
+          "recommended": true
         }
       ]
     },

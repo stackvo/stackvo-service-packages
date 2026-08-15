@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "solr",
+  "category": "search",
+  "name": { "en": "Apache Solr" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "9.9",
+  "legacyEnvPrefix": "SERVICE_SOLR_"
+}

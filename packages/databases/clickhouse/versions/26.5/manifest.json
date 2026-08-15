@@ -1,0 +1,34 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "clickhouse",
+  "version": "26.5",
+  "image": {
+    "repository": "clickhouse",
+    "tag": "26.5"
+  },
+  "capabilities": ["sql", "olap"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "http", "container": 8123, "preferred": 8123, "protocol": "tcp", "legacyKey": "SERVICE_CLICKHOUSE_HOST_PORT", "primary": true },
+    { "name": "native", "container": 9000, "preferred": 9100, "protocol": "tcp" }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/var/lib/clickhouse", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "DB", "type": "string", "default": "stackvo" },
+    { "key": "USER", "type": "string", "default": "stackvo" },
+    { "key": "PASSWORD", "type": "secret", "default": "stackvo" }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "http"
+  },
+  "url": { "subdomain": "clickhouse", "port": "http" },
+  "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "clickhouse-client --query 'SELECT 1'"], "interval": "10s", "retries": 15, "startPeriod": "30s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "d89ffd7f52945cbab02e6e29a5645ad2f1b3a7705119ccb9b4cf0f1499072b10" },
+  "support": {"status":"supported"}
+}

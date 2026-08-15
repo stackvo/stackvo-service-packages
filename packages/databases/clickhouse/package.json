@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "clickhouse",
+  "category": "databases",
+  "name": { "en": "ClickHouse" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "26.7",
+  "legacyEnvPrefix": "SERVICE_CLICKHOUSE_"
+}
