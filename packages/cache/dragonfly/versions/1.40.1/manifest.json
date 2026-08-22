@@ -1,0 +1,33 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "dragonfly",
+  "version": "1.40.1",
+  "image": {
+    "registry": "ghcr.io",
+    "repository": "dragonflydb/dragonfly",
+    "tag": "v1.40.1"
+  },
+  "capabilities": ["cache", "redis-protocol"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 6379, "preferred": 6382, "protocol": "tcp", "legacyKey": "SERVICE_DRAGONFLY_HOST_PORT", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "PASSWORD", "type": "secret" }
+  ],
+  "connection": {
+    "scheme": "redis",
+    "port": "main",
+    "passwordSetting": "PASSWORD"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": { "test": ["CMD", "/usr/local/bin/healthcheck.sh"], "interval": "10s", "retries": 10, "startPeriod": "10s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "27cceb6b2943337720ac9e985acae59244ef9a16ab9049fc0e45b6e79d5a8030" },
+  "support": {"status":"supported"}
+}

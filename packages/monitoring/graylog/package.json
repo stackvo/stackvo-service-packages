@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "graylog",
+  "category": "monitoring",
+  "name": { "en": "Graylog" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "7.1.8",
+  "legacyEnvPrefix": "SERVICE_GRAYLOG_"
+}

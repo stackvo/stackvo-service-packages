@@ -1,0 +1,40 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "graylog",
+  "version": "6.3.15",
+  "image": {
+    "repository": "graylog/graylog",
+    "tag": "6.3.15"
+  },
+  "capabilities": ["logs", "dashboard"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 9000, "preferred": 9010, "protocol": "tcp", "legacyKey": "SERVICE_GRAYLOG_HOST_PORT", "primary": false },
+    { "name": "gelf", "container": 12201, "preferred": 12201, "protocol": "udp" },
+    { "name": "syslog", "container": 1514, "preferred": 1514, "protocol": "tcp" }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/usr/share/graylog/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "ROOT_USERNAME", "type": "string", "default": "admin" },
+    { "key": "ROOT_PASSWORD_SHA2", "type": "string", "default": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918", "label": { "en": "SHA-256 of the admin password (default: admin)" } },
+    { "key": "PASSWORD_SECRET", "type": "secret", "default": "stackvo-first-boot", "label": { "en": "Session signing secret, at least 16 characters" } },
+    { "key": "MONGODB_URI", "type": "string", "default": "mongodb://root:root@stackvo-mongo:27017/graylog?authSource=admin" },
+    { "key": "TIMEZONE", "type": "string", "default": "UTC" },
+    { "key": "DEFAULT_TLD_SUFFIX", "type": "string", "default": "loc" }
+  ],
+  "connection": null,
+  "url": { "subdomain": "graylog", "port": "main" },
+  "dependsOn": [
+    { "capability": "document-store", "service": "mongo", "required": true }
+  ],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:9000/api"], "interval": "15s", "retries": 20, "startPeriod": "120s" },
+  "companions": [
+    { "name": "opensearch", "image": { "repository": "opensearchproject/opensearch", "tag": "2.19.6" }, "ports": [], "volumes": [{ "name": "data", "container": "/usr/share/opensearch/data", "purgeable": true }], "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:9200/_cluster/health"], "interval": "15s", "retries": 20, "startPeriod": "60s" }, "compose": { "file": "companion.opensearch.yml.tpl", "sha256": "e42a53fdcbcd77aa7ce58aed672cb73b6af5eb010c643e95951c364220b0a278" } }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "cbc6af7fd9b40ea14d24394d35c7824943d001790d79d23b37c6900eabb03b96" },
+  "support": {"eolDate":"2026-06-30","source":"https://endoflife.date/api/graylog.json","status":"eol"}
+}

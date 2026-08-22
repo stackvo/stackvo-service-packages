@@ -70,6 +70,8 @@ const PRODUCTS = {
   grafana: 'grafana',
   solr: 'solr',
   clickhouse: 'clickhouse',
+  prometheus: 'prometheus',
+  graylog: 'graylog',
 };
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf8'));

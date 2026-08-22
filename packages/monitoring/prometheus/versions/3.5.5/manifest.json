@@ -1,0 +1,35 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "prometheus",
+  "version": "3.5.5",
+  "image": {
+    "repository": "prom/prometheus",
+    "tag": "v3.5.5"
+  },
+  "capabilities": ["metrics"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 9090, "preferred": 9090, "protocol": "tcp", "legacyKey": "SERVICE_PROMETHEUS_HOST_PORT", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/prometheus", "purgeable": true }
+  ],
+  "files": [
+    { "name": "prometheus_yml", "template": "files/prometheus.yml.tpl", "target": "/etc/prometheus/prometheus.yml", "mode": "0444", "sha256": "fc41268619d12e30fb43a3b74522a83654db07bb0e673561142ac4b65e0c2113" }
+  ],
+  "settings": [
+    { "key": "SCRAPE_INTERVAL", "type": "string", "default": "15s" },
+    { "key": "EVALUATION_INTERVAL", "type": "string", "default": "15s" },
+    { "key": "RETENTION_TIME", "type": "string", "default": "15d" },
+    { "key": "DEFAULT_TLD_SUFFIX", "type": "string", "default": "loc" }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": { "subdomain": "prometheus", "port": "main" },
+  "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:9090/-/healthy"], "interval": "10s", "retries": 12, "startPeriod": "20s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "09b1764b512ba019086ab4bdb9e87758854795c01ac8cfa0a8fa15a1d580fc5d" },
+  "support": {"eolDate":"2026-07-31","source":"https://endoflife.date/api/prometheus.json","status":"eol"}
+}
