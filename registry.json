@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 13,
-  "generatedAt": "2026-08-15T07:27:28.841Z",
+  "sequence": 14,
+  "generatedAt": "2026-08-22T15:16:18.217Z",
   "packages": [
     {
       "service": "adminer",
@@ -219,6 +219,45 @@
           "path": "packages/admin-uis/phpmyadmin/versions/5.2",
           "manifestSha256": "7ddecff6ffe5fa6e8abc6845a989d3f1c023db399c66449514336f72c52bce16",
           "sizeBytes": 2122,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "dragonfly",
+      "category": "cache",
+      "name": {
+        "en": "Dragonfly"
+      },
+      "legacyEnvPrefix": "SERVICE_DRAGONFLY_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "cache",
+        "redis-protocol"
+      ],
+      "versions": [
+        {
+          "version": "1.38.1",
+          "path": "packages/cache/dragonfly/versions/1.38.1",
+          "manifestSha256": "87beddcaed08e2e8f0af70dbbab9ded5cf0e02e43d23afb8190d64b537483a27",
+          "sizeBytes": 1810,
+          "support": "supported"
+        },
+        {
+          "version": "1.39.0",
+          "path": "packages/cache/dragonfly/versions/1.39.0",
+          "manifestSha256": "74b5873f48f9a21a747960f3e3fc840e51ecedfe0212d324ae02bbf957736524",
+          "sizeBytes": 1810,
+          "support": "supported"
+        },
+        {
+          "version": "1.40.1",
+          "path": "packages/cache/dragonfly/versions/1.40.1",
+          "manifestSha256": "8857f50a2644d0259a6fe8948e12349b5ba11d9514cbf0b8980105bce55db9e9",
+          "sizeBytes": 1810,
           "support": "supported",
           "recommended": true
         }
@@ -891,6 +930,89 @@
       ]
     },
     {
+      "service": "graylog",
+      "category": "monitoring",
+      "name": {
+        "en": "Graylog"
+      },
+      "legacyEnvPrefix": "SERVICE_GRAYLOG_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "dashboard",
+        "logs"
+      ],
+      "versions": [
+        {
+          "version": "6.3.15",
+          "path": "packages/monitoring/graylog/versions/6.3.15",
+          "manifestSha256": "5c3c6fbe72c57bf87e6e326ac26b645a40199cf0cc93943b84c098341a36d7c9",
+          "sizeBytes": 5101,
+          "support": "eol",
+          "eolDate": "2026-06-30"
+        },
+        {
+          "version": "7.0.12",
+          "path": "packages/monitoring/graylog/versions/7.0.12",
+          "manifestSha256": "f17075d0002e5bed72662e72b26a186a604cbf21d3f15150f050f60ef97fea1c",
+          "sizeBytes": 5107,
+          "support": "supported",
+          "eolDate": "2026-11-03"
+        },
+        {
+          "version": "7.1.8",
+          "path": "packages/monitoring/graylog/versions/7.1.8",
+          "manifestSha256": "be540e16f1cbd8df33a828a254ed453025da97c41d07082ece8887b11f961af3",
+          "sizeBytes": 5105,
+          "support": "supported",
+          "recommended": true,
+          "eolDate": "2027-05-04"
+        }
+      ]
+    },
+    {
+      "service": "prometheus",
+      "category": "monitoring",
+      "name": {
+        "en": "Prometheus"
+      },
+      "legacyEnvPrefix": "SERVICE_PROMETHEUS_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "metrics"
+      ],
+      "versions": [
+        {
+          "version": "3.13.2",
+          "path": "packages/monitoring/prometheus/versions/3.13.2",
+          "manifestSha256": "4777907856923f87f985d8b66a61f627f387a4efe3fe944fe4cab8892bc2bb04",
+          "sizeBytes": 3412,
+          "support": "supported",
+          "recommended": true,
+          "eolDate": "2027-07-31"
+        },
+        {
+          "version": "3.14.0",
+          "path": "packages/monitoring/prometheus/versions/3.14.0",
+          "manifestSha256": "d1a352ebd8aa4731aef4979716638e6d6a3ee80f7df1e9a2cc19c1adf6a83d98",
+          "sizeBytes": 3412,
+          "support": "supported",
+          "eolDate": "2026-09-30"
+        },
+        {
+          "version": "3.5.5",
+          "path": "packages/monitoring/prometheus/versions/3.5.5",
+          "manifestSha256": "0330132323283338e5e6648ebe969cb23a6f4e7c5a49c0b055e355f2b1ea3678",
+          "sizeBytes": 3404,
+          "support": "eol",
+          "eolDate": "2026-07-31"
+        }
+      ]
+    },
+    {
       "service": "kafka",
       "category": "queue",
       "name": {
@@ -988,6 +1110,45 @@
           "manifestSha256": "6be70d12c37bdf41ade8bef28f064cb81cf49b4ae6c0c80f462788884825d3d7",
           "sizeBytes": 2418,
           "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "soketi",
+      "category": "queue",
+      "name": {
+        "en": "Soketi"
+      },
+      "legacyEnvPrefix": "SERVICE_SOKETI_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "broadcast",
+        "pusher-protocol"
+      ],
+      "versions": [
+        {
+          "version": "1.4.0",
+          "path": "packages/queue/soketi/versions/1.4.0",
+          "manifestSha256": "679f48942ea86b039f91a9ab830de71f379a4396130f7da797c297a4d1d22443",
+          "sizeBytes": 2045,
+          "support": "supported"
+        },
+        {
+          "version": "1.5.0",
+          "path": "packages/queue/soketi/versions/1.5.0",
+          "manifestSha256": "30396103320f6f18cc2a6a23a5465aab53db18c9cae1db6935210d4514969b20",
+          "sizeBytes": 2045,
+          "support": "supported"
+        },
+        {
+          "version": "1.6.1",
+          "path": "packages/queue/soketi/versions/1.6.1",
+          "manifestSha256": "c337cd321f3ba1800aed8cda65cb16300108d58ea39bec2c8be761e2e3ea1a8d",
+          "sizeBytes": 2045,
+          "support": "supported",
+          "recommended": true
         }
       ]
     },

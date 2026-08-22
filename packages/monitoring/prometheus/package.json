@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "prometheus",
+  "category": "monitoring",
+  "name": { "en": "Prometheus" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.13.2",
+  "legacyEnvPrefix": "SERVICE_PROMETHEUS_"
+}

@@ -1,0 +1,37 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "soketi",
+  "version": "1.4.0",
+  "image": {
+    "registry": "quay.io",
+    "repository": "soketi/soketi",
+    "tag": "1.4.0-16-alpine"
+  },
+  "capabilities": ["broadcast", "pusher-protocol"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 6001, "preferred": 6001, "protocol": "tcp", "legacyKey": "SERVICE_SOKETI_HOST_PORT", "primary": true },
+    { "name": "metrics", "container": 9601, "preferred": 9601, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "DEFAULT_APP_ID", "type": "string", "default": "app-id" },
+    { "key": "DEFAULT_APP_KEY", "type": "string", "default": "app-key" },
+    { "key": "DEFAULT_APP_SECRET", "type": "secret", "default": "app-secret" },
+    { "key": "ENABLE_CLIENT_MESSAGES", "type": "bool", "default": true },
+    { "key": "METRICS_ENABLED", "type": "bool", "default": true },
+    { "key": "DEBUG", "type": "bool", "default": false }
+  ],
+  "connection": {
+    "scheme": "ws",
+    "port": "main"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:6001/"], "interval": "10s", "retries": 12, "startPeriod": "15s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "dcf641a1feaaaca15196d20e28a160db2b2cc47af6881a8dbbc5e88eb03ba766" },
+  "support": {"status":"supported"}
+}
