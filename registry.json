@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 14,
-  "generatedAt": "2026-08-22T15:16:18.217Z",
+  "sequence": 15,
+  "generatedAt": "2026-08-24T07:30:43.049Z",
   "packages": [
     {
       "service": "adminer",
@@ -615,8 +615,8 @@
         {
           "version": "8.0",
           "path": "packages/databases/mongo/versions/8.0",
-          "manifestSha256": "ec09054bfd79f3b7e6377756b4f46717301ecb2d26f1aa26a5e3a6363983234b",
-          "sizeBytes": 4640,
+          "manifestSha256": "d93517fe3730bc24ffb8f5b6d2dad8e1628dcc69cb076e9aadf7db50687a8784",
+          "sizeBytes": 5516,
           "support": "supported",
           "recommended": true,
           "eolDate": "2029-10-31"
@@ -624,16 +624,16 @@
         {
           "version": "8.2",
           "path": "packages/databases/mongo/versions/8.2",
-          "manifestSha256": "c9c1a36d0a15ca3c815532b336e75b6357122033ba63000486c7594d1d298bad",
-          "sizeBytes": 4634,
+          "manifestSha256": "4b272a9dac71d9a0a7d6f1fc6166aea1ab1d0ba00e9a59e94b2c927b8dc4103b",
+          "sizeBytes": 5510,
           "support": "eol",
           "eolDate": "2026-07-31"
         },
         {
           "version": "8.3",
           "path": "packages/databases/mongo/versions/8.3",
-          "manifestSha256": "754421aa26ad16497b18be3a420520f2e488a3b0b5214e99441410ce458b884e",
-          "sizeBytes": 4640,
+          "manifestSha256": "b3d17dd037edadd4416dc171c8c4083e59dc9d08022e8e91641cbcb835e78a71",
+          "sizeBytes": 5516,
           "support": "supported",
           "eolDate": "2029-10-31"
         }
