@@ -36,6 +36,20 @@ environment:
   MONGO_INITDB_ROOT_PASSWORD: "{{ settings.INITDB_ROOT_PASSWORD }}"
   MONGO_INITDB_DATABASE: "{{ settings.DATABASE }}"
 
+  # The mongo:8.x image ships GLIBC_TUNABLES=glibc.pthread.rseq=0, which turns
+  # off glibc's own rseq registration and leaves it to the TCMalloc vendored
+  # into mongod. On Linux 6.19 and newer that path is broken (SERVER-121912),
+  # and recent mongod builds refuse to start rather than corrupt anything:
+  # "MongoDB cannot start: Linux kernel versions 6.19 and newer has a known
+  # incompatibility with this version of MongoDB", exit 1 — which `restart:
+  # unless-stopped` above turns into a boot loop. This is not a distant-server
+  # problem: Docker Desktop's own VM is already on 7.0.x-linuxkit.
+  #
+  # Handing rseq back to glibc sidesteps the broken TCMalloc path and clears the
+  # check. It is the default on kernels below 6.19, so it costs nothing there.
+  # Drop this line once the images carry a patched TCMalloc.
+  GLIBC_TUNABLES: "glibc.pthread.rseq=1"
+
 volumes:
   - "{{ volume.data }}:/data/db"
   - "{{ file.mongo_conf }}:/etc/mongo/mongo.conf:ro"

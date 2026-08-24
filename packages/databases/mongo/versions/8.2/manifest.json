@@ -36,6 +36,6 @@
   "url": null,
   "dependsOn": [],
   "health": { "test": ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"], "interval": "10s", "retries": 12, "startPeriod": "20s" },
-  "compose": { "file": "compose.yml.tpl", "sha256": "d4930066e01bd97c1c67113f65ece079254e2017158c2e2de3b5b64ae152a546" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "66a97b14a65aa8866179ea1fd9101591262cf4ce361acce98478f698cf62aced" },
   "support": {"eolDate":"2026-07-31","source":"https://endoflife.date/api/mongodb.json","status":"eol"}
 }
