@@ -65,7 +65,7 @@
     },
     "maintainer": {
       "type": "string",
-      "description": "Who is answerable for this package. 'stackvo' for the official set; third-party sources are a v2 question (ADR 0013 keeps the source pluggable, docs §4.6 keeps the door shut for now)."
+      "description": "Who is answerable for this package. Free text here because the schema describes a package anywhere, including a mirror an organisation runs for itself; the catalogue that ships it decides what the string may say. In stackvo/stackvo-service-packages that is publishers.json, checked by tools/validate.mjs before the index is signed — the app shows this name on a market card, and a name on a card reads as something somebody checked."
     },
     "license": {
       "type": "string",

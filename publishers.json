@@ -1,0 +1,12 @@
+{
+  "_note": "Who may be named as the maintainer of a package here. `maintainer` is a free string in the schema and the app now shows it on the market card, so without this file anybody opening a pull request could write \"stackvo\" and have it displayed as though somebody had checked. A name on a card reads as something somebody checked; this is the checking. Adding an entry is a separate decision from accepting a package — see CONTRIBUTING.md.",
+  "schemaVersion": 1,
+  "publishers": [
+    {
+      "id": "stackvo",
+      "name": "StackVo",
+      "url": "https://github.com/stackvo",
+      "since": "2026-08-25"
+    }
+  ]
+}
