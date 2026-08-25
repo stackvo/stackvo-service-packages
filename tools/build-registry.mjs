@@ -83,6 +83,12 @@ for (const category of dirs(PACKAGES).sort()) {
     };
     if (identity.summary) entry.summary = identity.summary;
     if (identity.keywords) entry.keywords = identity.keywords;
+    // Who publishes it. Every package here names a maintainer and the index
+    // dropped every one of them, so the client could not have shown whose a
+    // package was even if it wanted to — and a catalogue that means to carry
+    // third-party packages is asking somebody to run somebody else's compose
+    // fragment. That is the fact they weigh before saying yes.
+    if (identity.maintainer) entry.maintainer = identity.maintainer;
     if (identity.icon && existsSync(join(serviceDir, identity.icon))) {
       entry.icon = { path: identity.icon, sha256: sha256(join(serviceDir, identity.icon)) };
     }

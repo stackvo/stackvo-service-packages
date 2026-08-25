@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://stackvo.dev/contracts/v1/registry.schema.json",
   "title": "Service package registry index (registry.json) — contract v1",
-  "description": "The index the app fetches before it can show a catalog. GENERATED from the packages/ tree by tools/build-registry.mjs and signed; never hand-edited, and CI fails if a commit's registry.json differs from a fresh build of the tree beside it. It is the second link in the chain of trust: a pinned ed25519 key verifies this file, this file carries a sha256 for every version manifest, and each manifest carries a sha256 for every file it ships. See docs/servis-market-mimarisi.md §4.2.",
+  "description": "The index the app fetches before it can show a catalog. GENERATED from the packages/ tree by tools/build-registry.mjs and signed; never hand-edited, and CI fails if a commit's registry.json differs from a fresh build of the tree beside it. It is the second link in the chain of trust: a pinned ed25519 key verifies this file, this file carries a sha256 for every version manifest, and each manifest carries a sha256 for every file it ships. See SECURITY.md, where the chain and the threats it answers are set out.",
   "type": "object",
   "required": [
     "schemaVersion",
@@ -123,7 +123,11 @@
             "uniqueItems": true,
             "description": "What this service can be used as, for matching another package's dependsOn without downloading either."
           },
-          "legacyEnvPrefix": {
+          "maintainer": {
+          "type": "string",
+          "description": "Who publishes this package. Carried from the package manifest into the index because a catalogue offering third-party packages has to be able to say whose they are — it is the one fact a person weighs before installing somebody else's compose fragment, and dropping it here is what made it invisible for as long as it was."
+        },
+        "legacyEnvPrefix": {
             "type": "string",
             "description": "The SERVICE_<ID>_ prefix this service used before packages existed, carried for migration."
           },

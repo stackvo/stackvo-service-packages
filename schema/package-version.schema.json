@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://stackvo.dev/contracts/v1/package-version.schema.json",
   "title": "Service package version manifest (manifest.json) — contract v1",
-  "description": "One version of one service, as data. Lives at packages/<category>/<service>/versions/<version>/manifest.json in stackvo/stackvo-service-packages. This file is what replaces the six compile-time tables the app used to carry (template.rs DYNAMIC_SERVICES, config.rs EMBEDDED, commands.rs RENDERED, connect.rs SPECS, migrate.rs, env.schema.json serviceDependencies) — see docs/servis-market-mimarisi.md §3.2. Everything the app needs to install, render, connect to and remove one service instance is here, and nothing else is.",
+  "description": "One version of one service, as data. Lives at packages/<category>/<service>/versions/<version>/manifest.json in stackvo/stackvo-service-packages. This file is what replaces the six compile-time tables the app used to carry (template.rs DYNAMIC_SERVICES, config.rs EMBEDDED, commands.rs RENDERED, connect.rs SPECS, migrate.rs, env.schema.json serviceDependencies) — see One version is one directory and never a template with a version variable — the differences between series are real and a template that carried them with conditionals would be a program (decision 0032 in docs/durum.md). Everything the app needs to install, render, connect to and remove one service instance is here, and nothing else is.",
   "type": "object",
   "required": [
     "apiVersion",
