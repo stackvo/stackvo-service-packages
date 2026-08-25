@@ -48,6 +48,16 @@ jobs:
       - name: the index is the tree
         run: node tools/build-registry.mjs --check
 
+      # And the signature beside it still covers it. The index is generated and
+      # the signature is made by hand on the one machine holding the content
+      # key, so the two come apart the ordinary way: add a package, rebuild,
+      # commit, forget to re-sign. Downstream that is not a soft failure — the
+      # app refuses an index whose signature no longer matches, deliberately —
+      # so forgetting takes the catalogue away from every user at once. No
+      # network: it reads the two files here against the key the app pins.
+      - name: the signature still covers the index
+        run: node tools/verify-signature.mjs
+
       # Docker is on the runner, so this is both halves: `docker compose config`
       # and the policy allowlist.
       - name: every fragment is valid Compose and within policy
