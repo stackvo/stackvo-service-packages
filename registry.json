@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 15,
-  "generatedAt": "2026-08-24T07:30:43.049Z",
+  "sequence": 16,
+  "generatedAt": "2026-08-25T19:42:40.706Z",
   "packages": [
     {
       "service": "adminer",
@@ -9,6 +9,7 @@
       "name": {
         "en": "Adminer"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_ADMINER_",
       "instancing": {
         "multiple": true
@@ -47,6 +48,7 @@
       "name": {
         "en": "Kafbat UI"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_KAFBAT_",
       "instancing": {
         "multiple": true
@@ -85,6 +87,7 @@
       "name": {
         "en": "Mongo Express"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MONGO_EXPRESS_",
       "instancing": {
         "multiple": true
@@ -123,6 +126,7 @@
       "name": {
         "en": "pgAdmin"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_PGADMIN_",
       "instancing": {
         "multiple": true
@@ -161,6 +165,7 @@
       "name": {
         "en": "phpCacheAdmin"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_PHPCACHEADMIN_",
       "instancing": {
         "multiple": true
@@ -192,6 +197,7 @@
       "name": {
         "en": "phpMyAdmin"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_PHPMYADMIN_",
       "instancing": {
         "multiple": true
@@ -230,6 +236,7 @@
       "name": {
         "en": "Dragonfly"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_DRAGONFLY_",
       "instancing": {
         "multiple": true
@@ -269,6 +276,7 @@
       "name": {
         "en": "Memcached"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MEMCACHED_",
       "instancing": {
         "multiple": true
@@ -309,6 +317,7 @@
       "name": {
         "en": "Redis"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_REDIS_",
       "instancing": {
         "multiple": true
@@ -374,6 +383,7 @@
       "name": {
         "en": "Valkey"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_VALKEY_",
       "instancing": {
         "multiple": true
@@ -430,6 +440,7 @@
       "name": {
         "en": "Apache Cassandra"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_CASSANDRA_",
       "instancing": {
         "multiple": true
@@ -476,6 +487,7 @@
       "name": {
         "en": "ClickHouse"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_CLICKHOUSE_",
       "instancing": {
         "multiple": true
@@ -515,6 +527,7 @@
       "name": {
         "en": "MariaDB"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MARIADB_",
       "instancing": {
         "multiple": true
@@ -580,6 +593,7 @@
       "name": {
         "en": "MongoDB"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MONGO_",
       "instancing": {
         "multiple": true
@@ -645,6 +659,7 @@
       "name": {
         "en": "MySQL"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MYSQL_",
       "instancing": {
         "multiple": true
@@ -703,6 +718,7 @@
       "name": {
         "en": "PostgreSQL"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_POSTGRES_",
       "instancing": {
         "multiple": true
@@ -777,6 +793,7 @@
       "name": {
         "en": "Blackfire"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_BLACKFIRE_",
       "instancing": {
         "multiple": false
@@ -815,6 +832,7 @@
       "name": {
         "en": "MailHog"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MAILHOG_",
       "instancing": {
         "multiple": true
@@ -847,6 +865,7 @@
       "name": {
         "en": "Mailpit"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MAILPIT_",
       "instancing": {
         "multiple": true
@@ -886,6 +905,7 @@
       "name": {
         "en": "Grafana"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_GRAFANA_",
       "instancing": {
         "multiple": true
@@ -935,6 +955,7 @@
       "name": {
         "en": "Graylog"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_GRAYLOG_",
       "instancing": {
         "multiple": true
@@ -977,6 +998,7 @@
       "name": {
         "en": "Prometheus"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_PROMETHEUS_",
       "instancing": {
         "multiple": true
@@ -1018,6 +1040,7 @@
       "name": {
         "en": "Apache Kafka"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_KAFKA_",
       "instancing": {
         "multiple": true
@@ -1064,6 +1087,7 @@
       "name": {
         "en": "RabbitMQ"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_RABBITMQ_",
       "instancing": {
         "multiple": true
@@ -1119,6 +1143,7 @@
       "name": {
         "en": "Soketi"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_SOKETI_",
       "instancing": {
         "multiple": true
@@ -1158,6 +1183,7 @@
       "name": {
         "en": "Elasticsearch"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_ELASTICSEARCH_",
       "instancing": {
         "multiple": true
@@ -1213,6 +1239,7 @@
       "name": {
         "en": "Kibana"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_KIBANA_",
       "instancing": {
         "multiple": true
@@ -1267,6 +1294,7 @@
       "name": {
         "en": "Meilisearch"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MEILISEARCH_",
       "instancing": {
         "multiple": true
@@ -1305,6 +1333,7 @@
       "name": {
         "en": "Apache Solr"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_SOLR_",
       "instancing": {
         "multiple": true
@@ -1343,6 +1372,7 @@
       "name": {
         "en": "Typesense"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_TYPESENSE_",
       "instancing": {
         "multiple": true
@@ -1388,6 +1418,7 @@
       "name": {
         "en": "MinIO"
       },
+      "maintainer": "stackvo",
       "legacyEnvPrefix": "SERVICE_MINIO_",
       "instancing": {
         "multiple": true

@@ -3,7 +3,7 @@
   "$id": "https://stackvo.dev/contracts/v1/compose-policy.json",
   "contractVersion": "1.0.0",
   "title": "What a service package's compose fragment may declare — contract v1",
-  "description": "An allowlist, checked twice: by tools/compose-check.mjs in stackvo-service-packages before a package is published, and by compose_policy.rs in the app after a fragment is rendered and before it is assembled. Both read THIS file so the two cannot drift. See docs/servis-market-mimarisi.md §4.4.",
+  "description": "An allowlist, checked twice: by tools/compose-check.mjs in stackvo-service-packages before a package is published, and by compose_policy.rs in the app after a fragment is rendered and before it is assembled. Both read THIS file so the two cannot drift. The threat this answers is T-3 in SECURITY.md, which is the one that costs root on the host.",
   "why": [
     "Until service packages existed, StackVo only ever handed Docker files that were compiled into its own binary. A package is data somebody else wrote, and a compose service is not a passive description — the right four words in it are root on the host.",
     "An allowlist rather than a blocklist, because the list of things worth forbidding is only ever known in retrospect. A key nobody has considered is refused, and adding it is a review.",
