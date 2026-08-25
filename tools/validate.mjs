@@ -57,6 +57,24 @@ const HEALTH_EXEMPT = {
     'proved the process was running would pass for a reason unrelated to whether profiling works.',
 };
 
+/**
+ * Who may be named as a maintainer here.
+ *
+ * `maintainer` is a free string in the schema, and the app shows it on the
+ * market card. Those two facts together are an impersonation hole with nothing
+ * in between them: a pull request could name `stackvo` as the publisher of
+ * anything and every user would read a name that nobody had checked.
+ *
+ * The check belongs here rather than in the client, and that is the whole of
+ * the trust argument: the index is signed by the registry key **after** these
+ * gates run, so the signature is what carries "the registry vouches for this",
+ * and the maintainer strings are inside what it covers. A client cannot verify
+ * an identity claim on its own — it can only verify that the registry made it.
+ */
+const publishers = new Set(
+  readJson(join(ROOT, 'publishers.json')).publishers.map((p) => p.id),
+);
+
 const packageSchema = readJson(join(ROOT, 'schema/package.schema.json'));
 const versionSchema = readJson(join(ROOT, 'schema/package-version.schema.json'));
 
@@ -97,6 +115,21 @@ for (const category of dirs(PACKAGES)) {
     }
     if (identity.category !== category) {
       err(at, 'CATEGORY_MISMATCH', `package.json says category ${JSON.stringify(identity.category)}`);
+    }
+
+    // Who is answerable for it, and whether that is somebody this repository
+    // has accepted. Required here even though the schema leaves it optional:
+    // the schema describes a package anywhere, and this is the official set,
+    // where an unnamed publisher is a package nobody is answerable for.
+    if (!identity.maintainer) {
+      err(at, 'NO_MAINTAINER', 'package.json names no maintainer, so nobody is answerable for it');
+    } else if (!publishers.has(identity.maintainer)) {
+      err(
+        at,
+        'UNKNOWN_PUBLISHER',
+        `package.json names ${JSON.stringify(identity.maintainer)}, which publishers.json does not list — ` +
+          'accepting a publisher is a decision of its own (CONTRIBUTING.md)',
+      );
     }
 
     // ---- versions ---------------------------------------------------------
