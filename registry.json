@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 16,
-  "generatedAt": "2026-08-25T19:42:40.706Z",
+  "sequence": 19,
+  "generatedAt": "2026-08-28T12:40:50.568Z",
   "packages": [
     {
       "service": "adminer",
@@ -654,6 +654,45 @@
       ]
     },
     {
+      "service": "mssql",
+      "category": "databases",
+      "name": {
+        "en": "Microsoft SQL Server"
+      },
+      "summary": {
+        "en": "For the PHP extensions this app already offers. sqlsrv and pdo_sqlsrv have been in the extension list all along with nothing in the catalogue to connect them to.",
+        "tr": "Bu uygulamanın zaten sunduğu PHP uzantıları için. sqlsrv ve pdo_sqlsrv başından beri uzantı listesinde, ve bağlanacak hiçbir servis yoktu."
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_MSSQL_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "sql",
+        "tsql"
+      ],
+      "versions": [
+        {
+          "version": "2022",
+          "path": "packages/databases/mssql/versions/2022",
+          "manifestSha256": "ab574643c273fa988a24d3acbdbc61565a3cc658905000814f6aa99a47fd28c7",
+          "sizeBytes": 2713,
+          "support": "supported",
+          "recommended": true,
+          "eolDate": "2033-01-11"
+        },
+        {
+          "version": "2025",
+          "path": "packages/databases/mssql/versions/2025",
+          "manifestSha256": "ce5bd3560a94153abacdda01204c76e655174353a8d6aac2a39e0d1b6067ea43",
+          "sizeBytes": 2468,
+          "support": "supported",
+          "eolDate": "2036-01-06"
+        }
+      ]
+    },
+    {
       "service": "mysql",
       "category": "databases",
       "name": {
@@ -1031,6 +1070,36 @@
           "sizeBytes": 3404,
           "support": "eol",
           "eolDate": "2026-07-31"
+        }
+      ]
+    },
+    {
+      "service": "beanstalkd",
+      "category": "queue",
+      "name": {
+        "en": "Beanstalkd"
+      },
+      "summary": {
+        "en": "One of the five queue drivers Laravel ships with. A project writing QUEUE_CONNECTION=beanstalkd had nothing here to point it at.",
+        "tr": "Laravel'in kutudan gelen beş kuyruk sürücüsünden biri. QUEUE_CONNECTION=beanstalkd yazan bir projenin burada gösterecek hiçbir şeyi yoktu."
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_BEANSTALKD_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "beanstalk-protocol",
+        "queue"
+      ],
+      "versions": [
+        {
+          "version": "2025.03",
+          "path": "packages/queue/beanstalkd/versions/2025.03",
+          "manifestSha256": "8c08b9ff4e6e430012c6a02575430d5dac27d7f96c5aa9417cf03ddb250447bb",
+          "sizeBytes": 2430,
+          "support": "supported",
+          "recommended": true
         }
       ]
     },

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://stackvo.dev/contracts/v1/package-version.schema.json",
   "title": "Service package version manifest (manifest.json) — contract v1",
-  "description": "One version of one service, as data. Lives at packages/<category>/<service>/versions/<version>/manifest.json in stackvo/stackvo-service-packages. This file is what replaces the six compile-time tables the app used to carry (template.rs DYNAMIC_SERVICES, config.rs EMBEDDED, commands.rs RENDERED, connect.rs SPECS, migrate.rs, env.schema.json serviceDependencies) — see One version is one directory and never a template with a version variable — the differences between series are real and a template that carried them with conditionals would be a program (decision 0032 in docs/durum.md). Everything the app needs to install, render, connect to and remove one service instance is here, and nothing else is.",
+  "description": "One version of one service, as data. Lives at packages/<category>/<service>/versions/<version>/manifest.json in stackvo/stackvo-service-packages. This file is what replaces the six compile-time tables the app used to carry (template.rs DYNAMIC_SERVICES, config.rs EMBEDDED, commands.rs RENDERED, connect.rs SPECS, migrate.rs, env.schema.json serviceDependencies). One version is one directory and never a template with a version variable: the differences between series are real, and a template that carried them with conditionals would be a program. Everything the app needs to install, render, connect to and remove one service instance is here, and nothing else is.",
   "type": "object",
   "required": [
     "apiVersion",
@@ -38,7 +38,7 @@
           "master"
         ]
       },
-      "description": "CONCRETE version. Must equal the containing <version> directory name. A moving tag is forbidden here (ADR 0014): a manifest whose image can change under it has no fixed digest, so it cannot take a place in the hash chain that makes an installed package verifiable. 'latest' is expressed at registry level as the `recommended` flag, and migration resolves it to a concrete version before writing instances.json."
+      "description": "CONCRETE version. Must equal the containing <version> directory name. A moving tag is forbidden here: a manifest whose image can change under it has no fixed digest, so it cannot take a place in the hash chain that makes an installed package verifiable. 'latest' is expressed at registry level as the `recommended` flag, and migration resolves it to a concrete version before writing instances.json."
     },
     "image": {
       "type": "object",
@@ -172,7 +172,7 @@
           "purgeable": {
             "type": "boolean",
             "default": true,
-            "description": "May `market_uninstall --purgeData` delete this? ADR 0012 moved data deletion out of disable and into uninstall; this field is what the deletion reads, instead of the regex over template text that discard_service uses today."
+            "description": "May `market_uninstall --purgeData` delete this? Data deletion lives on uninstall rather than on disable; this field is what the deletion reads, instead of the regex over template text that discard_service uses today."
           }
         }
       }
@@ -210,7 +210,7 @@
             "type": "string",
             "pattern": "^0[0-7]{3}$",
             "default": "0444",
-            "description": "Octal mode the rendered file is written with. Read-only by default: it is generated output, and a user who edits it in place loses the edit on the next render (ADR 0002)."
+            "description": "Octal mode the rendered file is written with. Read-only by default: it is generated output, and a user who edits it in place loses the edit on the next render."
           },
           "sha256": {
             "type": "string",
@@ -246,7 +246,7 @@
               "enum",
               "instanceRef"
             ],
-            "description": "'secret' routes the value to the OS keystore (ADR 0010) and masks it with config::MASK everywhere it crosses IPC. 'instanceRef' names another instance rather than a literal, which is how an admin UI points at a database without hardcoding a container name."
+            "description": "'secret' routes the value to the OS keystore and masks it with config::MASK everywhere it crosses IPC. 'instanceRef' names another instance rather than a literal, which is how an admin UI points at a database without hardcoding a container name."
           },
           "default": {
             "type": [
@@ -485,7 +485,7 @@
         "status"
       ],
       "additionalProperties": false,
-      "description": "ADR 0014. 'Supported' must be a measurement, not an opinion: tools/eol.mjs checks this block against endoflife.date and a divergence fails the PR. Note that an eol version is still PUBLISHED — a version that exists in somebody's .env today must have a package or their migration stops. Publishing and promoting are different things, and this field is the difference.",
+      "description": "'Supported' must be a measurement, not an opinion: tools/eol.mjs checks this block against endoflife.date and a divergence fails the PR. Note that an eol version is still PUBLISHED — a version that exists in somebody's .env today must have a package or their migration stops. Publishing and promoting are different things, and this field is the difference.",
       "properties": {
         "status": {
           "enum": [

@@ -1,0 +1,13 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mssql",
+  "category": "databases",
+  "name": { "en": "Microsoft SQL Server" },
+  "summary": {
+    "en": "For the PHP extensions this app already offers. sqlsrv and pdo_sqlsrv have been in the extension list all along with nothing in the catalogue to connect them to.",
+    "tr": "Bu uygulamanın zaten sunduğu PHP uzantıları için. sqlsrv ve pdo_sqlsrv başından beri uzantı listesinde, ve bağlanacak hiçbir servis yoktu."
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2022",
+  "legacyEnvPrefix": "SERVICE_MSSQL_"
+}

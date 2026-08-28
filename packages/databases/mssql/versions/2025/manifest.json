@@ -1,0 +1,91 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mssql",
+  "version": "2025",
+  "image": {
+    "registry": "mcr.microsoft.com",
+    "repository": "mssql/server",
+    "tag": "2025-latest"
+  },
+  "capabilities": [
+    "sql",
+    "tsql"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 1433,
+      "preferred": 1433,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/var/opt/mssql",
+      "purgeable": true
+    }
+  ],
+  "files": [],
+  "settings": [
+    {
+      "key": "SA_PASSWORD",
+      "type": "secret",
+      "default": "Str0ng!Passw0rd"
+    },
+    {
+      "key": "ACCEPT_EULA",
+      "type": "enum",
+      "default": "Y",
+      "options": [
+        "Y",
+        "N"
+      ]
+    },
+    {
+      "key": "EDITION",
+      "type": "enum",
+      "default": "Developer",
+      "options": [
+        "Developer",
+        "Express",
+        "Evaluation"
+      ]
+    }
+  ],
+  "connection": {
+    "scheme": "sqlserver",
+    "port": "main",
+    "defaultUser": "sa",
+    "passwordSetting": "SA_PASSWORD"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "timeout 2 bash -c '</dev/tcp/127.0.0.1/1433'"
+    ],
+    "interval": "15s",
+    "retries": 20,
+    "startPeriod": "60s"
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "ce4d136f94ff0b767056366a3f8c4f42dcccf8c84df718fd848e6dda288e0598"
+  },
+  "notes": {
+    "en": "Internally 17.0. The current release, with the same architecture limit as 2022: x86-64 only. Start here on something new; 2022 is the safer default for a codebase already running against it.",
+    "tr": "İçeride 17.0. Güncel sürüm, 2022 ile aynı mimari sınırıyla: yalnız x86-64. Yeni bir şeye buradan başlayın; hâlihazırda 2022'ye karşı koşan bir kod tabanı için güvenli varsayılan 2022."
+  },
+  "support": {
+    "status": "supported",
+    "eolDate": "2036-01-06",
+    "source": "https://endoflife.date/api/mssqlserver.json"
+  }
+}
