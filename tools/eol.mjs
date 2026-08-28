@@ -72,6 +72,24 @@ const PRODUCTS = {
   clickhouse: 'clickhouse',
   prometheus: 'prometheus',
   graylog: 'graylog',
+  mssql: 'mssqlserver',
+};
+
+/**
+ * Versions whose upstream calls them something else.
+ *
+ * SQL Server is sold by the year and versioned by a number: what the world
+ * calls 2022 is internally 16.0, and endoflife.date keys by the number. Without
+ * this the schedule lookup finds nothing and the row is reported as unchecked —
+ * which is not wrong, exactly, but it means `support: supported` on the one
+ * package here whose vendor publishes the clearest schedule of any of them
+ * would be the opinion this tool exists to replace.
+ *
+ * A table rather than a rule: the mapping is a naming decision at Microsoft
+ * and there is nothing to derive it from.
+ */
+const CYCLES = {
+  mssql: { 2019: '15.0', 2022: '16.0', 2025: '17.0' },
 };
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf8'));
@@ -141,7 +159,7 @@ for (const row of rows) {
     continue;
   }
 
-  const cycle = cycleOf(entries, row.version);
+  const cycle = cycleOf(entries, CYCLES[row.service]?.[row.version] ?? row.version);
   if (!cycle) {
     unchecked += 1;
     continue;

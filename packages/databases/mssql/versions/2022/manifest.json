@@ -1,0 +1,91 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mssql",
+  "version": "2022",
+  "image": {
+    "registry": "mcr.microsoft.com",
+    "repository": "mssql/server",
+    "tag": "2022-latest"
+  },
+  "capabilities": [
+    "sql",
+    "tsql"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 1433,
+      "preferred": 1433,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/var/opt/mssql",
+      "purgeable": true
+    }
+  ],
+  "files": [],
+  "settings": [
+    {
+      "key": "SA_PASSWORD",
+      "type": "secret",
+      "default": "Str0ng!Passw0rd"
+    },
+    {
+      "key": "ACCEPT_EULA",
+      "type": "enum",
+      "default": "Y",
+      "options": [
+        "Y",
+        "N"
+      ]
+    },
+    {
+      "key": "EDITION",
+      "type": "enum",
+      "default": "Developer",
+      "options": [
+        "Developer",
+        "Express",
+        "Evaluation"
+      ]
+    }
+  ],
+  "connection": {
+    "scheme": "sqlserver",
+    "port": "main",
+    "defaultUser": "sa",
+    "passwordSetting": "SA_PASSWORD"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "timeout 2 bash -c '</dev/tcp/127.0.0.1/1433'"
+    ],
+    "interval": "15s",
+    "retries": 20,
+    "startPeriod": "60s"
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "ce4d136f94ff0b767056366a3f8c4f42dcccf8c84df718fd848e6dda288e0598"
+  },
+  "notes": {
+    "en": "Internally 16.0, which is the name endoflife.date knows it by. Microsoft publishes no arm64 image and never has — Azure SQL Edge was the arm64 answer and was retired — so on Apple Silicon this runs emulated. Measured on an M-series Mac: it starts, and `SELECT @@VERSION` answers; it is slow, not broken.",
+    "tr": "İçeride 16.0, ki endoflife.date onu bu adla tanıyor. Microsoft arm64 imajı yayımlamıyor ve hiç yayımlamadı — arm64 cevabı olan Azure SQL Edge emekliye ayrıldı — dolayısıyla Apple Silicon'da öykünmeyle koşuyor. Bir M serisi Mac'te ölçüldü: başlıyor ve `SELECT @@VERSION` cevap veriyor; yavaş, bozuk değil."
+  },
+  "support": {
+    "status": "supported",
+    "eolDate": "2033-01-11",
+    "source": "https://endoflife.date/api/mssqlserver.json"
+  }
+}

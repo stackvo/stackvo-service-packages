@@ -20,12 +20,24 @@ packages/<category>/<service>/
     └── files/…                  # config files the service mounts
 ```
 
-**31 services, 119 versions.** Eight categories: `databases`, `cache`, `queue`,
+**33 services, 122 versions.** Eight categories: `databases`, `cache`, `queue`,
 `search`, `storage`, `monitoring`, `devtools`, `admin-uis`.
 
-Six of them — Solr, ClickHouse, Soketi, Dragonfly, Prometheus and Graylog —
-were never templates in the app's binary. Every other entry here arrived by
-migration; these arrived as packages, which is what the tree was built for.
+Eight of them — Solr, ClickHouse, Soketi, Dragonfly, Prometheus, Graylog, SQL
+Server and Beanstalkd — were never templates in the app's binary. Every other
+entry here arrived by migration; these arrived as packages, which is what the
+tree was built for.
+
+The last two close gaps the app could point at. Its PHP extension list has
+offered `sqlsrv` and `pdo_sqlsrv` from the beginning with no SQL Server to
+connect them to, and its `.env` reader recognises `QUEUE_CONNECTION` without
+being able to match `beanstalkd` — one of the five drivers Laravel ships with.
+
+Beanstalkd is also the first package here pinned by **digest**. Upstream
+publishes one tag, `latest`, and its binary answers `-v` with `unknown`; the
+version directory is named for when the image was built rather than for a
+release it will not confirm, and the digest is what makes naming a moving tag
+safe — the tag can move, the bytes cannot.
 
 `registry.json` at the root is the index a client fetches first. It is
 **generated** by `tools/build-registry.mjs` and never hand-edited — CI fails a

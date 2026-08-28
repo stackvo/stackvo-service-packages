@@ -28,7 +28,7 @@
     "expires": {
       "type": "string",
       "format": "date-time",
-      "description": "After this the client warns but keeps working. Deliberately not fatal: on an air-gapped install a stale-but-correct index is worth more than no index, and ADR 0011 leaves those installs with nothing else."
+      "description": "After this the client warns but keeps working. Deliberately not fatal: on an air-gapped install a stale-but-correct index is worth more than no index, and nothing is embedded to fall back on."
     },
     "baseUrl": {
       "type": "string",
@@ -166,7 +166,7 @@
                 "recommended": {
                   "type": "boolean",
                   "default": false,
-                  "description": "Two jobs, and the second is ADR 0014's: it is the default selection in the picker, AND it is what 'latest' resolves to. Exactly one version per service carries it. When migration meets SERVICE_<ID>_VERSION=latest — which 11 of today's 25 defaults are — it resolves to this and writes the CONCRETE version into instances.json, so a re-pull can no longer move a user's version underneath them."
+                  "description": "Two jobs: it is the default selection in the picker, AND it is what 'latest' resolves to. Exactly one version per service carries it. When migration meets SERVICE_<ID>_VERSION=latest — which 11 of today's 25 defaults are — it resolves to this and writes the CONCRETE version into instances.json, so a re-pull can no longer move a user's version underneath them."
                 },
                 "support": {
                   "enum": [
@@ -183,7 +183,7 @@
                 },
                 "revoked": {
                   "type": "boolean",
-                  "description": "Withdrawn by the publisher. A MARKING, never a deletion: a version removed from the index would leave every machine that installed it holding an instances.json entry pointing at nothing, with no way to find out what happened (ADR 0014). A client refuses to install a revoked version and reports one it already has."
+                  "description": "Withdrawn by the publisher. A MARKING, never a deletion: a version removed from the index would leave every machine that installed it holding an instances.json entry pointing at nothing, with no way to find out what happened. A client refuses to install a revoked version and reports one it already has."
                 },
                 "revokedReason": {
                   "type": "string",

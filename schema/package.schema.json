@@ -44,7 +44,7 @@
     },
     "recommendedVersion": {
       "type": "string",
-      "description": "Which of this service's versions the picker selects by default, and — ADR 0014 — what `latest` resolves to. Lives here rather than on each version because it is a statement about the service: putting it on the versions would let two of them claim it, and nothing would say which was right. build-registry.mjs copies it onto the matching version entry as `recommended`."
+      "description": "Which of this service's versions the picker selects by default, and what `latest` resolves to. Lives here rather than on each version because it is a statement about the service: putting it on the versions would let two of them claim it, and nothing would say which was right. build-registry.mjs copies it onto the matching version entry as `recommended`."
     },
     "summary": {
       "type": "object",

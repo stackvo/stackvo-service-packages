@@ -1,0 +1,13 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "beanstalkd",
+  "category": "queue",
+  "name": { "en": "Beanstalkd" },
+  "summary": {
+    "en": "One of the five queue drivers Laravel ships with. A project writing QUEUE_CONNECTION=beanstalkd had nothing here to point it at.",
+    "tr": "Laravel'in kutudan gelen beş kuyruk sürücüsünden biri. QUEUE_CONNECTION=beanstalkd yazan bir projenin burada gösterecek hiçbir şeyi yoktu."
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2025.03",
+  "legacyEnvPrefix": "SERVICE_BEANSTALKD_"
+}

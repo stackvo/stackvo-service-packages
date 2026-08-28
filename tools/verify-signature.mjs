@@ -45,8 +45,22 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-/** The key `signing::PINNED` carries in the app. Public half — safe to commit. */
-const PINNED = 'RWQbD5of/xliJY7WXb+sFE+Nba3QD0TgXneUNgBIsHf7+BVz2oT0gs0r';
+/**
+ * The key `signing::PINNED` carries in the app. Public half — safe to commit.
+ *
+ * A copy, and the second one: the app is the authority and this file cannot
+ * read it, so the two agree by somebody keeping them in step. That is a real
+ * cost and it was paid the first time the key rotated — this line still named
+ * the old key after the app had moved on, so a correctly signed index was
+ * reported as signed with the wrong key. **Rotating the content key means
+ * editing here as well as in `signing.rs`.**
+ *
+ * The alternative would be fetching the app's source to read the constant,
+ * which trades a copy for a network dependency in a gate whose whole job is to
+ * work offline. The copy is the cheaper wrong thing; this note is what makes
+ * it survivable.
+ */
+const PINNED = 'RWSW56bSXoFQm+jNBGKcK6qbvyrG/bMqQ16lHJrhOgAmQUz840qNUYc+';
 
 const die = (message) => {
   console.error(`✗ ${message}`);
