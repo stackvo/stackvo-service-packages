@@ -1,0 +1,35 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "backstage",
+  "version": "1.54.9",
+  "image": {
+    "registry": "ghcr.io",
+    "repository": "backstage/backstage",
+    "tag": "1.54.9"
+  },
+  "capabilities": ["developer-portal"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 7007, "preferred": 7007, "protocol": "tcp", "legacyKey": "SERVICE_BACKSTAGE_HOST_PORT", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "POSTGRES_HOST", "type": "string", "default": "stackvo-postgres" },
+    { "key": "POSTGRES_PORT", "type": "int", "default": 5432 },
+    { "key": "POSTGRES_USER", "type": "string", "default": "stackvo" },
+    { "key": "POSTGRES_PASSWORD", "type": "secret", "default": "stackvo" },
+    { "key": "DEFAULT_TLD_SUFFIX", "type": "string", "default": "loc" }
+  ],
+  "connection": null,
+  "url": { "subdomain": "backstage", "port": "main" },
+  "dependsOn": [
+    { "capability": "sql", "service": "postgres", "required": true }
+  ],
+  "health": { "test": ["CMD", "node", "-e", "fetch('http://127.0.0.1:7007/.backstage/health/v1/readiness').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"], "interval": "15s", "retries": 20, "startPeriod": "60s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "40db949d03ad497058f47c36d837b23f0c28a56392136c8df80dad2ba1360019" },
+  "support": {"status":"supported"},
+  "notes": { "en": "This is the upstream evaluation image: the stock create-app build with guest sign-in and the sample catalog, and no way to install further plugins. A real portal builds its own image from its own source." }
+}

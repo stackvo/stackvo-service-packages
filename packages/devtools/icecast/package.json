@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "icecast",
+  "category": "devtools",
+  "name": { "en": "Icecast" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2.5.0",
+  "legacyEnvPrefix": "SERVICE_ICECAST_"
+}

@@ -1,0 +1,74 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "opentelemetry-collector",
+  "version": "0.161.0",
+  "image": {
+    "repository": "otel/opentelemetry-collector-contrib",
+    "tag": "0.161.0"
+  },
+  "capabilities": [
+    "telemetry",
+    "otlp"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "grpc",
+      "container": 4317,
+      "preferred": 4317,
+      "protocol": "tcp",
+      "primary": false
+    },
+    {
+      "name": "http",
+      "container": 4318,
+      "preferred": 4318,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [],
+  "files": [
+    {
+      "name": "config_yaml",
+      "template": "files/config.yaml.tpl",
+      "target": "/etc/otelcol-contrib/config.yaml",
+      "mode": "0444",
+      "sha256": "7e95a50860afc2244b2479dac283e14db136414dee87661cbffb1c2cab5361d8"
+    }
+  ],
+  "settings": [
+    {
+      "key": "TEMPO_ENDPOINT",
+      "type": "string",
+      "default": "stackvo-tempo:4317"
+    },
+    {
+      "key": "LOKI_ENDPOINT",
+      "type": "string",
+      "default": "http://stackvo-loki:3100/otlp"
+    },
+    {
+      "key": "MEMORY_LIMIT_MIB",
+      "type": "int",
+      "default": 512
+    }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "http"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": null,
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "7fd23f6a523dcd39b2859a3a9e7dadb9cc7733e709202ad70eb0f9e313d0b628"
+  },
+  "support": {
+    "status": "supported"
+  }
+}

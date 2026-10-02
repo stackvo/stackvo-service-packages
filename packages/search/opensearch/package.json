@@ -1,0 +1,14 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "opensearch",
+  "category": "search",
+  "name": {
+    "en": "OpenSearch"
+  },
+  "summary": {
+    "en": "Elasticsearch-compatible search and analytics engine, security plugin off for local development."
+  },
+  "homepage": "https://opensearch.org",
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.9.0"
+}

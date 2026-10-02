@@ -1,0 +1,64 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "loki",
+  "version": "3.6.17",
+  "image": {
+    "repository": "grafana/loki",
+    "tag": "3.6.17"
+  },
+  "capabilities": [
+    "logs",
+    "loki-protocol"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 3100,
+      "preferred": 3100,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/loki",
+      "purgeable": true
+    }
+  ],
+  "files": [
+    {
+      "name": "loki_yaml",
+      "template": "files/loki.yaml.tpl",
+      "target": "/etc/loki/loki.yaml",
+      "mode": "0444",
+      "sha256": "bbcfbd1f9c90ccd24249f6de472059dc2ea416bfe0ac2f2721cf90d9bb16714f"
+    }
+  ],
+  "settings": [
+    {
+      "key": "RETENTION_PERIOD",
+      "type": "string",
+      "default": "168h"
+    }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": null,
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "a0d0a76a0c042bdadc750830b70f6f36f3f72ff572a15f86a888366abbb41afb"
+  },
+  "support": {
+    "status": "supported",
+    "source": "https://endoflife.date/api/grafana-loki.json"
+  }
+}

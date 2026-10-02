@@ -1,0 +1,14 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "opensearch-dashboards",
+  "category": "search",
+  "name": {
+    "en": "OpenSearch Dashboards"
+  },
+  "summary": {
+    "en": "Browser UI for exploring and visualising data in a StackVo OpenSearch instance."
+  },
+  "homepage": "https://opensearch.org/docs/latest/dashboards/",
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.9.0"
+}

@@ -1,0 +1,10 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "memgraph",
+  "category": "databases",
+  "name": {
+    "en": "Memgraph"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.13.1"
+}

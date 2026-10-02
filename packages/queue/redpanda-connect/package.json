@@ -1,0 +1,11 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "redpanda-connect",
+  "category": "queue",
+  "name": {
+    "en": "Redpanda Connect"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "4.111.1",
+  "legacyEnvPrefix": "SERVICE_REDPANDA_CONNECT_"
+}

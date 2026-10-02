@@ -1,0 +1,11 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "spark",
+  "category": "devtools",
+  "name": {
+    "en": "Apache Spark"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "4.2.0",
+  "legacyEnvPrefix": "SERVICE_SPARK_"
+}

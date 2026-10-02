@@ -1,0 +1,20 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "vault",
+  "category": "devtools",
+  "name": {
+    "en": "HashiCorp Vault"
+  },
+  "summary": {
+    "en": "Secrets manager in dev mode (in-memory, auto-unsealed) for local integration work."
+  },
+  "homepage": "https://www.vaultproject.io",
+  "maintainer": "stackvo",
+  "license": "BUSL-1.1",
+  "keywords": [
+    "secrets",
+    "kv",
+    "vault"
+  ],
+  "recommendedVersion": "2.1.1"
+}

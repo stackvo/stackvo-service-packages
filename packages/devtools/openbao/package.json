@@ -1,0 +1,20 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "openbao",
+  "category": "devtools",
+  "name": {
+    "en": "OpenBao"
+  },
+  "summary": {
+    "en": "Open-source Vault fork in dev mode (in-memory, auto-unsealed) for local integration work."
+  },
+  "homepage": "https://openbao.org",
+  "maintainer": "stackvo",
+  "license": "MPL-2.0",
+  "keywords": [
+    "secrets",
+    "kv",
+    "vault"
+  ],
+  "recommendedVersion": "2.7.0"
+}

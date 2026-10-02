@@ -1,0 +1,33 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "greenmail",
+  "version": "2.1.14",
+  "image": {
+    "repository": "greenmail/standalone",
+    "tag": "2.1.14"
+  },
+  "capabilities": ["smtp", "imap", "pop3", "mail-catcher"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "smtp", "container": 3025, "preferred": 3025, "protocol": "tcp", "legacyKey": "HOST_PORT_GREENMAIL_SMTP", "primary": true },
+    { "name": "imap", "container": 3143, "preferred": 3143, "protocol": "tcp", "legacyKey": "HOST_PORT_GREENMAIL_IMAP", "primary": false },
+    { "name": "pop3", "container": 3110, "preferred": 3110, "protocol": "tcp", "legacyKey": "HOST_PORT_GREENMAIL_POP3", "primary": false },
+    { "name": "api", "container": 8080, "preferred": 3080, "protocol": "tcp", "legacyKey": "HOST_PORT_GREENMAIL_API", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+  ],
+  "connection": {
+    "scheme": "smtp",
+    "port": "smtp"
+  },
+  "url": { "subdomain": "greenmail", "port": "api" },
+  "dependsOn": [],
+  "health": { "test": ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/3025"], "interval": "10s", "retries": 10, "startPeriod": "10s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "a283a1e2845898155b122ca576c095b05c92f66b5ff99f3cb3f57f12bb99841b" },
+  "support": {"status":"supported"},
+  "notes": { "en": "Authentication is disabled: a mailbox is created the first time mail is delivered to it or someone logs in. Any password is accepted." }
+}

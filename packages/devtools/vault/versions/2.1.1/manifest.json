@@ -1,0 +1,67 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "vault",
+  "version": "2.1.1",
+  "image": {
+    "repository": "hashicorp/vault",
+    "tag": "2.1.1"
+  },
+  "capabilities": [
+    "secrets",
+    "kv"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 8200,
+      "preferred": 8200,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [],
+  "files": [],
+  "settings": [
+    {
+      "key": "ROOT_TOKEN",
+      "type": "secret",
+      "default": "root",
+      "label": {
+        "en": "Dev-mode root token"
+      }
+    }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": {
+    "subdomain": "vault",
+    "port": "main"
+  },
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "VAULT_ADDR=http://127.0.0.1:8200 vault status"
+    ],
+    "interval": "10s",
+    "retries": 10,
+    "startPeriod": "10s"
+  },
+  "notes": {
+    "en": "Dev-mode server: in-memory storage, auto-unsealed, no TLS. Data is lost on restart."
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "186c1e4f60307e0100b73b92f6f043ac6dbd8bb1a96be65a597f1e4fdff83379"
+  },
+  "support": {
+    "source": "https://endoflife.date/api/hashicorp-vault.json",
+    "status": "supported"
+  }
+}

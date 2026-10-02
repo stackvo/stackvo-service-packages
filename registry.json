@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sequence": 19,
-  "generatedAt": "2026-08-28T12:40:50.568Z",
+  "sequence": 20,
+  "generatedAt": "2026-10-01T08:54:07.687Z",
   "packages": [
     {
       "service": "adminer",
@@ -225,6 +225,45 @@
           "path": "packages/admin-uis/phpmyadmin/versions/5.2",
           "manifestSha256": "7ddecff6ffe5fa6e8abc6845a989d3f1c023db399c66449514336f72c52bce16",
           "sizeBytes": 2122,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "temporal-ui",
+      "category": "admin-uis",
+      "name": {
+        "en": "Temporal UI"
+      },
+      "summary": {
+        "en": "Web console for a Temporal server: workflows, namespaces, schedules."
+      },
+      "keywords": [
+        "temporal",
+        "workflow",
+        "ui"
+      ],
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "admin-ui"
+      ],
+      "versions": [
+        {
+          "version": "2.53.3",
+          "path": "packages/admin-uis/temporal-ui/versions/2.53.3",
+          "manifestSha256": "f2c7a117d1d1da8ede98d5ee112ce27fda4142c64bea4181fedd37af67f46df9",
+          "sizeBytes": 2297,
+          "support": "supported"
+        },
+        {
+          "version": "2.54.1",
+          "path": "packages/admin-uis/temporal-ui/versions/2.54.1",
+          "manifestSha256": "d3c83e28fbb92864721889d5d0c92ab2ea1eefa27d297619ca0af56fe4535552",
+          "sizeBytes": 2297,
           "support": "supported",
           "recommended": true
         }
@@ -588,6 +627,38 @@
       ]
     },
     {
+      "service": "memgraph",
+      "category": "databases",
+      "name": {
+        "en": "Memgraph"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "bolt",
+        "graph"
+      ],
+      "versions": [
+        {
+          "version": "3.12.0",
+          "path": "packages/databases/memgraph/versions/3.12.0",
+          "manifestSha256": "161d4f3a63c85fe222c5cf7d333b4c8a080555ea6f848147d13f553d2c37e6c1",
+          "sizeBytes": 1268,
+          "support": "supported"
+        },
+        {
+          "version": "3.13.1",
+          "path": "packages/databases/memgraph/versions/3.13.1",
+          "manifestSha256": "42edb653ae25859d3a39ae81eb6f7704a6b192030908c9a6fc3a548083d6226e",
+          "sizeBytes": 1268,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
       "service": "mongo",
       "category": "databases",
       "name": {
@@ -752,6 +823,70 @@
       ]
     },
     {
+      "service": "neo4j",
+      "category": "databases",
+      "name": {
+        "en": "Neo4j (Community)"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "bolt",
+        "graph"
+      ],
+      "versions": [
+        {
+          "version": "2026.09.0",
+          "path": "packages/databases/neo4j/versions/2026.09.0",
+          "manifestSha256": "a044feaa04d034e9fb8d9c7af83e01358dc3ee9c4dcd3112bf361dbf92703ddc",
+          "sizeBytes": 2160,
+          "support": "supported",
+          "recommended": true
+        },
+        {
+          "version": "5.26.31",
+          "path": "packages/databases/neo4j/versions/5.26.31",
+          "manifestSha256": "841a4ef67a3e5dae82a2cbfed439567a99405aabd58164b0458659b62ead0316",
+          "sizeBytes": 2185,
+          "support": "supported",
+          "eolDate": "2028-06-06"
+        }
+      ]
+    },
+    {
+      "service": "nessie",
+      "category": "databases",
+      "name": {
+        "en": "Project Nessie"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "iceberg-catalog"
+      ],
+      "versions": [
+        {
+          "version": "0.107.9",
+          "path": "packages/databases/nessie/versions/0.107.9",
+          "manifestSha256": "5227bcfac1f04386a334221311407833cc9bc6f30212dc27af0c6649813e469d",
+          "sizeBytes": 1980,
+          "support": "supported"
+        },
+        {
+          "version": "0.108.8",
+          "path": "packages/databases/nessie/versions/0.108.8",
+          "manifestSha256": "186d1d2746450af45c55e7ee10438af6a907b3f84681442e829dea4410eda24d",
+          "sizeBytes": 1980,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
       "service": "postgres",
       "category": "databases",
       "name": {
@@ -827,6 +962,95 @@
       ]
     },
     {
+      "service": "qdrant",
+      "category": "databases",
+      "name": {
+        "en": "Qdrant"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "vector-search",
+        "vector-store"
+      ],
+      "versions": [
+        {
+          "version": "1.18.3",
+          "path": "packages/databases/qdrant/versions/1.18.3",
+          "manifestSha256": "cc5bc5f95ad02e4d73cc9826914181afc9f0a151a15fb33ac3e1de63bdd7c561",
+          "sizeBytes": 1904,
+          "support": "supported"
+        },
+        {
+          "version": "1.19.1",
+          "path": "packages/databases/qdrant/versions/1.19.1",
+          "manifestSha256": "99159744481720ebbf4cb1be1284c0f2388af916bdb844b3072992ad8e1e4b47",
+          "sizeBytes": 1904,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "argilla",
+      "category": "devtools",
+      "name": {
+        "en": "Argilla"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "dashboard",
+        "data-labeling"
+      ],
+      "versions": [
+        {
+          "version": "2.8.0",
+          "path": "packages/devtools/argilla/versions/2.8.0",
+          "manifestSha256": "bd265f8be418845338b439c28c49acfca6202957bdaa11cebd49859020a6f434",
+          "sizeBytes": 6128,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "backstage",
+      "category": "devtools",
+      "name": {
+        "en": "Backstage"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_BACKSTAGE_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "developer-portal"
+      ],
+      "versions": [
+        {
+          "version": "1.54.9",
+          "path": "packages/devtools/backstage/versions/1.54.9",
+          "manifestSha256": "ef342b740d490a4501e927abb4618c480a4028dd043b7c5b9a2ed7c120a3ea54",
+          "sizeBytes": 3246,
+          "support": "supported"
+        },
+        {
+          "version": "1.55.2",
+          "path": "packages/devtools/backstage/versions/1.55.2",
+          "manifestSha256": "3232f58b817c0184f23314a22f44802c55395381b8204db8aca5031bc8a71461",
+          "sizeBytes": 3246,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
       "service": "blackfire",
       "category": "devtools",
       "name": {
@@ -862,6 +1086,98 @@
           "manifestSha256": "b90b7f16967e52eaa716946c60d160509de14ac95feb659be073d6b27b972db2",
           "sizeBytes": 1295,
           "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "greenmail",
+      "category": "devtools",
+      "name": {
+        "en": "GreenMail"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_GREENMAIL_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "imap",
+        "mail-catcher",
+        "pop3",
+        "smtp"
+      ],
+      "versions": [
+        {
+          "version": "2.1.14",
+          "path": "packages/devtools/greenmail/versions/2.1.14",
+          "manifestSha256": "f022b88251771eafd3231079c2961e061af5321aba8adc1a45e08237d1e1db9a",
+          "sizeBytes": 2730,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "icecast",
+      "category": "devtools",
+      "name": {
+        "en": "Icecast"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_ICECAST_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "streaming"
+      ],
+      "versions": [
+        {
+          "version": "2.4.4",
+          "path": "packages/devtools/icecast/versions/2.4.4",
+          "manifestSha256": "5ece35cedb6ad1e089c7208d11f2388767a08a1a2d704995b8e78dccadcc1474",
+          "sizeBytes": 2675,
+          "support": "supported"
+        },
+        {
+          "version": "2.5.0",
+          "path": "packages/devtools/icecast/versions/2.5.0",
+          "manifestSha256": "97c6933a1179143c6cb225da1b7833a10fd3850e3e43d5effe89a89b87acd316",
+          "sizeBytes": 2675,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "label-studio",
+      "category": "devtools",
+      "name": {
+        "en": "Label Studio"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "dashboard",
+        "data-labeling"
+      ],
+      "versions": [
+        {
+          "version": "1.22.0",
+          "path": "packages/devtools/label-studio/versions/1.22.0",
+          "manifestSha256": "df3267471fd890c4d36d7351d22aca176964a20d17d1746ddb9e9c8cb7304351",
+          "sizeBytes": 2300,
+          "support": "supported"
+        },
+        {
+          "version": "1.23.2",
+          "path": "packages/devtools/label-studio/versions/1.23.2",
+          "manifestSha256": "834482641bcc7f92ca895d5a9ef6630fd62ba6270e25da6e80274dd8012d1ec4",
+          "sizeBytes": 2300,
+          "support": "supported",
+          "recommended": true
         }
       ]
     },
@@ -933,6 +1249,331 @@
           "path": "packages/devtools/mailpit/versions/v1.30",
           "manifestSha256": "1e9293433eb3eb8acf15d74e35c10ed698ee365b5cd4af0fef41d50c70e1478e",
           "sizeBytes": 1908,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "mlflow",
+      "category": "devtools",
+      "name": {
+        "en": "MLflow"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "dashboard",
+        "ml-tracking"
+      ],
+      "versions": [
+        {
+          "version": "3.14.0",
+          "path": "packages/devtools/mlflow/versions/3.14.0",
+          "manifestSha256": "c73e0337e889937e52125fda43a91a091dffb70ef554f31c3c92e072942f5ad2",
+          "sizeBytes": 2456,
+          "support": "supported"
+        },
+        {
+          "version": "3.15.2",
+          "path": "packages/devtools/mlflow/versions/3.15.2",
+          "manifestSha256": "4142b55f0bd4c600bef4e15e11993659deebe5ad29b3b67066f897998966b8c9",
+          "sizeBytes": 2456,
+          "support": "supported"
+        },
+        {
+          "version": "3.16.1",
+          "path": "packages/devtools/mlflow/versions/3.16.1",
+          "manifestSha256": "092d4fe5b029e97f37e461db9d6e95d49c22788d4f0401d8ba039cb239fb3bac",
+          "sizeBytes": 2456,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "ollama",
+      "category": "devtools",
+      "name": {
+        "en": "Ollama"
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "http-api",
+        "llm"
+      ],
+      "versions": [
+        {
+          "version": "0.34.4",
+          "path": "packages/devtools/ollama/versions/0.34.4",
+          "manifestSha256": "070626e81bb7b5227069b45addc0895f05fe7502b4810d3f7b85f13b1d988aac",
+          "sizeBytes": 2111,
+          "support": "supported"
+        },
+        {
+          "version": "0.35.0",
+          "path": "packages/devtools/ollama/versions/0.35.0",
+          "manifestSha256": "66cad61a61da527608c8ba969ea9022555acf9430e60c115cf5c0ffc2fbbffe3",
+          "sizeBytes": 2111,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "openbao",
+      "category": "devtools",
+      "name": {
+        "en": "OpenBao"
+      },
+      "summary": {
+        "en": "Open-source Vault fork in dev mode (in-memory, auto-unsealed) for local integration work."
+      },
+      "keywords": [
+        "secrets",
+        "kv",
+        "vault"
+      ],
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "kv",
+        "secrets"
+      ],
+      "versions": [
+        {
+          "version": "2.7.0",
+          "path": "packages/devtools/openbao/versions/2.7.0",
+          "manifestSha256": "d0f66f88efaf8b6cca3ffcfc2275a48e52d79ae0d7653101bca00861d877bffc",
+          "sizeBytes": 2320,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "postal",
+      "category": "devtools",
+      "name": {
+        "en": "Postal"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_POSTAL_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "mail-server",
+        "smtp"
+      ],
+      "versions": [
+        {
+          "version": "3.3.7",
+          "path": "packages/devtools/postal/versions/3.3.7",
+          "manifestSha256": "8668b90192e06b7174154f260a10e3b4455b0f21c8fc863ab987f8fe02f35dc9",
+          "sizeBytes": 6338,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "spark",
+      "category": "devtools",
+      "name": {
+        "en": "Apache Spark"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_SPARK_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "batch-processor",
+        "sql"
+      ],
+      "versions": [
+        {
+          "version": "4.0.4",
+          "path": "packages/devtools/spark/versions/4.0.4",
+          "manifestSha256": "2a4a953ee81eed2569028e6dbb2f187b0cbeaeb8369e3fa6ccf316c0a222c1be",
+          "sizeBytes": 2800,
+          "support": "supported",
+          "eolDate": "2026-11-23"
+        },
+        {
+          "version": "4.1.3",
+          "path": "packages/devtools/spark/versions/4.1.3",
+          "manifestSha256": "2662dbcded54e9afdeb6fb2b647883a8a8ec55aea1a4c47404c0a079e7cf292c",
+          "sizeBytes": 2800,
+          "support": "supported",
+          "eolDate": "2027-06-11"
+        },
+        {
+          "version": "4.2.0",
+          "path": "packages/devtools/spark/versions/4.2.0",
+          "manifestSha256": "87c961c6b9e58536aa1f14edfcad2b2adb33498b765f9353edd1c3f821d4e96e",
+          "sizeBytes": 2800,
+          "support": "supported",
+          "recommended": true,
+          "eolDate": "2028-01-11"
+        }
+      ]
+    },
+    {
+      "service": "temporal",
+      "category": "devtools",
+      "name": {
+        "en": "Temporal"
+      },
+      "summary": {
+        "en": "Durable workflow engine for local development; pair it with Temporal UI."
+      },
+      "keywords": [
+        "workflow",
+        "orchestration",
+        "durable-execution"
+      ],
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "temporal",
+        "workflow-engine"
+      ],
+      "versions": [
+        {
+          "version": "1.8.3",
+          "path": "packages/devtools/temporal/versions/1.8.3",
+          "manifestSha256": "1e6ac62553d061c546f4e60ffc3e7e71269e7916ec5de8195fd8938ab9d6c102",
+          "sizeBytes": 2373,
+          "support": "supported"
+        },
+        {
+          "version": "1.9.1",
+          "path": "packages/devtools/temporal/versions/1.9.1",
+          "manifestSha256": "112c9a66bc0d29060b4d83acb2c92eddaae15329371265bca76d0f168c63d9ec",
+          "sizeBytes": 2373,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "unleash",
+      "category": "devtools",
+      "name": {
+        "en": "Unleash"
+      },
+      "summary": {
+        "en": "Open-source feature flag server with its own PostgreSQL."
+      },
+      "keywords": [
+        "feature-flags",
+        "feature-toggles"
+      ],
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "feature-flags"
+      ],
+      "versions": [
+        {
+          "version": "7.6.5",
+          "path": "packages/devtools/unleash/versions/7.6.5",
+          "manifestSha256": "8265f4f382c57aaf3e33aa5eaea183425e8a9fb7cf2f0902ad3f0f0ba5b35a58",
+          "sizeBytes": 3667,
+          "support": "supported"
+        },
+        {
+          "version": "8.2.0",
+          "path": "packages/devtools/unleash/versions/8.2.0",
+          "manifestSha256": "e3d5f24e67ade6367b9eefee98f67d11123d6cb329bcc63166d8a222f887a6f5",
+          "sizeBytes": 3667,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "vault",
+      "category": "devtools",
+      "name": {
+        "en": "HashiCorp Vault"
+      },
+      "summary": {
+        "en": "Secrets manager in dev mode (in-memory, auto-unsealed) for local integration work."
+      },
+      "keywords": [
+        "secrets",
+        "kv",
+        "vault"
+      ],
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "kv",
+        "secrets"
+      ],
+      "versions": [
+        {
+          "version": "2.1.1",
+          "path": "packages/devtools/vault/versions/2.1.1",
+          "manifestSha256": "a06052942bfb8e76fcf7ac22b2eb383e004a6ab388bfe160311b4c59ee45a664",
+          "sizeBytes": 2332,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "zitadel",
+      "category": "devtools",
+      "name": {
+        "en": "Zitadel"
+      },
+      "summary": {
+        "en": "Identity provider (OIDC, SAML, passkeys) with its own PostgreSQL."
+      },
+      "keywords": [
+        "identity",
+        "oidc",
+        "sso",
+        "auth"
+      ],
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "identity",
+        "oidc"
+      ],
+      "versions": [
+        {
+          "version": "v3.4.15",
+          "path": "packages/devtools/zitadel/versions/v3.4.15",
+          "manifestSha256": "ce7a73d6772db673a020f5baa366ca02170d9a3e0c0899c827f8269e901aa737",
+          "sizeBytes": 5033,
+          "support": "supported"
+        },
+        {
+          "version": "v4.19.3",
+          "path": "packages/devtools/zitadel/versions/v4.19.3",
+          "manifestSha256": "e08c25b947f277479560d7dd1477d5cbbf926b74e17a74a5cfde596f60847781",
+          "sizeBytes": 5318,
           "support": "supported",
           "recommended": true
         }
@@ -1032,6 +1673,69 @@
       ]
     },
     {
+      "service": "loki",
+      "category": "monitoring",
+      "name": {
+        "en": "Grafana Loki"
+      },
+      "summary": {
+        "en": "Log aggregation that Grafana queries, single-binary with filesystem storage and OTLP ingestion."
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "logs",
+        "loki-protocol"
+      ],
+      "versions": [
+        {
+          "version": "3.6.17",
+          "path": "packages/monitoring/loki/versions/3.6.17",
+          "manifestSha256": "0b07d5e73df0d7cf0acb6452e694b575a0c36c30b0dff97b56c1d9e1180fa591",
+          "sizeBytes": 2821,
+          "support": "supported"
+        },
+        {
+          "version": "3.7.8",
+          "path": "packages/monitoring/loki/versions/3.7.8",
+          "manifestSha256": "78edf1579efcd8d31a85ce897a8a3694213bab43161188cf4b0036777c01aabb",
+          "sizeBytes": 2819,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "opentelemetry-collector",
+      "category": "monitoring",
+      "name": {
+        "en": "OpenTelemetry Collector"
+      },
+      "summary": {
+        "en": "Contrib distribution that receives OTLP and forwards traces to Tempo, logs to Loki and exposes metrics for Prometheus."
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "otlp",
+        "telemetry"
+      ],
+      "versions": [
+        {
+          "version": "0.161.0",
+          "path": "packages/monitoring/opentelemetry-collector/versions/0.161.0",
+          "manifestSha256": "0dc1e9215825ab0c5362c25b3fe180280c3102b5ef9450a79891dd144d2d6dcd",
+          "sizeBytes": 3405,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
       "service": "prometheus",
       "category": "monitoring",
       "name": {
@@ -1074,6 +1778,74 @@
       ]
     },
     {
+      "service": "tempo",
+      "category": "monitoring",
+      "name": {
+        "en": "Grafana Tempo"
+      },
+      "summary": {
+        "en": "Trace storage that Grafana queries, single-binary with filesystem storage and OTLP ingestion."
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "tempo-protocol",
+        "traces"
+      ],
+      "versions": [
+        {
+          "version": "2.10.8",
+          "path": "packages/monitoring/tempo/versions/2.10.8",
+          "manifestSha256": "71220477d8c1f161141a2a0037a1bf225388306fe90a60c34edfb4051cb88ca7",
+          "sizeBytes": 2664,
+          "support": "supported"
+        },
+        {
+          "version": "3.1.0",
+          "path": "packages/monitoring/tempo/versions/3.1.0",
+          "manifestSha256": "a6bf9aa3ac9b4c1d87a1066195799f0af5328580925a9bbb4a6b42cd3a947e7c",
+          "sizeBytes": 2696,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "apicurio-registry",
+      "category": "queue",
+      "name": {
+        "en": "Apicurio Registry"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_APICURIO_REGISTRY_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "api-registry",
+        "schema-registry"
+      ],
+      "versions": [
+        {
+          "version": "3.2.6",
+          "path": "packages/queue/apicurio-registry/versions/3.2.6",
+          "manifestSha256": "f2a2a6e1e53cdc7153098604e601dbcecb627af3b8753a1b4a57f8b94390bf40",
+          "sizeBytes": 1720,
+          "support": "supported"
+        },
+        {
+          "version": "3.3.3",
+          "path": "packages/queue/apicurio-registry/versions/3.3.3",
+          "manifestSha256": "4315c8f170869ad690b2806cf72d77230f845fdbf4fa0cd171402bb6cb832130",
+          "sizeBytes": 1720,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
       "service": "beanstalkd",
       "category": "queue",
       "name": {
@@ -1098,6 +1870,46 @@
           "path": "packages/queue/beanstalkd/versions/2025.03",
           "manifestSha256": "8c08b9ff4e6e430012c6a02575430d5dac27d7f96c5aa9417cf03ddb250447bb",
           "sizeBytes": 2430,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "flink",
+      "category": "queue",
+      "name": {
+        "en": "Apache Flink"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_FLINK_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "batch-processor",
+        "stream-processor"
+      ],
+      "versions": [
+        {
+          "version": "1.20.5",
+          "path": "packages/queue/flink/versions/1.20.5",
+          "manifestSha256": "dc0c582dc719ea5a940bebcc5fd4afde3152029bf1b9a44b400a069bff706c3b",
+          "sizeBytes": 2822,
+          "support": "supported"
+        },
+        {
+          "version": "2.2.1",
+          "path": "packages/queue/flink/versions/2.2.1",
+          "manifestSha256": "4a9709fd9c40817d9936df55f8616c84bd835c1e89b4fe4155490c4343248a7a",
+          "sizeBytes": 2783,
+          "support": "supported"
+        },
+        {
+          "version": "2.3.0",
+          "path": "packages/queue/flink/versions/2.3.0",
+          "manifestSha256": "85f8f9247b70fb1b4d6a23167ac4c931af8b77dc632792901434f0fe4dded2fb",
+          "sizeBytes": 2783,
           "support": "supported",
           "recommended": true
         }
@@ -1147,6 +1959,38 @@
           "manifestSha256": "d71b01d08a60dab33e140757ce5aefcffd48bd85a6a50114f73a4536f1e8c3f1",
           "sizeBytes": 2690,
           "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "karapace",
+      "category": "queue",
+      "name": {
+        "en": "Karapace Schema Registry"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_KARAPACE_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "schema-registry"
+      ],
+      "versions": [
+        {
+          "version": "6.1.4",
+          "path": "packages/queue/karapace/versions/6.1.4",
+          "manifestSha256": "254898b00e5f4fb91a1445fba147d1ebab8c959f5e91005e68aff5d1438114ad",
+          "sizeBytes": 2249,
+          "support": "supported"
+        },
+        {
+          "version": "6.2.3",
+          "path": "packages/queue/karapace/versions/6.2.3",
+          "manifestSha256": "f928f6aa17f1eaed62c91a61a8c0850a5568835e8a1fed059bee0d3bd8b51b60",
+          "sizeBytes": 2249,
+          "support": "supported",
+          "recommended": true
         }
       ]
     },
@@ -1203,6 +2047,38 @@
           "manifestSha256": "6be70d12c37bdf41ade8bef28f064cb81cf49b4ae6c0c80f462788884825d3d7",
           "sizeBytes": 2418,
           "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "redpanda-connect",
+      "category": "queue",
+      "name": {
+        "en": "Redpanda Connect"
+      },
+      "maintainer": "stackvo",
+      "legacyEnvPrefix": "SERVICE_REDPANDA_CONNECT_",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "stream-processor"
+      ],
+      "versions": [
+        {
+          "version": "4.107.2",
+          "path": "packages/queue/redpanda-connect/versions/4.107.2",
+          "manifestSha256": "54438455dcdc10d509e22d83d3f09dbf113199324a498fac13d057d904139b1e",
+          "sizeBytes": 2022,
+          "support": "supported"
+        },
+        {
+          "version": "4.111.1",
+          "path": "packages/queue/redpanda-connect/versions/4.111.1",
+          "manifestSha256": "53ba5a4d719b3a11fa925a822c162ae1176d57314809a50492309f9a73619fdd",
+          "sizeBytes": 2022,
+          "support": "supported",
+          "recommended": true
         }
       ]
     },
@@ -1393,6 +2269,75 @@
           "manifestSha256": "ec5c3dc3a6a8f880ae69f67a8e00b86a6a19fdc8cc932c925f31b92dd47cb6e8",
           "sizeBytes": 2055,
           "support": "supported"
+        }
+      ]
+    },
+    {
+      "service": "opensearch",
+      "category": "search",
+      "name": {
+        "en": "OpenSearch"
+      },
+      "summary": {
+        "en": "Elasticsearch-compatible search and analytics engine, security plugin off for local development."
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "opensearch-protocol",
+        "search"
+      ],
+      "versions": [
+        {
+          "version": "2.19.6",
+          "path": "packages/search/opensearch/versions/2.19.6",
+          "manifestSha256": "122bef50f31dcca10af81fdd76a412a8555e11f939e0a5d2f12d1c1c632925bf",
+          "sizeBytes": 2006,
+          "support": "supported"
+        },
+        {
+          "version": "3.9.0",
+          "path": "packages/search/opensearch/versions/3.9.0",
+          "manifestSha256": "f0afb026936adb3b3d506d2d92dc63306b39832836761327a9198fd5eb31d074",
+          "sizeBytes": 2004,
+          "support": "supported",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "service": "opensearch-dashboards",
+      "category": "search",
+      "name": {
+        "en": "OpenSearch Dashboards"
+      },
+      "summary": {
+        "en": "Browser UI for exploring and visualising data in a StackVo OpenSearch instance."
+      },
+      "maintainer": "stackvo",
+      "instancing": {
+        "multiple": true
+      },
+      "capabilities": [
+        "dashboard"
+      ],
+      "versions": [
+        {
+          "version": "2.19.6",
+          "path": "packages/search/opensearch-dashboards/versions/2.19.6",
+          "manifestSha256": "d75a38e01dd0f1966226a630bd855f2bde295ed684a8b141fc665c7057dc2f47",
+          "sizeBytes": 2684,
+          "support": "supported"
+        },
+        {
+          "version": "3.9.0",
+          "path": "packages/search/opensearch-dashboards/versions/3.9.0",
+          "manifestSha256": "ed47f3c88b1566e9f3a8b75aca4cd6237df525bbceef9dc09ac678abd749f7cc",
+          "sizeBytes": 2682,
+          "support": "supported",
+          "recommended": true
         }
       ]
     },

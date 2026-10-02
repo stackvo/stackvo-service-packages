@@ -1,0 +1,71 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "opensearch-dashboards",
+  "version": "3.9.0",
+  "image": {
+    "repository": "opensearchproject/opensearch-dashboards",
+    "tag": "3.9.0"
+  },
+  "capabilities": [
+    "dashboard"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 5601,
+      "preferred": 5602,
+      "protocol": "tcp",
+      "primary": false
+    }
+  ],
+  "volumes": [],
+  "files": [],
+  "settings": [
+    {
+      "key": "OPENSEARCH_HOSTS",
+      "type": "string",
+      "default": "http://stackvo-opensearch:9200"
+    },
+    {
+      "key": "SERVER_HOST",
+      "type": "string",
+      "default": "0.0.0.0"
+    }
+  ],
+  "connection": null,
+  "url": {
+    "subdomain": "opensearch-dashboards",
+    "port": "main"
+  },
+  "dependsOn": [
+    {
+      "capability": "search",
+      "service": "opensearch",
+      "required": true
+    }
+  ],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "curl -fsS -o /dev/null http://127.0.0.1:5601/api/status"
+    ],
+    "interval": "15s",
+    "retries": 20,
+    "startPeriod": "180s"
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "aecb7589ab136ff97747e98bd7e2b10e133abe8da00f45334a08985b082786db"
+  },
+  "support": {
+    "status": "supported",
+    "source": "https://endoflife.date/api/opensearch.json"
+  },
+  "notes": {
+    "en": "Use the OpenSearch instance of the same series: Dashboards refuses a server it does not recognise, and the first boot after plugin removal takes a few minutes."
+  }
+}

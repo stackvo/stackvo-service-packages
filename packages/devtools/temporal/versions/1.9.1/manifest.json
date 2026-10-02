@@ -1,0 +1,86 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "temporal",
+  "version": "1.9.1",
+  "image": {
+    "repository": "temporalio/temporal",
+    "tag": "1.9.1"
+  },
+  "capabilities": [
+    "workflow-engine",
+    "temporal"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 7233,
+      "preferred": 7233,
+      "protocol": "tcp",
+      "primary": true
+    },
+    {
+      "name": "http",
+      "container": 7243,
+      "preferred": 7243,
+      "protocol": "tcp"
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/home/temporal",
+      "purgeable": true
+    }
+  ],
+  "files": [],
+  "settings": [
+    {
+      "key": "LOG_LEVEL",
+      "type": "enum",
+      "default": "warn",
+      "options": [
+        "debug",
+        "info",
+        "warn",
+        "error"
+      ],
+      "label": {
+        "en": "Server log level"
+      }
+    }
+  ],
+  "connection": {
+    "scheme": "host-port",
+    "port": "main"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD",
+      "temporal",
+      "operator",
+      "cluster",
+      "health",
+      "--address",
+      "127.0.0.1:7233"
+    ],
+    "interval": "10s",
+    "retries": 10,
+    "startPeriod": "20s"
+  },
+  "notes": {
+    "en": "Temporal CLI 1.9.1 bundles server 1.32.0; runs the development server with SQLite persistence and the default namespace, not a Postgres-backed cluster."
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "eaf89429214e59cb5e6f8e52b3a44bfd8fe0ab2b2a7f904200f9396a3317fe9e"
+  },
+  "support": {
+    "status": "supported"
+  }
+}

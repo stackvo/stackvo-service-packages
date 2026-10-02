@@ -1,0 +1,11 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "flink",
+  "category": "queue",
+  "name": {
+    "en": "Apache Flink"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2.3.0",
+  "legacyEnvPrefix": "SERVICE_FLINK_"
+}

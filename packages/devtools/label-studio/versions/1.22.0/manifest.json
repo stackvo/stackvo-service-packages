@@ -1,0 +1,30 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "label-studio",
+  "version": "1.22.0",
+  "image": {
+    "repository": "heartexlabs/label-studio",
+    "tag": "1.22.0"
+  },
+  "capabilities": ["data-labeling", "dashboard"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 8080, "preferred": 8085, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/label-studio/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "USERNAME", "type": "string", "default": "admin@stackvo.loc", "label": { "en": "First-boot admin e-mail address" } },
+    { "key": "PASSWORD", "type": "secret", "default": "stackvo-first-boot", "label": { "en": "First-boot admin password" } },
+    { "key": "DEFAULT_TLD_SUFFIX", "type": "string", "default": "loc" }
+  ],
+  "connection": null,
+  "url": { "subdomain": "label-studio", "port": "main" },
+  "dependsOn": [],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:8080/health"], "interval": "15s", "retries": 20, "startPeriod": "180s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "23856c876736158d91d0c9b4f7f4193e91828d40dec6e6f35f84507b9ffd3ef8" },
+  "support": {"status":"supported"}
+}

@@ -1,0 +1,14 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "loki",
+  "category": "monitoring",
+  "name": {
+    "en": "Grafana Loki"
+  },
+  "summary": {
+    "en": "Log aggregation that Grafana queries, single-binary with filesystem storage and OTLP ingestion."
+  },
+  "homepage": "https://grafana.com/oss/loki/",
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.7.8"
+}

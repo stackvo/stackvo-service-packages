@@ -1,0 +1,99 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "unleash",
+  "version": "7.6.5",
+  "image": {
+    "repository": "unleashorg/unleash-server",
+    "tag": "7.6.5"
+  },
+  "capabilities": [
+    "feature-flags"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 4242,
+      "preferred": 4242,
+      "protocol": "tcp",
+      "primary": false
+    }
+  ],
+  "volumes": [],
+  "files": [],
+  "settings": [
+    {
+      "key": "ADMIN_USERNAME",
+      "type": "string",
+      "default": "admin"
+    },
+    {
+      "key": "ADMIN_PASSWORD",
+      "type": "secret",
+      "default": "unleash4all",
+      "label": {
+        "en": "Initial admin password (first boot only; change it after signing in)"
+      }
+    },
+    {
+      "key": "DEFAULT_TLD_SUFFIX",
+      "type": "string",
+      "default": "loc"
+    }
+  ],
+  "connection": null,
+  "url": {
+    "subdomain": "unleash",
+    "port": "main"
+  },
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "wget -q -O /dev/null http://127.0.0.1:4242/health"
+    ],
+    "interval": "15s",
+    "retries": 15,
+    "startPeriod": "40s"
+  },
+  "companions": [
+    {
+      "name": "postgres",
+      "image": {
+        "repository": "postgres",
+        "tag": "17-alpine"
+      },
+      "ports": [],
+      "volumes": [
+        {
+          "name": "data",
+          "container": "/var/lib/postgresql/data",
+          "purgeable": true
+        }
+      ],
+      "health": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -h 127.0.0.1 -U unleash -d unleash"
+        ],
+        "interval": "10s",
+        "retries": 12,
+        "startPeriod": "20s"
+      },
+      "compose": {
+        "file": "companion.postgres.yml.tpl",
+        "sha256": "cb65f64f97d3555bc31df2c6f0b58e40dea7da46de1c9805292f57f49e10b6a9"
+      }
+    }
+  ],
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "c0d0a4393ec0b3e5e1037b69d6905ca4ed491b2531a9ac414a9c195a1fb115cb"
+  },
+  "support": {
+    "status": "supported"
+  }
+}

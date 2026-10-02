@@ -1,0 +1,64 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "opensearch",
+  "version": "2.19.6",
+  "image": {
+    "repository": "opensearchproject/opensearch",
+    "tag": "2.19.6"
+  },
+  "capabilities": [
+    "search",
+    "opensearch-protocol"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 9200,
+      "preferred": 9201,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/usr/share/opensearch/data",
+      "purgeable": true
+    }
+  ],
+  "files": [],
+  "settings": [
+    {
+      "key": "OPENSEARCH_JAVA_OPTS",
+      "type": "string",
+      "default": "-Xms512m -Xmx512m"
+    }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "curl -fsS -o /dev/null http://127.0.0.1:9200/_cluster/health"
+    ],
+    "interval": "15s",
+    "retries": 15,
+    "startPeriod": "90s"
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "c7e170dded7ef73a44288f80a36c863b736e3d65609b2789e1e5f5712df7a363"
+  },
+  "support": {
+    "status": "supported",
+    "source": "https://endoflife.date/api/opensearch.json"
+  }
+}

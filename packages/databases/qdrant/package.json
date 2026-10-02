@@ -1,0 +1,10 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "qdrant",
+  "category": "databases",
+  "name": {
+    "en": "Qdrant"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "1.19.1"
+}

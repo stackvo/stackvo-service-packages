@@ -1,0 +1,72 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "temporal-ui",
+  "version": "2.53.3",
+  "image": {
+    "repository": "temporalio/ui",
+    "tag": "2.53.3"
+  },
+  "capabilities": [
+    "admin-ui"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 8080,
+      "preferred": 8088,
+      "protocol": "tcp",
+      "primary": false
+    }
+  ],
+  "volumes": [],
+  "files": [],
+  "settings": [
+    {
+      "key": "TEMPORAL_ADDRESS",
+      "type": "string",
+      "default": "stackvo-temporal:7233"
+    },
+    {
+      "key": "DEFAULT_NAMESPACE",
+      "type": "string",
+      "default": "default"
+    },
+    {
+      "key": "DEFAULT_TLD_SUFFIX",
+      "type": "string",
+      "default": "loc"
+    }
+  ],
+  "connection": null,
+  "url": {
+    "subdomain": "temporal-ui",
+    "port": "main"
+  },
+  "dependsOn": [
+    {
+      "capability": "workflow-engine",
+      "service": "temporal",
+      "required": true
+    }
+  ],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "wget -q -O /dev/null http://127.0.0.1:8080/healthz"
+    ],
+    "interval": "15s",
+    "retries": 10,
+    "startPeriod": "15s"
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "63b644bce9c77b5619a0e0ebb3adb0674b656625b8ae5533ffeaea14c06f2418"
+  },
+  "support": {
+    "status": "supported"
+  }
+}
