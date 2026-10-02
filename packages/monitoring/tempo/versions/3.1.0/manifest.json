@@ -1,0 +1,75 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "tempo",
+  "version": "3.1.0",
+  "image": {
+    "repository": "grafana/tempo",
+    "tag": "3.1.0"
+  },
+  "capabilities": [
+    "traces",
+    "tempo-protocol"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 3200,
+      "preferred": 3200,
+      "protocol": "tcp",
+      "primary": true
+    },
+    {
+      "name": "otlp-grpc",
+      "container": 4317,
+      "preferred": 14317,
+      "protocol": "tcp"
+    },
+    {
+      "name": "otlp-http",
+      "container": 4318,
+      "preferred": 14318,
+      "protocol": "tcp"
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/var/tempo",
+      "purgeable": true
+    }
+  ],
+  "files": [
+    {
+      "name": "tempo_yaml",
+      "template": "files/tempo.yaml.tpl",
+      "target": "/etc/tempo/tempo.yaml",
+      "mode": "0444",
+      "sha256": "fc268dfc43beac673981b01b6685a7aa577c1ee4e889c82d2802b19540495e4c"
+    }
+  ],
+  "settings": [
+    {
+      "key": "RETENTION_PERIOD",
+      "type": "string",
+      "default": "168h"
+    }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": null,
+  "dependsOn": [],
+  "health": null,
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "a854e7468db0c27a08c6d68f722dd7cb5e13e4ef6f4d63c9dfd229f7db5e4ea1"
+  },
+  "support": {
+    "status": "supported"
+  }
+}

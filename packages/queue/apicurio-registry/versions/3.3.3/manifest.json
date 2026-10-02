@@ -1,0 +1,28 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "apicurio-registry",
+  "version": "3.3.3",
+  "image": {
+    "repository": "apicurio/apicurio-registry",
+    "tag": "3.3.3"
+  },
+  "capabilities": ["schema-registry", "api-registry"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 8080, "preferred": 8090, "protocol": "tcp", "legacyKey": "SERVICE_APICURIO_REGISTRY_HOST_PORT", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/deployments/data", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+  ],
+  "connection": { "scheme": "http", "port": "main" },
+  "url": null,
+  "dependsOn": [
+  ],
+  "health": { "test": ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8080 && printf 'GET /apis/registry/v3/system/info HTTP/1.0\\r\\n\\r\\n' >&3 && head -n1 <&3 | grep -q ' 200 '"], "interval": "15s", "retries": 12, "startPeriod": "30s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "7babc161415fbca5c292d0592a3f40f5dfa7cf28751cbc0714daec85db429585" },
+  "support": { "status": "supported" }
+}

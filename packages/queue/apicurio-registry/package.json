@@ -1,0 +1,11 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "apicurio-registry",
+  "category": "queue",
+  "name": {
+    "en": "Apicurio Registry"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.3.3",
+  "legacyEnvPrefix": "SERVICE_APICURIO_REGISTRY_"
+}

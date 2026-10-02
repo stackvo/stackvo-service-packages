@@ -1,0 +1,8 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "argilla",
+  "category": "devtools",
+  "name": { "en": "Argilla" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2.8.0"
+}

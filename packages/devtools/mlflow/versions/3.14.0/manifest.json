@@ -1,0 +1,29 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mlflow",
+  "version": "3.14.0",
+  "image": {
+    "registry": "ghcr.io",
+    "repository": "mlflow/mlflow",
+    "tag": "v3.14.0"
+  },
+  "capabilities": ["ml-tracking", "dashboard"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 5000, "preferred": 5000, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/mlflow", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "ALLOWED_HOSTS", "type": "string", "default": "localhost*,127.0.0.1*,10.*,172.*,192.168.*,stackvo-*,*.stackvo.*", "label": { "en": "Host headers the server accepts (DNS-rebinding guard)" } }
+  ],
+  "connection": null,
+  "url": { "subdomain": "mlflow", "port": "main" },
+  "dependsOn": [],
+  "health": { "test": ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=5)"], "interval": "15s", "retries": 15, "startPeriod": "60s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "2cafd3f44e9de8f9c9e53ff52987fb85f33eeb9a9c7f6059e0cdc63773c2d48f" },
+  "support": {"status":"supported"}
+}

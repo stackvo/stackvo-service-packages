@@ -55,6 +55,19 @@ const HEALTH_EXEMPT = {
   blackfire:
     'the agent is an outbound probe. It opens no readiness endpoint, and a check that ' +
     'proved the process was running would pass for a reason unrelated to whether profiling works.',
+  // These three CAN be asked whether they are ready — over HTTP — but their images
+  // are distroless: no shell, no wget, no curl, and no health subcommand in the
+  // binary, so there is nothing inside the container to ask with. Loki answers on
+  // :3100/ready, Tempo on :3200/ready, the Collector on :13133 (health_check).
+  loki:
+    'the image ships no shell, wget or curl and the binary has no health subcommand, so a ' +
+    'check cannot run inside the container. It answers GET /ready on 3100 from outside.',
+  tempo:
+    'the image ships no shell, wget or curl and the binary has no health subcommand, so a ' +
+    'check cannot run inside the container. It answers GET /ready on 3200 from outside.',
+  'opentelemetry-collector':
+    'the image ships no shell, wget or curl and the binary has no health subcommand, so a ' +
+    'check cannot run inside the container. The health_check extension answers on 13133 from outside.',
 };
 
 /**

@@ -1,0 +1,36 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "argilla",
+  "version": "2.8.0",
+  "image": {
+    "repository": "argilla/argilla-server",
+    "tag": "v2.8.0"
+  },
+  "capabilities": ["data-labeling", "dashboard"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 6900, "preferred": 6900, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "USERNAME", "type": "string", "default": "argilla", "label": { "en": "First-boot owner username" } },
+    { "key": "PASSWORD", "type": "secret", "default": "stackvo-first-boot", "label": { "en": "First-boot owner password, at least 8 characters" } },
+    { "key": "API_KEY", "type": "secret", "default": "stackvo-first-boot-key", "label": { "en": "First-boot owner API key, at least 8 characters" } },
+    { "key": "AUTH_SECRET_KEY", "type": "secret", "default": "stackvo-first-boot", "label": { "en": "Session signing secret" } }
+  ],
+  "connection": null,
+  "url": { "subdomain": "argilla", "port": "main" },
+  "dependsOn": [],
+  "health": { "test": ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:6900/', timeout=5)"], "interval": "15s", "retries": 20, "startPeriod": "120s" },
+  "companions": [
+    { "name": "elasticsearch", "image": { "registry": "docker.elastic.co", "repository": "elasticsearch/elasticsearch", "tag": "8.19.19" }, "ports": [], "volumes": [{ "name": "data", "container": "/usr/share/elasticsearch/data", "purgeable": true }], "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:9200/_cluster/health"], "interval": "15s", "retries": 20, "startPeriod": "90s" }, "compose": { "file": "companion.elasticsearch.yml.tpl", "sha256": "58c55dc6f34cec33de26d1612462c2b45b756e9493813608a6f6686c6a95adbb" } },
+    { "name": "redis", "image": { "repository": "redis", "tag": "7.4" }, "ports": [], "volumes": [], "health": { "test": ["CMD", "redis-cli", "ping"], "interval": "10s", "retries": 12, "startPeriod": "10s" }, "compose": { "file": "companion.redis.yml.tpl", "sha256": "0f172af6acf2e06eefbad8948a652601abb2f2a2b10f7e50116a0a5b386fad2c" } },
+    { "name": "postgres", "image": { "repository": "postgres", "tag": "17" }, "ports": [], "volumes": [{ "name": "data", "container": "/var/lib/postgresql/data", "purgeable": true }], "health": { "test": ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "argilla"], "interval": "10s", "retries": 12, "startPeriod": "30s" }, "compose": { "file": "companion.postgres.yml.tpl", "sha256": "a15c1aac1979c020b98f084275db413257e256a3763ec4955462611a0116365a" } },
+    { "name": "worker", "image": { "repository": "argilla/argilla-server", "tag": "v2.8.0" }, "ports": [], "volumes": [], "compose": { "file": "companion.worker.yml.tpl", "sha256": "33878ab32abce63aa13bec1050a1c7d4e5a0c2068e13adfa28d3e2c87d3828b8" } }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "36b6cd425e3abf0da7fe15ce5bd7b741046d764ae5c7c6a4f620c26bb68ef0b9" },
+  "support": {"status":"supported"}
+}

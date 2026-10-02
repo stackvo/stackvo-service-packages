@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "greenmail",
+  "category": "devtools",
+  "name": { "en": "GreenMail" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2.1.14",
+  "legacyEnvPrefix": "SERVICE_GREENMAIL_"
+}

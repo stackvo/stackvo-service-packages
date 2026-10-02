@@ -1,0 +1,10 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "neo4j",
+  "category": "databases",
+  "name": {
+    "en": "Neo4j (Community)"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "2026.09.0"
+}

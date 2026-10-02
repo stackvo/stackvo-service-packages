@@ -1,0 +1,11 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "karapace",
+  "category": "queue",
+  "name": {
+    "en": "Karapace Schema Registry"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "6.2.3",
+  "legacyEnvPrefix": "SERVICE_KARAPACE_"
+}

@@ -1,0 +1,29 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "redpanda-connect",
+  "version": "4.107.2",
+  "image": {
+    "repository": "redpandadata/connect",
+    "tag": "4.107.2"
+  },
+  "capabilities": ["stream-processor"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 4195, "preferred": 4195, "protocol": "tcp", "legacyKey": "SERVICE_REDPANDA_CONNECT_HOST_PORT", "primary": true }
+  ],
+  "volumes": [
+  ],
+  "files": [
+    { "name": "connect_yaml", "template": "files/connect.yaml.tpl", "target": "/connect.yaml", "mode": "0444", "sha256": "8abb6b6b49a83e76df74be8417f6a05f490ccc5acf37aa120a9e0bbb9cac98d0" }
+  ],
+  "settings": [
+    { "key": "LOG_LEVEL", "type": "enum", "default": "INFO", "options": ["ERROR", "WARN", "INFO", "DEBUG", "TRACE"] }
+  ],
+  "connection": { "scheme": "http", "port": "main" },
+  "url": null,
+  "dependsOn": [
+  ],
+  "health": { "test": ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:4195/ready"], "interval": "10s", "retries": 10, "startPeriod": "10s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "e4a0a98e00c33fa24c3479b3d09029f51cd46dd136791b763aa0573ecd693635" },
+  "support": { "status": "supported" }
+}

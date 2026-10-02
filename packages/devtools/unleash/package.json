@@ -1,0 +1,19 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "unleash",
+  "category": "devtools",
+  "name": {
+    "en": "Unleash"
+  },
+  "summary": {
+    "en": "Open-source feature flag server with its own PostgreSQL."
+  },
+  "homepage": "https://www.getunleash.io",
+  "maintainer": "stackvo",
+  "license": "Apache-2.0",
+  "keywords": [
+    "feature-flags",
+    "feature-toggles"
+  ],
+  "recommendedVersion": "8.2.0"
+}

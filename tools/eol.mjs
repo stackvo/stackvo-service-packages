@@ -73,6 +73,14 @@ const PRODUCTS = {
   prometheus: 'prometheus',
   graylog: 'graylog',
   mssql: 'mssqlserver',
+  neo4j: 'neo4j',
+  vault: 'hashicorp-vault',
+  openbao: 'openbao',
+  opensearch: 'opensearch',
+  'opensearch-dashboards': 'opensearch',
+  loki: 'grafana-loki',
+  flink: 'apache-flink',
+  spark: 'apache-spark',
 };
 
 /**

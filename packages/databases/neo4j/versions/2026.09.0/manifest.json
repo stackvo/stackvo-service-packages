@@ -1,0 +1,78 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "neo4j",
+  "version": "2026.09.0",
+  "image": {
+    "repository": "neo4j",
+    "tag": "2026.09.0-community"
+  },
+  "capabilities": [
+    "graph",
+    "bolt"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "http",
+      "container": 7474,
+      "preferred": 7474,
+      "protocol": "tcp"
+    },
+    {
+      "name": "bolt",
+      "container": 7687,
+      "preferred": 7687,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/data",
+      "purgeable": true
+    }
+  ],
+  "files": [],
+  "settings": [
+    {
+      "key": "PASSWORD",
+      "type": "secret",
+      "default": "stackvo-neo4j",
+      "label": {
+        "en": "Password of the neo4j user, at least 8 characters"
+      }
+    }
+  ],
+  "connection": {
+    "scheme": "bolt",
+    "port": "bolt",
+    "defaultUser": "neo4j",
+    "passwordSetting": "PASSWORD"
+  },
+  "url": {
+    "subdomain": "neo4j",
+    "port": "http"
+  },
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "wget -q -O /dev/null http://127.0.0.1:7474"
+    ],
+    "interval": "15s",
+    "retries": 20,
+    "startPeriod": "40s"
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "a3ff777e848da17f2b18a8124c14aa26239dcf5f1a5d95283e6cc982533d110b"
+  },
+  "support": {
+    "source": "https://endoflife.date/api/neo4j.json",
+    "status": "supported"
+  }
+}

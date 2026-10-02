@@ -1,0 +1,31 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "spark",
+  "version": "4.2.0",
+  "image": {
+    "repository": "spark",
+    "tag": "4.2.0"
+  },
+  "capabilities": ["sql", "batch-processor"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "ui", "container": 4040, "preferred": 4040, "protocol": "tcp", "legacyKey": "SERVICE_SPARK_HOST_PORT", "primary": false },
+    { "name": "connect", "container": 15002, "preferred": 15002, "protocol": "tcp", "primary": true }
+  ],
+  "volumes": [
+    { "name": "data", "container": "/opt/spark/work-dir", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "DRIVER_MEMORY", "type": "string", "default": "1g", "label": { "en": "Memory of the local-mode driver" } },
+    { "key": "MASTER", "type": "string", "default": "local[*]", "label": { "en": "Spark master URL (local mode by default)" } }
+  ],
+  "connection": { "scheme": "sc", "port": "connect" },
+  "url": { "subdomain": "spark", "port": "ui" },
+  "dependsOn": [
+  ],
+  "health": { "test": ["CMD-SHELL", "curl -fsSL -o /dev/null http://127.0.0.1:4040/"], "interval": "15s", "retries": 12, "startPeriod": "40s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "69f55e95abac156babbb4a954ac8a9a37946458173a2a0435b0ebdd3605424fe" },
+  "support": { "eolDate": "2028-01-11", "source": "https://endoflife.date/api/apache-spark.json", "status": "supported" }
+}

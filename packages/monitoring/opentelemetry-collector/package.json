@@ -1,0 +1,14 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "opentelemetry-collector",
+  "category": "monitoring",
+  "name": {
+    "en": "OpenTelemetry Collector"
+  },
+  "summary": {
+    "en": "Contrib distribution that receives OTLP and forwards traces to Tempo, logs to Loki and exposes metrics for Prometheus."
+  },
+  "homepage": "https://opentelemetry.io/docs/collector/",
+  "maintainer": "stackvo",
+  "recommendedVersion": "0.161.0"
+}

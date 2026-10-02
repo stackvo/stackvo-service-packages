@@ -1,0 +1,8 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "ollama",
+  "category": "devtools",
+  "name": { "en": "Ollama" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "0.35.0"
+}

@@ -1,0 +1,113 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "zitadel",
+  "version": "v4.19.3",
+  "image": {
+    "registry": "ghcr.io",
+    "repository": "zitadel/zitadel",
+    "tag": "v4.19.3"
+  },
+  "capabilities": [
+    "identity",
+    "oidc"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 8080,
+      "preferred": 8085,
+      "protocol": "tcp",
+      "primary": false
+    }
+  ],
+  "volumes": [],
+  "files": [],
+  "settings": [
+    {
+      "key": "MASTERKEY",
+      "type": "string",
+      "default": "StackvoFirstBootMasterkey32chars",
+      "label": {
+        "en": "Encryption masterkey, exactly 32 characters. The default is a public placeholder: replace it before the first start; it cannot be changed afterwards."
+      }
+    },
+    {
+      "key": "ADMIN_USERNAME",
+      "type": "string",
+      "default": "admin"
+    },
+    {
+      "key": "ADMIN_PASSWORD",
+      "type": "secret",
+      "default": "Password1!",
+      "label": {
+        "en": "Initial admin password (first boot only; change it after signing in)"
+      }
+    },
+    {
+      "key": "DEFAULT_TLD_SUFFIX",
+      "type": "string",
+      "default": "loc"
+    }
+  ],
+  "connection": null,
+  "url": {
+    "subdomain": "zitadel",
+    "port": "main"
+  },
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD",
+      "/app/zitadel",
+      "ready"
+    ],
+    "interval": "15s",
+    "retries": 15,
+    "startPeriod": "60s"
+  },
+  "companions": [
+    {
+      "name": "postgres",
+      "image": {
+        "repository": "postgres",
+        "tag": "17-alpine"
+      },
+      "ports": [],
+      "volumes": [
+        {
+          "name": "data",
+          "container": "/var/lib/postgresql/data",
+          "purgeable": true
+        }
+      ],
+      "health": {
+        "test": [
+          "CMD-SHELL",
+          "pg_isready -h 127.0.0.1 -U zitadel -d zitadel"
+        ],
+        "interval": "10s",
+        "retries": 12,
+        "startPeriod": "20s"
+      },
+      "compose": {
+        "file": "companion.postgres.yml.tpl",
+        "sha256": "37578d11e74063c1463606690dff5525cded555ef6379a9c6d42c08c4c595d8a"
+      }
+    }
+  ],
+  "notes": {
+    "en": "Sign in at the console with the admin user (login name admin@zitadel.zitadel.stackvo.<tld>). The masterkey cannot be changed after the first start. Login V2 (separate container) is not included; the bundled login UI is used."
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "244fb6053859e3bd97f74b6a115be5e747ce989150b1f7c7cdb03b6e4abaffdc"
+  },
+  "support": {
+    "status": "supported"
+  }
+}

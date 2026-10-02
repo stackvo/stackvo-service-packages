@@ -1,0 +1,10 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "nessie",
+  "category": "databases",
+  "name": {
+    "en": "Project Nessie"
+  },
+  "maintainer": "stackvo",
+  "recommendedVersion": "0.108.8"
+}

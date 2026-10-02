@@ -1,0 +1,67 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "openbao",
+  "version": "2.7.0",
+  "image": {
+    "repository": "openbao/openbao",
+    "tag": "2.7.0"
+  },
+  "capabilities": [
+    "secrets",
+    "kv"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "main",
+      "container": 8200,
+      "preferred": 8210,
+      "protocol": "tcp",
+      "primary": true
+    }
+  ],
+  "volumes": [],
+  "files": [],
+  "settings": [
+    {
+      "key": "ROOT_TOKEN",
+      "type": "secret",
+      "default": "root",
+      "label": {
+        "en": "Dev-mode root token"
+      }
+    }
+  ],
+  "connection": {
+    "scheme": "http",
+    "port": "main"
+  },
+  "url": {
+    "subdomain": "openbao",
+    "port": "main"
+  },
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "BAO_ADDR=http://127.0.0.1:8200 bao status"
+    ],
+    "interval": "10s",
+    "retries": 10,
+    "startPeriod": "10s"
+  },
+  "notes": {
+    "en": "Dev-mode server: in-memory storage, auto-unsealed, no TLS. Data is lost on restart."
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "be1dbef8e93f169f86c269a708382b5c07bab61b5ef1a59d27c4bea9649e5824"
+  },
+  "support": {
+    "source": "https://endoflife.date/api/openbao.json",
+    "status": "supported"
+  }
+}

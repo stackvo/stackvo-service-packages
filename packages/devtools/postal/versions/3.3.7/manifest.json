@@ -1,0 +1,39 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "postal",
+  "version": "3.3.7",
+  "image": {
+    "registry": "ghcr.io",
+    "repository": "postalserver/postal",
+    "tag": "3.3.7"
+  },
+  "capabilities": ["smtp", "mail-server"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "web", "container": 5000, "preferred": 5050, "protocol": "tcp", "legacyKey": "SERVICE_POSTAL_HOST_PORT", "primary": false },
+    { "name": "smtp", "container": 25, "preferred": 2525, "protocol": "tcp", "legacyKey": "HOST_PORT_POSTAL_SMTP", "primary": true }
+  ],
+  "volumes": [
+    { "name": "config", "container": "/opt/postal/config", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "ADMIN_EMAIL", "type": "string", "default": "admin@stackvo.loc", "label": { "en": "Email of the first admin user (created only when no user exists)" } },
+    { "key": "ADMIN_PASSWORD", "type": "secret", "default": "stackvo-first-boot", "label": { "en": "Password of the first admin user" } },
+    { "key": "DEFAULT_TLD_SUFFIX", "type": "string", "default": "loc" }
+  ],
+  "connection": {
+    "scheme": "smtp",
+    "port": "smtp"
+  },
+  "url": { "subdomain": "postal", "port": "web" },
+  "dependsOn": [],
+  "health": { "test": ["CMD", "bash", "-c", "curl -fsS -o /dev/null http://127.0.0.1:9090/ && curl -fsS -o /dev/null http://127.0.0.1:9091/ && exec 3<>/dev/tcp/127.0.0.1/5000"], "interval": "15s", "retries": 20, "startPeriod": "90s" },
+  "companions": [
+    { "name": "mariadb", "image": { "repository": "mariadb", "tag": "11.8" }, "ports": [], "volumes": [{ "name": "data", "container": "/var/lib/mysql", "purgeable": true }], "health": { "test": ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"], "interval": "10s", "retries": 12, "startPeriod": "30s" }, "compose": { "file": "companion.mariadb.yml.tpl", "sha256": "2f2929ac4c7a6ae2d9b6f9b517a4e7df59bd5416ba8767e5a08b8766050f7812" } }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "c7b7aba7ba25e38dc84695481ac971295cf26f5490201d5a086ca2d4f2d4ba00" },
+  "support": {"status":"supported"},
+  "notes": { "en": "The image is published for linux/amd64 only (it runs under emulation on Apple Silicon). The first admin is created from ADMIN_EMAIL and ADMIN_PASSWORD on first boot; change the password after signing in. Postal does not send mail to the outside world until a mail server, domain and DNS records are set up in its web interface." }
+}

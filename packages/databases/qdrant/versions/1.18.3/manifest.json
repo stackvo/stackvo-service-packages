@@ -1,0 +1,66 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "qdrant",
+  "version": "1.18.3",
+  "image": {
+    "repository": "qdrant/qdrant",
+    "tag": "v1.18.3"
+  },
+  "capabilities": [
+    "vector-store",
+    "vector-search"
+  ],
+  "instancing": {
+    "multiple": true,
+    "identity": "version"
+  },
+  "ports": [
+    {
+      "name": "http",
+      "container": 6333,
+      "preferred": 6333,
+      "protocol": "tcp",
+      "primary": true
+    },
+    {
+      "name": "grpc",
+      "container": 6334,
+      "preferred": 6334,
+      "protocol": "tcp"
+    }
+  ],
+  "volumes": [
+    {
+      "name": "data",
+      "container": "/qdrant/storage",
+      "purgeable": true
+    }
+  ],
+  "files": [],
+  "settings": [],
+  "connection": {
+    "scheme": "http",
+    "port": "http"
+  },
+  "url": {
+    "subdomain": "qdrant",
+    "port": "http"
+  },
+  "dependsOn": [],
+  "health": {
+    "test": [
+      "CMD-SHELL",
+      "bash -c 'exec 3<>/dev/tcp/127.0.0.1/6333; printf \"GET /readyz HTTP/1.0\\r\\n\\r\\n\" >&3; read -r l <&3; case \"$l\" in *200*) exit 0;; *) exit 1;; esac'"
+    ],
+    "interval": "10s",
+    "retries": 12,
+    "startPeriod": "20s"
+  },
+  "compose": {
+    "file": "compose.yml.tpl",
+    "sha256": "c7637f5761ebbaaa8a1ae44fcd994796a7d3841b632ed066b674ab7cc1ddebd1"
+  },
+  "support": {
+    "status": "supported"
+  }
+}

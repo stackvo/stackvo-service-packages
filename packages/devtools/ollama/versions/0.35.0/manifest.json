@@ -1,0 +1,30 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "ollama",
+  "version": "0.35.0",
+  "image": {
+    "repository": "ollama/ollama",
+    "tag": "0.35.0"
+  },
+  "capabilities": ["llm", "http-api"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 11434, "preferred": 11434, "protocol": "tcp", "primary": false }
+  ],
+  "volumes": [
+    { "name": "models", "container": "/root/.ollama", "purgeable": true }
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "KEEP_ALIVE", "type": "string", "default": "5m", "label": { "en": "How long a model stays loaded after its last request" } },
+    { "key": "MAX_LOADED_MODELS", "type": "int", "default": 1 },
+    { "key": "NUM_PARALLEL", "type": "int", "default": 1 }
+  ],
+  "connection": null,
+  "url": { "subdomain": "ollama", "port": "main" },
+  "dependsOn": [],
+  "health": { "test": ["CMD", "ollama", "list"], "interval": "15s", "retries": 10, "startPeriod": "20s" },
+  "compose": { "file": "compose.yml.tpl", "sha256": "1d6a1692f480bbb0d8a76ff3900fea39335366b75377a45a7a356d472d929e93" },
+  "support": {"status":"supported"}
+}

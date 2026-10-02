@@ -1,0 +1,31 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "flink",
+  "version": "2.2.1",
+  "image": {
+    "repository": "flink",
+    "tag": "2.2.1"
+  },
+  "capabilities": ["stream-processor", "batch-processor"],
+  "instancing": { "multiple": true, "identity": "version" },
+  "ports": [
+    { "name": "main", "container": 8081, "preferred": 8083, "protocol": "tcp", "legacyKey": "SERVICE_FLINK_HOST_PORT", "primary": true }
+  ],
+  "volumes": [
+  ],
+  "files": [
+  ],
+  "settings": [
+    { "key": "JOBMANAGER_MEMORY", "type": "string", "default": "1600m" }
+  ],
+  "connection": { "scheme": "http", "port": "main" },
+  "url": { "subdomain": "flink", "port": "main" },
+  "dependsOn": [
+  ],
+  "health": { "test": ["CMD-SHELL", "curl -fsS -o /dev/null http://127.0.0.1:8081/overview"], "interval": "15s", "retries": 12, "startPeriod": "30s" },
+  "companions": [
+    { "name": "taskmanager", "image": { "repository": "flink", "tag": "2.2.1" }, "ports": [], "volumes": [], "health": { "test": ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/6122"], "interval": "15s", "retries": 12, "startPeriod": "30s" }, "compose": { "file": "companion.taskmanager.yml.tpl", "sha256": "812389a88177f37de3960ae55d012193808e99dd635623f627a0c93ca2a0e3ad" } }
+  ],
+  "compose": { "file": "compose.yml.tpl", "sha256": "06fd98fa31a2aa901652cb6e9493e7e6b5fa5d88677df730284996e38ecdd63c" },
+  "support": { "source": "https://endoflife.date/api/apache-flink.json", "status": "supported" }
+}

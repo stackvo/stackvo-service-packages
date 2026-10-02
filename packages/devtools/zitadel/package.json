@@ -1,0 +1,21 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "zitadel",
+  "category": "devtools",
+  "name": {
+    "en": "Zitadel"
+  },
+  "summary": {
+    "en": "Identity provider (OIDC, SAML, passkeys) with its own PostgreSQL."
+  },
+  "homepage": "https://zitadel.com",
+  "maintainer": "stackvo",
+  "license": "Apache-2.0",
+  "keywords": [
+    "identity",
+    "oidc",
+    "sso",
+    "auth"
+  ],
+  "recommendedVersion": "v4.19.3"
+}

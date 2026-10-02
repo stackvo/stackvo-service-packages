@@ -1,0 +1,9 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "postal",
+  "category": "devtools",
+  "name": { "en": "Postal" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.3.7",
+  "legacyEnvPrefix": "SERVICE_POSTAL_"
+}

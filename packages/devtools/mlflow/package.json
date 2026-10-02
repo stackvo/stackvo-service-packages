@@ -1,0 +1,8 @@
+{
+  "apiVersion": "stackvo.dev/package/v1",
+  "service": "mlflow",
+  "category": "devtools",
+  "name": { "en": "MLflow" },
+  "maintainer": "stackvo",
+  "recommendedVersion": "3.16.1"
+}
