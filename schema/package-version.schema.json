@@ -459,6 +459,45 @@
         }
       }
     },
+    "commands": {
+      "type": "array",
+      "default": [],
+      "description": "Commands this package brings with it, run inside THIS package's own container and nowhere else — the DDEV add-on shape (installing ddev-redis also gives you `ddev redis-cli`) with the one thing DDEV does not have: every byte of it was verified before it was read. A package may name a command for the same reason a project may name one in its own container and a SIDECAR may not: the package already chose the image, already wrote the compose fragment and already decides what that container runs, and it arrived through the whole chain — a signature over the registry, the registry's hash over this manifest, and this manifest's hashes over every byte beside it. The containment that is still built rather than inherited: the command is offered only for an ENABLED instance, it never reaches the host, and the container name is DERIVED from the instance rather than declared, so a package can no more name somebody else's container than it can name a host port. The id a caller sends is prefixed with the instance (`redis-7-2:redis-cli`), because two versions of one service are two instances and an unprefixed id would resolve to whichever was listed first.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "exec"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "description": "The only thing a caller ever sends. The catalogue's rule is unchanged — the frontend sends an id and never a program; what is new is only where the id may come from."
+          },
+          "exec": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "argv, never a shell string. Passed to `docker exec` as an array, so a `;` inside a word is a `;` inside an argument — which is why no metacharacter rule is applied here: it would read as security and would only break legitimate arguments such as `redis-cli --scan --pattern 'a*'`."
+          },
+          "about": {
+            "type": "string",
+            "default": "",
+            "description": "One line about what it does. NOT translated, and that is a fact rather than an omission: it is the package author's sentence in the language they wrote it, exactly as a package description already is, and the pane marks it lang=\"\" for the same reason."
+          },
+          "interactive": {
+            "type": "boolean",
+            "default": false,
+            "description": "Wants a TTY and a human at it — `redis-cli` does, `redis-cli info` does not."
+          }
+        }
+      }
+    },
     "compose": {
       "type": "object",
       "required": [
