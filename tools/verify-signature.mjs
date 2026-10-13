@@ -60,7 +60,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
  * work offline. The copy is the cheaper wrong thing; this note is what makes
  * it survivable.
  */
-const PINNED = 'RWSW56bSXoFQm+jNBGKcK6qbvyrG/bMqQ16lHJrhOgAmQUz840qNUYc+';
+const PINNED = 'RWQ8KOyvOjI+C4XzwxDtgmJcKV3vNiePzhaQ0IgQrOgmaCZUioF0Mtet';
 
 const die = (message) => {
   console.error(`✗ ${message}`);
